@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row items-center">
         <!-- Logo DPM -->
         <div class="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
-          <img src="../assets/logo_dpm.jpg" alt="Logo DPM" class="w-[481px] h-[480px] rounded shadow-lg" />
+          <img src="../../assets/logo_dpm.jpg" alt="Logo DPM" class="w-[481px] h-[480px] rounded shadow-lg" />
         </div>
         <!-- Text Section -->
         <div class="md:w-1/2">

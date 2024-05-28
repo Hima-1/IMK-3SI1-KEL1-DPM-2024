@@ -2,19 +2,31 @@
   <div id="app" class="flex flex-col min-h-screen">
     <Navbar />
     <Hero />
+    <VisiMisi />
+    <DaftarPengumuman />
+    <Galeri />
     <!-- Komponen lainnya -->
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import Hero from './components/Hero.vue'
+import Navbar from './components/LandingPage/Navbar.vue'
+import Hero from './components/LandingPage/Hero.vue'
+import VisiMisi from './components/LandingPage/VisiMisi.vue'
+import DaftarPengumuman from "./components/LandingPage/Pengungumans.vue";
+import Pengunguman from "./components/LandingPage/Pengunguman.vue";
+import Galeri from "./components/LandingPage/Galeri.vue";
 
 export default {
   name: 'App',
   components: {
+    DaftarPengumuman,
     Navbar,
-    Hero
+    Hero,
+    VisiMisi,
+    DaftarPengumuman,
+    Pengunguman,
+    Galeri
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <!-- Logo and Title on the Left -->
       <div class="flex items-center">
-        <img src="../assets/logo_dpm.jpg" alt="Logo" class="w-[51px] h-[51px] flex-shrink-0 rounded-full mr-4" />
+        <img src="../../assets/logo_dpm.jpg" alt="Logo" class="w-[51px] h-[51px] flex-shrink-0 rounded-full mr-4" />
         <span class="text-white text-[22px] font-bold font-poppins">DPM</span>
       </div>
 
