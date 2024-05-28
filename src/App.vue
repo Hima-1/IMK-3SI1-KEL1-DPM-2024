@@ -5,6 +5,8 @@
     <VisiMisi />
     <DaftarPengumuman />
     <Galeri />
+    <Berita />
+    <Footer />
     <!-- Komponen lainnya -->
   </div>
 </template>
@@ -16,6 +18,8 @@ import VisiMisi from './components/LandingPage/VisiMisi.vue'
 import DaftarPengumuman from "./components/LandingPage/Pengungumans.vue";
 import Pengunguman from "./components/LandingPage/Pengunguman.vue";
 import Galeri from "./components/LandingPage/Galeri.vue";
+import Berita from "./components/LandingPage/Berita.vue";
+import Footer from "./components/LandingPage/Footer.vue";
 
 export default {
   name: 'App',
@@ -26,7 +30,9 @@ export default {
     VisiMisi,
     DaftarPengumuman,
     Pengunguman,
-    Galeri
+    Galeri,
+    Berita,
+    Footer
   }
 }
 </script>
