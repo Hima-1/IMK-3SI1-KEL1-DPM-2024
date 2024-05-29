@@ -1,10 +1,11 @@
 <template>
   <div class="bg-[#EBF3F5] min-h-screen flex items-center justify-center">
     <div class="wrapper flex flex-col items-center" style="width: 1127px; height: auto;">
-      <div class="icon mb-8" style="width: 191.046px; height: 106.517px; opacity: 0.78;">
+      <div class="mb-8" style="width: 191.046px; height: 106.517px; opacity: 0.78;">
+        <!-- Ikon dihapus dari sini -->
       </div>
       <div>
-        <h1 class="text-[#1A5796] text-center font-poppins text-5xl font-bold">
+        <h1 class="visi-misi bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold p-5">
           Visi
         </h1>
       </div>
@@ -12,7 +13,7 @@
         Menjadikan Dewan Perwakilan Mahasiswa Politeknik Statistika STIS sebagai organisasi / majelis permusyawaratan mahasiswa yang kredibel dalam mengemban tanggung jawab secara inspiratif, kontributif, komunikatif dan juga selaras dengan Spiritualitas.
       </p>
       <div>
-        <h1 class="text-[#1A5796] text-center font-poppins text-5xl font-bold mt-16">
+        <h1 class="visi-misi bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-16 p-5">
           Misi
         </h1>
       </div>
@@ -34,9 +35,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
+.visi-misi {
+  background-image: url('../../assets/icon/visi_misi.svg');
 }
 </style>

@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import './style.css'
 import Navbar from './components/LandingPage/Navbar.vue'
 import Hero from './components/LandingPage/Hero.vue'
 import VisiMisi from './components/LandingPage/VisiMisi.vue'

@@ -28,15 +28,3 @@ export default {
   name: 'Hero',
 }
 </script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
-
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
-}
-
-.shadow-custom {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.26);
-}
-</style>

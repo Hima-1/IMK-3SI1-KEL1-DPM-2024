@@ -9,15 +9,15 @@
 
     <!-- Foto Dummy -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
+      <div class="w-[536px] h-[358px] bg-cover bg-center" style="background-image: url('../../assets/galeri.webp')"></div>
     </div>
   </div>
 </template>
@@ -27,18 +27,3 @@ export default {
   name: 'Galeri',
 };
 </script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-.foto-dummy {
-  width: 536px;
-  height: 358px;
-  flex-shrink: 0;
-  background: url('../../assets/galeri.webp') lightgray 50% / cover no-repeat;
-}
-</style>
