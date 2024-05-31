@@ -1,13 +1,13 @@
 <template>
-  <section class="bg-[#CAD8E3] h-screen flex items-center pt-[90px]">
+  <section class="bg-[#CAD8E3] h-[93vh] flex items-center">
     <div class="container mx-auto px-6 text-center md:text-left">
       <div class="flex flex-col md:flex-row items-center">
         <!-- Logo DPM -->
         <div class="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
-          <img src="../../assets/logo_dpm.jpg" alt="Logo DPM" class="w-[481px] h-[480px] rounded shadow-lg" />
+          <img src="../../assets/images/logo_dpm.webp" alt="Logo DPM" class="w-[481px] h-[480px] rounded shadow-lg" />
         </div>
         <!-- Text Section -->
-        <div class="md:w-1/2">
+        <div class="md:w-7/12">
           <h1 class="text-[#1A5796] text-[80px] font-bold font-poppins leading-tight">
             Dewan Perwakilan
           </h1>
