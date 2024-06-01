@@ -1,57 +1,78 @@
 <template>
-  <nav class="bg-[#1a5796] shadow-custom fixed w-full z-50 top-0">
+  <nav :class="['bg-[#1a5796] shadow-custom w-full z-50', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <!-- Logo and Title on the Left -->
       <div class="flex items-center">
-        <img src="../../assets/logo_dpm.jpg" alt="Logo" class="w-[51px] h-[51px] flex-shrink-0 rounded-full mr-4" />
-        <span class="text-white text-[22px] font-bold font-poppins">DPM</span>
+        <img src="../../assets/images/logo_dpm.webp" alt="Logo" class="w-12 h-12 flex-shrink-0 rounded-full mr-4" />
+        <span class="text-white text-2xl font-bold font-poppins">DPM</span>
       </div>
 
       <!-- Navigation Links and Login Button on the Right -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="#" class="text-white text-[22px] uppercase font-bold font-poppins">Home</a>
-        <a href="#" class="text-white text-[22px] font-medium font-poppins">Pengumuman</a>
-        <a href="#" class="text-white text-[22px] font-medium font-poppins">Galeri</a>
-        <a href="#" class="text-white text-[22px] font-medium font-poppins">Berita</a>
-        <a href="#" class="text-white text-[22px] uppercase border-[5px] border-white rounded-full px-4 py-1 font-bold font-poppins">Log In</a>
+        <router-link to="/" exact class="nav-link text-white text-2xl uppercase font-poppins" :exact-active-class="'active-link'">Home</router-link>
+        <router-link to="/berita" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Berita</router-link>
+        <router-link to="/galeri" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Galeri</router-link>
+        <router-link to="/struktur" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Struktur</router-link>
+        <router-link to="/login" class="nav-link text-white text-2xl uppercase border-2 border-white rounded-full px-4 py-1 font-bold font-poppins" :active-class="'active-link'">Log In</router-link>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden">
-        <button class="text-white focus:outline-none">
-          <!-- Icon for mobile menu -->
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
+        <button @click="toggleMobileMenu" class="text-white focus:outline-none">
+          <img src="../../assets/icon/nama_sementara.svg" alt="Menu Icon" class="w-6 h-6" />
         </button>
       </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div class="md:hidden">
-      <a href="#" class="block text-white text-[22px] uppercase font-bold font-poppins py-2 px-4">Home</a>
-      <a href="#" class="block text-white text-[22px] font-medium font-poppins py-2 px-4">Pengumuman</a>
-      <a href="#" class="block text-white text-[22px] font-medium font-poppins py-2 px-4">Galeri</a>
-      <a href="#" class="block text-white text-[22px] font-medium font-poppins py-2 px-4">Berita</a>
-      <a href="#" class="block text-white text-[22px] uppercase border-[5px] border-white rounded-full px-4 py-1 font-bold font-poppins mx-4 my-2">Log In</a>
+    <div v-if="isMobileMenuOpen" class="md:hidden">
+      <router-link to="/" exact class="block nav-link text-white text-2xl uppercase font-poppins py-2 px-4" :exact-active-class="'active-link'">Home</router-link>
+      <router-link to="/berita" class="block nav-link text-white text-2xl font-medium font-poppins py-2 px-4" :active-class="'active-link'">Berita</router-link>
+      <router-link to="/galeri" class="block nav-link text-white text-2xl font-medium font-poppins py-2 px-4" :active-class="'active-link'">Galeri</router-link>
+      <router-link to="/struktur" class="block nav-link text-white text-2xl font-medium font-poppins py-2 px-4" :active-class="'active-link'">Struktur</router-link>
+      <router-link to="/login" class="block nav-link text-white text-2xl uppercase border-2 border-white rounded-full px-4 py-1 font-bold font-poppins mx-4 my-2" :active-class="'active-link'">Log In</router-link>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'Navbar',
+  name: 'NavbarLanding',
+  data() {
+    return {
+      isMobileMenuOpen: false,
+      isScrolled: false
+    };
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
-
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
+.nav-link:hover {
+  color: #CEDBE5;
 }
 
-.shadow-custom {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.26);
+.active-link {
+  font-weight: bold;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 </style>

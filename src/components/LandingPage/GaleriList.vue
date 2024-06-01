@@ -39,6 +39,6 @@ body {
   width: 536px;
   height: 358px;
   flex-shrink: 0;
-  background: url('../../assets/galeri.webp') lightgray 50% / cover no-repeat;
+  background: url('../../assets/images/galeri.webp') lightgray 50% / cover no-repeat;
 }
 </style>
