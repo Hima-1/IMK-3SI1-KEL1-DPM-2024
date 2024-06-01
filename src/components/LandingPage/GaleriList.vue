@@ -19,19 +19,82 @@
     </div>
 
     <!-- Foto Dummy -->
-    <div class="gallery-grid mt-8">
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
-      <div class="foto-dummy"></div>
+
+    <div class="gallery-grid mt-8 rounded-[44px]">
+    <div class="foto-dummy rounded-[44px]">
+    <div class="image-container rounded-[44px]">
+
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 2" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="foto-dummy">
+        <div class="image-container">
+          <img src="/Users/jihanmaisaroh/Semester 6/IMK/IMK-3SI1-KEL1-DPM-2024/src/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <div class="overlay">
+            <span class="text">Tulisan di Tengah 1</span>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -60,30 +123,17 @@ body {
 }
 
 .foto-dummy {
-  width: 510px;
-  height: 358px;
-  flex-shrink: 0;
-  background: url('../../assets/images/galeri.webp') lightgray 50% / cover no-repeat;
   border-radius: 20px;
-}
+   position: relative;
+  width: 500px;
+  border-radius: 50%;
+} 
 
 .galeri {
   background-image: url('../../assets/icon/visi_misi.svg');
   margin-bottom: 25px;
 }
 
-.circle-number {
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F8C147;
-  border-radius: 50%;
-  flex-shrink: 0;
-  font-weight: bold;
-  color: #1A5796;
-}
 
 .button-group {
   display: flex;
@@ -145,4 +195,40 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.image-container {
+  position: relative;
+  width: 500px;
+  border-radius: 44px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  transition: opacity 0.3s; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif; }
+
 </style>
