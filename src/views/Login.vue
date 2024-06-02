@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-[#c8d6df] relative overflow-hidden">
     <router-link to="/">
-      <div class="absolute top-[6rem] left-[7rem] cursor-pointer">
+      <div class="absolute top-[6rem] left-[7rem] cursor-pointer z-10">
         <div class="flex flex-col items-center w-[3.75rem] h-[5rem] flex-shrink-0">
           <img src="../assets/icon/home.svg" class="w-[3.5rem] h-[3.5rem] flex-shrink-0" alt="Beranda Icon" />
           <p class="text-[#1A5796] text-center font-poppins text-[0.875rem] font-medium mt-2">
