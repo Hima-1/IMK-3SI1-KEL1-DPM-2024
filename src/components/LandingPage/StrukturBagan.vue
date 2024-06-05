@@ -7,7 +7,7 @@
         </h1>
       </div>
       <div class="mt-8 p-4">
-        <img src="../../assets/images/struktur_bagan.png" alt="">
+        <img src="../../assets/images/struktur_bagan.webp" alt="">
       </div>
     </div>
   </div>

@@ -33,7 +33,7 @@ export default {
         { id: 3, nama: "Inafianti Klaristania Rilano", nim: "222112110", jabatan: "JABATAN 3" },
         { id: 4, nama: "Irsyad Fadhil Asyraf", nim: "222112116", jabatan: "JABATAN 4" },
         { id: 5, nama: "Jihan Maisaroh", nim: "222112122", jabatan: "JABATAN 5" },
-        { id: 6, nama: "Hua", nim: "222222222", jabatan: "JABATAN 6" },
+        { id: 6, nama: "Himacad Rijifen", nim: "222222222", jabatan: "JABATAN 6" },
       ],
     };
   },

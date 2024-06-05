@@ -9,6 +9,7 @@ import LoginPage from '../views/Login.vue';
 import Aspirasi from '../views/Aspirasi.vue';
 import ArsipDokumen from '../views/ArsipDokumen.vue';
 import AnggaranImpolstat from '../views/AnggaranImpolstat.vue';
+import MyProfile from '../views/MyProfile.vue';
 
 const routes = [
     {
@@ -29,6 +30,7 @@ const routes = [
             { path: '', name: 'Aspirasi', component: Aspirasi },
             { path: 'arsip-dokumen', name: 'ArsipDokumen', component: ArsipDokumen },
             { path: 'anggaran-impolstat', name: 'AnggaranImpolstat', component: AnggaranImpolstat },
+            { path: 'my-profile', name: 'MyProfile', component: MyProfile},
         ],
     },
 ];
