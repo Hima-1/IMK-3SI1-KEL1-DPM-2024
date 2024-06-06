@@ -4,7 +4,7 @@
     <div class="w-full text-center mb-16">
       <h1
         class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold p-10 text-[35px]">
-        Perpanjangan Open Recruitment Sekretaris, Bendahara, Pudmekraf, dan Tim IT DPM Periode 2023/2024
+        Berita DPM Polstat STIS
       </h1>
     </div>
 
