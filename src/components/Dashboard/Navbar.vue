@@ -1,27 +1,37 @@
 <template>
-  <nav :class="['mt-0 w-full h-[5.75rem] flex items-center justify-between bg-[#1A5796] drop-shadow-md p-4', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
-    <router-link to="/">
-      <div class="flex items-center logo-container">
-        <img src="../../assets/images/logo_dpm.webp" alt="Logo" class="logo">
-        <span class="logo-text">SIASPIMAN</span>
-      </div>
-    </router-link>
-    <div class="flex items-center nav-links-container">
+  <nav :class="['w-full h-[92px] flex items-center justify-between bg-[#1A5796] drop-shadow-md p-4', { fixed: isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
+    <div class="flex items-center space-x-4 ml-16">
+      <img src="../../assets/images/logo_dpm.webp" alt="Logo" class="w-[62px] h-[62px] flex-shrink-0" />
+      <span class="text-white font-poppins text-2xl font-bold">SIASPIMAN</span>
+    </div>
+    <div class="flex items-center space-x-8 mr-16">
       <router-link to="/dashboard" exact class="nav-link" :exact-active-class="'active-link'">
-        <span class="nav-link-text">Aspirasi</span>
+        <span class="text-[#EBF3F5] text-center font-poppins text-lg">Aspirasi</span>
       </router-link>
       <router-link to="/dashboard/arsip-dokumen" class="nav-link" :active-class="'active-link'">
-        <span class="nav-link-text">Arsip Dokumen</span>
+        <span class="text-[#EBF3F5] text-center font-poppins text-lg">Arsip Dokumen</span>
       </router-link>
       <router-link to="/dashboard/anggaran-impolstat" class="nav-link" :active-class="'active-link'">
-        <span class="nav-link-text">Anggaran Imapolstat</span>
+        <span class="text-[#EBF3F5] text-center font-poppins text-lg">Anggaran Imapolstat</span>
       </router-link>
-      <div class="flex items-center user-info">
-        <img src="../../assets/icon/account.svg" alt="User Photo" class="user-photo">
-        <div class="text-right user-name-container">
-          <span class="user-name">Nama User</span>
+      <div class="flex items-center space-x-2">
+        <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[60px] h-[60px] flex-shrink-0" />
+        <div class="text-right">
+          <!-- <span class="text-[#EBF3F5] font-poppins text-lg font-medium">Nama User</span> -->
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="text-[#EBF3F5] font-poppins text-lg font-medium m-1 btn">Nama User</div>
+            <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+              <router-link to="/dashboard/my-profile" class="nav-link" :active-class="'active-link'">
+                <li class="text-[#EBF3F5] text-center font-poppins text-lg">My Profile</li>
+              </router-link>
+              <router-link to="" class="nav-link" :active-class="''">
+                <li class="text-[#EBF3F5] text-center font-poppins text-lg">Logout</li>
+              </router-link>
+            </ul>
+          </div>
+          <img src="../../assets/icon/arrow-down.svg" alt="Dropdown Icon" class="w-[11px] h-[9px] fill-current text-[#EBF3F5]" />
         </div>
-        <img src="../../assets/icon/arrow-down.svg" alt="Dropdown Icon" class="dropdown-icon">
+        
       </div>
     </div>
   </nav>
@@ -29,31 +39,31 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   data() {
     return {
-      isScrolled: false
+      isScrolled: false,
     };
   },
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 0;
-    }
+    },
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-}
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
 
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .fixed {
@@ -65,74 +75,10 @@ export default {
 
 .nav-link {
   text-decoration: none;
-  color: #EBF3F5;
+  color: #ebf3f5;
 }
 
 .active-link > span {
   font-weight: bold;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  margin-left: 4rem;
-  gap: 1rem;
-}
-
-.logo {
-  width: 3.875rem;
-  height: 3.875rem;
-  flex-shrink: 0;
-}
-
-.logo-text {
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.nav-links-container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-right: 4rem;
-}
-
-.nav-link-text {
-  color: #EBF3F5;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.125rem;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.user-photo {
-  width: 3.75rem;
-  height: 3.75rem;
-  flex-shrink: 0;
-}
-
-.user-name-container {
-  text-align: right;
-}
-
-.user-name {
-  color: #EBF3F5;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.125rem;
-  font-weight: medium;
-}
-
-.dropdown-icon {
-  width: 0.6875rem;
-  height: 0.5625rem;
-  fill: currentColor;
-  color: #EBF3F5;
 }
 </style>
