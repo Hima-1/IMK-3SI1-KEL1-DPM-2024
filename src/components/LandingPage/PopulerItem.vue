@@ -1,6 +1,6 @@
 <template>
     <div class="px-4 mb-4 flex">
-        <!-- Bagian Kiri (Persegi Putih) -->
+        <!-- Bagian Kiri -->
         <div class="flex-shrink-0 w-[110px] h-[68px] overflow-hidden mr-4 mt-2 bg-white"></div>
         <!-- Bagian Kanan -->
         <div class="flex-1 flex flex-col justify-between">

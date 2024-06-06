@@ -4,9 +4,10 @@
             <!-- Box -->
             <div class="rounded-[12px] w-full h-auto bg-[#EBF3F5] flex flex-col">
                 <!-- Image -->
-                <div class="flex-shrink-0">
+                <div class="flex-shrink-0 relative w-full pb-[54%]">
                     <!-- Image container -->
-                    <img src="../../assets/images/berita.webp" class="w-full h-[500px] rounded-t-[13px] object-cover" />
+                    <img src="../../assets/images/berita.webp"
+                        class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <!-- Content -->
                 <div class="flex-grow p-4">
@@ -19,12 +20,13 @@
                     </div>
                     <!-- Isi -->
                     <p class="text-[#000] font-poppins text-[23px] break-words">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Mauris commodo augue ac est accumsan laoreet. 
-                        Suspendisse ultricies sem ut diam rhoncus, eget blandit turpis fermentum. 
-                        Proin sodales, ex id maximus luctus, urna neque ultricies lacus, quis blandit mauris nibh sed augue. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris commodo augue ac est accumsan laoreet.
+                        Suspendisse ultricies sem ut diam rhoncus, eget blandit turpis fermentum.
+                        Proin sodales, ex id maximus luctus, urna neque ultricies lacus, quis blandit mauris nibh sed
+                        augue.
                         Nullam maximus lorem eget magna laoreet auctor.
-                        Vestibulum fermentum nulla metus, tempor fringilla ex laoreet a. 
+                        Vestibulum fermentum nulla metus, tempor fringilla ex laoreet a.
                         Nunc bibendum est eros, nec lacinia elit eleifend fringilla.
                         Suspendisse mauris dolor, mattis in massa sit amet, faucibus sollicitudin tortor.
                     </p>
@@ -62,4 +64,22 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.aspect-ratio-54-100 {
+    position: relative;
+    width: 100%;
+    padding-top: 54%;
+    /* This sets the height to 54% of the width */
+}
+
+.aspect-ratio-54-100 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+</style>
