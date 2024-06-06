@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#ebf3f5] min-h-fit flex justify-center">
-    <div class="w-[1660px] my-6 mx-20 flex flex-col">
+    <div class="w-[1660px] my-6 mx-20">
       <!-- Edit Icon and My Profile Text -->
       <div class="flex items-center space-x-6 my-4">
         <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-12 h-12 text-[#1A5796]" />
@@ -8,7 +8,7 @@
       </div>
 
       <!-- My Profile -->
-      <div class="flex my-8 h-[513x]">
+      <div class="flex my-8 h-[512px]">
         <!-- Foto Profil, Nama, dan NIM -->
         <div class="flex-col justify-center content-center bg-[#FFFFFF] text-[#1A5796] p-16 w-1/3">
           <div class="flex-col w-full content-center">
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Detail Profil -->
-        <div class="flex-col bg-[#FFFFFF] text-[#1A5796] text-[25px] ml-16 w-2/3 h-full">
+        <div class="flex-col bg-[#FFFFFF] text-[#1A5796] text-[25px] ml-16 w-2/3 h-[512px]">
           <!-- Tab Detail Profil dan Ubah Password -->
 
           <div class="font-semibold text-[#ebf3f5]">
@@ -29,43 +29,80 @@
             <button @click="activeTabTwo" class="w-1/2 p-4 border-b-2 active:border-b-[#1A5796] active:text-[#1A5796] focus:text-[#1A5796] focus:border-b-[#1A5796]">Ubah Password</button>
           </div>
 
-          <!-- Tab Detail Profil -->
-          <div v-if="tab === 1" class="m-8 h-5/6">
-            <!-- Informasi User -->
-            <div class="flex flex-row h-4/5">
-              <table class="flex flex-col w-full border-separate border-spacing-y-10">
-                <tbody class="">
-                  <tr class="">
-                    <td class="pr-28 mb-20">Nama Lengkap</td>
-                    <td>Himacad Rijifen</td>
-                  </tr>
-                  <tr class="">
-                    <td class="">Kelas</td>
-                    <td>3SI1</td>
-                  </tr>
-                  <tr class="">
-                    <td class="">NIM</td>
-                    <td>222112999</td>
-                  </tr>
-                  <tr class="">
-                    <td class="">Email</td>
-                    <td>kelompok1@gmail.com</td>
-                  </tr>
-                  <tr class="">
-                    <td class="">No HP</td>
-                    <td>082143658709</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="grid grid-rows-1 h-[512px] w-[1087px]">
+            <!-- Tab Detail Profil -->
+            <div v-if="tab === 1" class="m-8 h-5/6" aria-selected="true" role="tab">
+              <!-- Informasi User -->
+              <div class="grid grid-rows-9">
+                <!-- Nama Lengkap -->
+                <div class="grid grid-cols-3">
+                  <p>Nama Lengkap</p>
+                  <p>Himacad Rijifen</p>
+                </div>
+
+                <!-- Kelas -->
+                <div class="grid grid-cols-3">
+                  <p>Kelas</p>
+                  <p>3SI1</p>
+                </div>
+
+                <!-- NIM -->
+                <div class="grid grid-cols-3">
+                  <p>NIM</p>
+                  <p>222112999</p>
+                </div>
+
+                <!-- Email -->
+                <div class="grid grid-cols-3">
+                  <p>Email</p>
+                  <p>kelompok1@gmail.com</p>
+                </div>
+
+                <!-- No HP -->
+                <div class="grid grid-cols-3">
+                  <p>No HP</p>
+                  <p>082143658709</p>
+                </div>
+              </div>
+
+              <!-- Button Edit Profile -->
+              <div class="flex w-full justify-end p-5 h-1/5">
+                <router-link to="/dashboard/edit-profile" class="nav-link bg-[#1A5796] text-center text-[#FFFFFF] w-1/3 rounded-md" :active-class="'active-link'">
+                  <button class="h-full w-full">Edit Profil</button>
+                </router-link>
+              </div>
             </div>
 
-            <!-- Button Edit Profile -->
-            <div class="flex w-full justify-end p-5 h-1/5">
-              <button class="bg-[#1A5796] text-[#FFFFFF] w-1/3 rounded-md">Edit Profil</button>
+            <!-- Tab Ubah Password -->
+            <div v-if="tab === 2" class="m-8 h-5/6" role="tab">
+              <div class="grid grid-rows-5">
+                <!-- Password Lama -->
+                <div class="grid grid-cols-3">
+                  <p>Password Lama</p>
+                  <input type="text" name="" class="col-span-2 bg-transparent border-[#D9D9D9] input input-bordered w-full" />
+                </div>
+
+                <!-- Password Baru -->
+                <div class="grid grid-cols-3">
+                  <p>Password Baru</p>
+                  <input type="text" class="col-span-2 bg-transparent border-[#D9D9D9] input input-bordered w-full" />
+                </div>
+
+                <!-- Konfirmasi Password Baru -->
+                <div class="grid grid-cols-3">
+                  <p>Konfirmasi Password Baru</p>
+                  <input type="text" name="" class="col-span-2 bg-transparent border-[#D9D9D9] input input-bordered w-full" />
+                </div>
+              </div>
+
+              <!-- Button Ubah Password -->
+              <div class="flex w-full justify-end h-1/5">
+                <router-link to="" class="nav-link bg-[#1A5796] text-center text-[#FFFFFF] w-1/3 rounded-md" :active-class="'active-link'">
+                  <button class="h-full w-full">Ubah Password</button>
+                </router-link>
+              </div>
             </div>
           </div>
-
-          <!-- Tab Ubah Password -->
         </div>
       </div>
     </div>

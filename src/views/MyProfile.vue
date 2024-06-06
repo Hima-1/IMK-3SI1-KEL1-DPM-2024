@@ -16,6 +16,7 @@ export default {
   },
   data() {
     return {
+      tab: 1,
       detail: [
         {
           namaLengkap: "Himacad Rijifen",
@@ -54,10 +55,3 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 </style>
-<!-- </template>
-
-<script>
-</script>
-
-<style scoped>
-</style> -->
