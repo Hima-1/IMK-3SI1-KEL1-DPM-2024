@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .visi-misi {
-  background-image: url('../../assets/icon/visi_misi.svg');
+  background-image: url('@/assets/icon/visi_misi.svg');
 }
 
 .circle-number {

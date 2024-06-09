@@ -3,7 +3,7 @@
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <!-- Logo and Title on the Left -->
       <div class="flex items-center">
-        <img src="../../assets/images/logo_dpm.webp" alt="Logo" class="w-12 h-12 flex-shrink-0 rounded-full mr-4" />
+        <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="w-12 h-12 flex-shrink-0 rounded-full mr-4" />
         <span class="text-white text-2xl font-bold font-poppins">DPM</span>
       </div>
 
@@ -19,7 +19,7 @@
       <!-- Mobile Menu Button -->
       <div class="md:hidden">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
-          <img src="../../assets/icon/nama_sementara.svg" alt="Menu Icon" class="w-6 h-6" />
+          <img src="@/assets/icon/hamburger.svg" alt="Menu Icon" class="w-6 h-6" />
         </button>
       </div>
     </div>

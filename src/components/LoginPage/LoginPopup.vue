@@ -1,12 +1,12 @@
 <template>
   <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
     <div class="w-full max-w-[49.875rem] h-[44.875rem] bg-[#EBF3F5] rounded-[1.6875rem] flex flex-col items-center p-6 relative">
-      <img src="../../assets/icon/close.svg" @click="$emit('close')" class="absolute top-[1.875rem] right-[2.25rem] w-[3.4375rem] h-[3.4375rem] cursor-pointer" alt="Close Icon" />
+      <img src="@/assets/icon/close.svg" @click="$emit('close')" class="absolute top-[1.875rem] right-[2.25rem] w-[3.4375rem] h-[3.4375rem] cursor-pointer" alt="Close Icon" />
       <div class="w-full max-w-[42.625rem] h-[36rem] flex flex-col items-center justify-between mt-[4.5rem] mb-[4.375rem] mx-[3.625rem]">
-        <img src="../../assets/images/logo_dpm.webp" class="w-[11.375rem] h-[11.3125rem] flex-shrink-0 mb-8" alt="Logo DPM" />
+        <img src="@/assets/images/logo_dpm.webp" class="w-[11.375rem] h-[11.3125rem] flex-shrink-0 mb-8" alt="Logo DPM" />
 
         <div class="w-full h-[4.5625rem] flex items-center border-2 border-[#1A5796] bg-[#EBF3F5] rounded-[2.28125rem] shadow-inner mb-6">
-          <img src="../../assets/icon/emailLogin.svg" class="w-[3.125rem] h-[3.125rem] flex-shrink-0 ml-4" alt="Email Icon" />
+          <img src="@/assets/icon/emailLogin.svg" class="w-[3.125rem] h-[3.125rem] flex-shrink-0 ml-4" alt="Email Icon" />
           <input
               v-model="email"
               type="email"
@@ -16,14 +16,14 @@
         </div>
 
         <div class="w-full h-[4.5625rem] flex items-center border-2 border-[#1A5796] bg-[#EBF3F5] rounded-[2.28125rem] shadow-inner mb-6">
-          <img src="../../assets/icon/password.svg" class="w-[1.75rem] h-[2.296875rem] flex-shrink-0 ml-7" alt="Password Icon" />
+          <img src="@/assets/icon/password.svg" class="w-[1.75rem] h-[2.296875rem] flex-shrink-0 ml-7" alt="Password Icon" />
           <input
               v-model="password"
               :type="passwordVisible ? 'text' : 'password'"
               placeholder="Password"
               class="ml-6 w-full bg-transparent border-none text-[#1A5796] font-poppins text-[1.375rem] opacity-43 outline-none"
           />
-          <img @click="togglePasswordVisibility" src="../../assets/icon/unseen.svg" class="w-[4.5rem] h-[4.5rem] flex-shrink-0 mr-4 cursor-pointer" alt="Toggle Password Visibility" />
+          <img @click="togglePasswordVisibility" src="@/assets/icon/unseen.svg" class="w-[4.5rem] h-[4.5rem] flex-shrink-0 mr-4 cursor-pointer" alt="Toggle Password Visibility" />
         </div>
 
         <div @click="login" class="w-full h-[4.5625rem] flex items-center justify-center bg-[#1A5796] rounded-[2.28125rem] shadow-lg cursor-pointer mb-4">

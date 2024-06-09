@@ -2,7 +2,7 @@
   <nav :class="['mt-0 w-full h-[5.75rem] flex items-center justify-between bg-[#1A5796] drop-shadow-md p-4', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
     <router-link to="/">
       <div class="flex items-center logo-container">
-        <img src="../../assets/images/logo_dpm.webp" alt="Logo" class="logo">
+        <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo">
         <span class="logo-text">SIASPIMAN</span>
       </div>
     </router-link>
@@ -17,11 +17,11 @@
         <span class="nav-link-text">Anggaran Imapolstat</span>
       </router-link>
       <div class="flex items-center user-info">
-        <img src="../../assets/icon/account.svg" alt="User Photo" class="user-photo">
+        <img src="@/assets/icon/account.svg" alt="User Photo" class="user-photo">
         <div class="text-right user-name-container">
           <span class="user-name">Nama User</span>
         </div>
-        <img src="../../assets/icon/arrow-down.svg" alt="Dropdown Icon" class="dropdown-icon">
+        <img src="@/assets/icon/arrow-down.svg" alt="Dropdown Icon" class="dropdown-icon">
       </div>
     </div>
   </nav>
