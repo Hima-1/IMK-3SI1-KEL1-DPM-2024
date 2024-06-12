@@ -8,12 +8,14 @@
       </div>
 
       <!-- My Profile -->
-      <div class="flex my-8 h-[512px]">
+      <div class="grid grid-cols-3 my-8 h-[512px]">
         <!-- Foto Profil, Nama, dan NIM -->
-        <div class="flex-col justify-center content-center bg-[#FFFFFF] text-[#1A5796] p-16 w-1/3">
-          <div class="flex-col w-full content-center">
-            <img src="../../assets/icon/account.svg" alt="User Photo" class="border-none my-12 w-full" />
-            <div class="flex-col w-full text-center mt-6">
+        <div class="grid-flow-col col-span-1 bg-[#FFFFFF] text-[#1A5796] shadow-lg">
+          <div class="grid grid-rows-5">
+            <div class="grid row-span-4 items-center justify-center">
+              <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[300px] object-cover" />
+            </div>
+            <div class="text-center mt-3">
               <p class="font-bold text-[30px]">Himacad Rijifen</p>
               <p class="text-[24px]">2112999</p>
             </div>
@@ -21,85 +23,110 @@
         </div>
 
         <!-- Detail Profil -->
-        <div class="flex-col bg-[#FFFFFF] text-[#1A5796] text-[25px] ml-16 w-2/3 h-[512px]">
+        <div class="grid col-span-2 bg-[#FFFFFF] text-[#1A5796] text-[20px] ml-16 h-[512px] shadow-lg">
           <!-- Tab Detail Profil dan Ubah Password -->
+          <div class="grid grid-cols-4 font-semibold text-[#ebf3f5]">
+            <button
+              @click="activeTabOne"
+              class="text-nowrap p-4 border-b-2"
+              :class="{ 'border-b-[#1A5796] text-[#1A5796]': activeTab === 'detailProfile', 'border-b-2': activeTab !== 'detailProfile' }"
+              aria-selected="activeTab === 'detailProfile'"
+            >
+              Detail Profile
+            </button>
 
-          <div class="font-semibold text-[#ebf3f5]">
-            <button @click="activeTabOne" class="w-1/2 p-4 border-b-2 active:border-b-[#1A5796] active:text-[#1A5796] focus:text-[#1A5796] focus:border-b-[#1A5796]">Detail Profile</button>
-            <button @click="activeTabTwo" class="w-1/2 p-4 border-b-2 active:border-b-[#1A5796] active:text-[#1A5796] focus:text-[#1A5796] focus:border-b-[#1A5796]">Ubah Password</button>
+            <button @click="activeTabTwo" class="text-nowrap p-4 border-b-2" :class="{ 'border-b-[#1A5796] text-[#1A5796]': activeTab === 'ubahPassword', 'border-b-2': activeTab !== 'ubahPassword' }">Ubah Password</button>
+
+            <div class="col-span-2 border-b-2"></div>
           </div>
 
-          <div class="grid grid-rows-1 h-[512px] w-[1087px]">
+          <div class="grid grid-rows-1">
             <!-- Tab Detail Profil -->
-            <div v-if="tab === 1" class="m-8 h-5/6" aria-selected="true" role="tab">
+            <div v-if="activeTab === 'detailProfile'" class="h-full m-8" role="tab">
               <!-- Informasi User -->
-              <div class="grid grid-rows-9">
+              <div class="grid grid-rows-5 gap-y-8 text-[#6A6C7A]">
                 <!-- Nama Lengkap -->
                 <div class="grid grid-cols-3">
-                  <p>Nama Lengkap</p>
+                  <p class="font-bold">Nama Lengkap</p>
                   <p>Himacad Rijifen</p>
                 </div>
 
                 <!-- Kelas -->
                 <div class="grid grid-cols-3">
-                  <p>Kelas</p>
+                  <p class="font-bold">Kelas</p>
                   <p>3SI1</p>
                 </div>
 
                 <!-- NIM -->
                 <div class="grid grid-cols-3">
-                  <p>NIM</p>
+                  <p class="font-bold">NIM</p>
                   <p>222112999</p>
                 </div>
 
                 <!-- Email -->
                 <div class="grid grid-cols-3">
-                  <p>Email</p>
+                  <p class="font-bold">Email</p>
                   <p>kelompok1@gmail.com</p>
                 </div>
 
                 <!-- No HP -->
                 <div class="grid grid-cols-3">
-                  <p>No HP</p>
+                  <p class="font-bold">No HP</p>
                   <p>082143658709</p>
                 </div>
               </div>
 
               <!-- Button Edit Profile -->
-              <div class="flex w-full justify-end p-5 h-1/5">
-                <router-link to="/dashboard/edit-profile" class="nav-link bg-[#1A5796] text-center text-[#FFFFFF] w-1/3 rounded-md" :active-class="'active-link'">
-                  <button class="h-full w-full">Edit Profil</button>
+              <div class="flex justify-end">
+                <router-link to="/dashboard/edit-profile" class="w-1/4 nav-link bg-[#1A5796] text-center text-[#FFFFFF] rounded-md mt-6" :active-class="'active-link'">
+                  <button class="p-4 font-semibold">Edit Profil</button>
                 </router-link>
               </div>
             </div>
 
             <!-- Tab Ubah Password -->
-            <div v-if="tab === 2" class="m-8 h-5/6" role="tab">
-              <div class="grid grid-rows-5">
+            <div v-if="activeTab === 'ubahPassword'" class="m-8" role="tab">
+              <div class="grid grid-rows-5 text-[#6A6C7A]">
                 <!-- Password Lama -->
-                <div class="grid grid-cols-3">
+                <div class="grid grid-cols-3 items-center">
                   <p>Password Lama</p>
-                  <input type="text" name="" class="col-span-2 bg-transparent border-[#D9D9D9] input input-bordered w-full" />
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
+                    <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
+                    <div class="grid w-full justify-center object-center">
+                      <img v-if="passwordLamaVisible === false" @click="togglePasswordLamaVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="passwordLamaVisible === true" @click="togglePasswordLamaVisibility" src="../../assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Password Baru -->
-                <div class="grid grid-cols-3">
+                <div class="grid grid-cols-3 items-center">
                   <p>Password Baru</p>
-                  <input type="text" class="col-span-2 bg-transparent border-[#D9D9D9] input input-bordered w-full" />
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
+                    <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
+                    <div class="grid w-full justify-center object-center">
+                      <img v-if="passwordBaruVisible === false" @click="togglePasswordBaruVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="passwordBaruVisible === true" @click="togglePasswordBaruVisibility" src="../../assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Konfirmasi Password Baru -->
-                <div class="grid grid-cols-3">
+                <div class="grid grid-cols-3 items-center">
                   <p>Konfirmasi Password Baru</p>
-                  <input type="text" name="" class="col-span-2 bg-transparent border-[#D9D9D9] input input-bordered w-full" />
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
+                    <input v-model="konfirmasiPassword" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full"/>
+                    <div class="grid w-full justify-center object-center">
+                      <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="../../assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Button Ubah Password -->
-              <div class="flex w-full justify-end h-1/5">
-                <router-link to="" class="nav-link bg-[#1A5796] text-center text-[#FFFFFF] w-1/3 rounded-md" :active-class="'active-link'">
-                  <button class="h-full w-full">Ubah Password</button>
-                </router-link>
+              <div class="flex justify-end">
+                <button @click="$emit('show-success-popup')" class="w-1/3 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">Ubah Password</button>
               </div>
             </div>
           </div>
@@ -107,21 +134,34 @@
       </div>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
 export default {
   data() {
     return {
-      tab: 1,
+      activeTab: "detailProfile",
+      passwordLamaVisible: false,
+      passwordBaruVisible: false,
+      konfirmasiPasswordVisible: false,
     };
   },
   methods: {
+    togglePasswordLamaVisibility() {
+      this.passwordLamaVisible = !this.passwordLamaVisible;
+    },
+    togglePasswordBaruVisibility() {
+      this.passwordBaruVisible = !this.passwordBaruVisible;
+    },
+    toggleKonfirmasiPasswordVisibility() {
+      this.konfirmasiPasswordVisible = !this.konfirmasiPasswordVisible;
+    },
     activeTabOne() {
-      this.tab = 1;
+      this.activeTab = "detailProfile";
     },
     activeTabTwo() {
-      this.tab = 2;
+      this.activeTab = "ubahPassword";
     },
   },
 };

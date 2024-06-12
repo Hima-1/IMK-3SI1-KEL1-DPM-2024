@@ -14,24 +14,30 @@
       <router-link to="/dashboard/anggaran-impolstat" class="nav-link" :active-class="'active-link'">
         <span class="text-[#EBF3F5] text-center font-poppins text-lg">Anggaran Imapolstat</span>
       </router-link>
-      <div class="flex items-center space-x-2">
-        <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[60px] h-[60px] flex-shrink-0" />
-        <div class="text-right">
-          <!-- <span class="text-[#EBF3F5] font-poppins text-lg font-medium">Nama User</span> -->
+      <div class="flex items-center">
+        <div class="flex flex-row text-left">
           <div class="dropdown">
-            <div tabindex="0" role="button" class="text-[#EBF3F5] font-poppins text-lg font-medium m-1 btn">Nama User</div>
-            <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-              <router-link to="/dashboard/my-profile" class="nav-link" :active-class="'active-link'">
-                <li class="text-[#EBF3F5] text-center font-poppins text-lg">My Profile</li>
-              </router-link>
-              <router-link to="" class="nav-link" :active-class="''">
-                <li class="text-[#EBF3F5] text-center font-poppins text-lg">Logout</li>
-              </router-link>
+            <div tabindex="0" role="button" class="text-[#EBF3F5] min-h-fit border-none bg-transparent hover:bg-transparent font-poppins text-lg font-medium m-1 btn">
+              <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[60px] h-[60px] flex-shrink-0" />
+              <h3>Nama User</h3>
+              <img src="../../assets/icon/arrow-down.svg" alt="Dropdown Icon" class="fill-current text-[#EBF3F5]" />
+            </div>
+            <ul class="bg-[#1A5796] grid grid-rows-2 gap-x-2 mt-4 shadow menu dropdown-content rounded-box w-56">
+              <div class="border-b-2 border-[#EBF3F550]">
+                <router-link to="/dashboard/my-profile" class="nav-link p-4 grid grid-cols-4" :active-class="'active-link'">
+                  <img src="../../assets/icon/profile.svg" alt="Profile Icon" class="obejct-center fill-current text-[#EBF3F5]" />
+                  <li class="col-span-3 text-[#EBF3F5] font-poppins text-lg">My Profile</li>
+                </router-link>
+              </div>
+              <div>
+                <router-link to="" class="nav-link p-4 grid grid-cols-4" :active-class="''">
+                  <img src="../../assets/icon/logout.svg" alt="Logout Icon" class="object-center fill-current text-[#EBF3F5]" />
+                  <li class="col-span-3 text-[#EBF3F5] font-poppins text-lg">Logout</li>
+                </router-link>
+              </div>
             </ul>
           </div>
-          <img src="../../assets/icon/arrow-down.svg" alt="Dropdown Icon" class="w-[11px] h-[9px] fill-current text-[#EBF3F5]" />
         </div>
-        
       </div>
     </div>
   </nav>

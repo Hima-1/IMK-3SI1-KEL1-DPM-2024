@@ -1,21 +1,25 @@
 <template>
   <div>
     <section id="myProfile">
-      <Profile/>
+      <Profile @show-success-popup="showSuccessPopup"/>
     </section>
+    <UbahPasswordSuccess v-if="isSuccessPopupVisible" @confirm="hideSuccessPopup"></UbahPasswordSuccess>
   </div>  
 </template>
 
 <script>
 import Profile from "../components/Dashboard/Profile.vue"
+import UbahPasswordSuccess from "../components/Dashboard/UbahPasswordSuccess.vue"
 
 export default {
   name: "MyProfile",
   components: {
-    Profile
+    Profile,
+    UbahPasswordSuccess
   },
   data() {
     return {
+      isSuccessPopupVisible: false,
       tab: 1,
       detail: [
         {
@@ -33,6 +37,12 @@ export default {
     };
   },
   methods: {
+    showSuccessPopup() {
+      this.isSuccessPopupVisible = true;
+    },
+    hideSuccessPopup() {
+      this.isSuccessPopupVisible = false;
+    },
     viewDetails(row) {
       this.currentFolder = row;
       this.showDetail = true;
