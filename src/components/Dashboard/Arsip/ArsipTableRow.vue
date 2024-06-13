@@ -16,7 +16,7 @@
       <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4" style="width: 13.4%;">
         <span>{{ rowData.size }}</span>
       </div>
-      <div class="flex items-center justify-center px-4" style="width: 15.6%;">
+      <div class="flex items-center justify-center px-4 space-x-12" style="width: 15.6%;">
         <img @click="viewDetails" src="@/assets/icon/seen.svg" alt="View Icon" class="w-[2.8125rem] h-[1.9375rem] flex-shrink-0 cursor-pointer"/>
         <img src="@/assets/icon/download.svg" alt="Download Icon" class="ml-4 w-[2.625rem] h-[2.3125rem] flex-shrink-0"/>
       </div>

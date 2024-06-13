@@ -7,7 +7,7 @@
         <span class="text-white text-2xl font-bold font-poppins">DPM</span>
       </div>
 
-      <!-- Navigation Links and Login Button on the Right -->
+      <!-- Navigasi Links and Login Button on the Right -->
       <div class="hidden md:flex items-center space-x-4">
         <router-link to="/" exact class="nav-link text-white text-2xl uppercase font-poppins" :exact-active-class="'active-link'">Home</router-link>
         <router-link to="/berita" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Berita</router-link>

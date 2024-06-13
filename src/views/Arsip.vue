@@ -1,24 +1,11 @@
 <template>
   <div class="bg-[#ebf3f5] p-6 min-h-screen flex justify-center">
     <div class="w-[1660px] flex flex-col">
-      <!-- Folder Icon and Arsip Dokumen Text -->
-      <div class="flex items-center mt-12 space-x-6">
-        <img
-            src="@/assets/icon/folder.svg"
-            alt="Folder Icon"
-            class="w-12 h-12"
-        />
-        <h1 class="text-[#1A5796] font-poppins text-4xl" style="line-height: 60px;">
-          Arsip Dokumen
-        </h1>
-      </div>
-
-      <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 mt-6">
-        <img src="@/assets/icon/return.svg" alt="Return Icon" class="w-[56px] h-[56px] flex-shrink-0 cursor-pointer" @click="toggleDetail"/>
-        <div class="ml-4">
-          <p class="text-[#267DC2] font-poppins text-[30px] font-semibold leading-normal">{{ currentFolder.namaFolder }}</p>
-        </div>
-      </div>
+      <ArsipHeader
+          :showDetail="showDetail"
+          :currentFolder="currentFolder"
+          @toggleDetail="toggleDetail"
+      />
 
       <div class="mt-10 w-full">
         <TableSearch />
@@ -54,14 +41,16 @@
 </template>
 
 <script>
-import TableHeader from "@/components/Dashboard/TableHeader.vue";
-import TableSearch from "@/components/Dashboard/TableSearch.vue";
-import TableRow from "@/components/Dashboard/TableRow.vue";
-import TablePagination from "@/components/Dashboard/TablePagination.vue";
+import ArsipHeader from "@/components/Dashboard/Arsip/Header.vue";
+import TableHeader from "@/components/Dashboard/Arsip/TableHeader.vue";
+import TableSearch from "@/components/Dashboard/Umum/TableSearch.vue";
+import TableRow from "@/components/Dashboard/Arsip/ArsipTableRow.vue";
+import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
 
 export default {
   name: 'AnggaranImpolstat',
   components: {
+    ArsipHeader,
     TableHeader,
     TableSearch,
     TableRow,

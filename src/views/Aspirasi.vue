@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/Dashboard/AspirasiHeader.vue'
-import IntroComponent from '@/components/Dashboard/AspirasiIntro.vue'
-import FormComponent from '@/components/Dashboard/AspirasiForm.vue'
-import AspirasiConfirmationPopup from "@/components/Dashboard/AspirasiConfirmationPopup.vue";
-import AspirasiSuccess from "@/components/Dashboard/AspirasiSuccess.vue";
+import HeaderComponent from '@/components/Dashboard/Aspirasi/AspirasiHeader.vue'
+import IntroComponent from '@/components/Dashboard/Aspirasi/AspirasiIntro.vue'
+import FormComponent from '@/components/Dashboard/Aspirasi/AspirasiForm.vue'
+import AspirasiConfirmationPopup from "@/components/Dashboard/Aspirasi/AspirasiConfirmationPopup.vue";
+import AspirasiSuccess from "@/components/Dashboard/Aspirasi/AspirasiSuccess.vue";
 
 export default {
   name: 'AspirasiIntro',
