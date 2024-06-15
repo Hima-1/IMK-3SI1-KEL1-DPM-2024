@@ -1,49 +1,77 @@
 <template>
-  <div class="wrapper">
-    <h1 class="title">Dana Imapolstat</h1>
-    <div id="chart" class="chart-container">
-      <apexchart type="treemap" :options="chartOptions" :series="series"></apexchart>
+  <div class="flex-shrink-0 w-[63.125rem] h-[48.0625rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center">
+    <h1 class="text-[#1A5796] text-center font-poppins text-[3.125rem] font-bold mb-5">Dana Imapolstat</h1>
+    <div class="w-[34.5625rem] h-[34.5625rem] transform flex-shrink-0">
+      <Pie :data="chartData" :options="chartOptions" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import VueApexCharts from 'vue3-apexcharts'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Pie } from 'vue-chartjs'
+
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 export default defineComponent({
   name: 'GraphDana',
   components: {
-    apexchart: VueApexCharts,
+    Pie
   },
   data() {
     return {
-      series: [
-        {
-          data: [
-            {
-              x: 'Pemasukan',
-              y: 87448825
-            },
-            {
-              x: 'Pengeluaran',
-              y: 3696000
-            }
-          ]
-        }
-      ],
+      chartData: {
+        labels: ['Pemasukan', 'Pengeluaran'],
+        datasets: [
+          {
+            backgroundColor: ['#1a5796', '#267dc2'],
+            data: [87448825, 3696000]
+          }
+        ]
+      },
       chartOptions: {
-        legend: {
-          show: false
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            align: 'start',
+            labels: {
+              color: '#1A5796',
+              textAlign: 'right',
+              font: {
+                family: 'Poppins',
+                size: 25, // equivalent to 1.5625rem
+                style: 'normal',
+                weight: 600,
+                lineHeight: 'normal'
+              }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let label = context.label || '';
+                if (label) {
+                  label += ': ';
+                }
+                if (context.parsed !== null) {
+                  label += `Rp. ${context.parsed.toLocaleString()}`;
+                }
+                return label;
+              }
+            }
+          }
         },
-        chart: {
-          height: 350,
-          type: 'treemap'
-        },
-        title: {
-          text: 'Treemap Dana Imapolstat'
-        },
-        colors: ['#1a5796', '#267dc2']
+        layout: {
+          padding: {
+            left: 10,
+            right: 0,
+            top: 10,
+            bottom: 0
+          }
+        }
       }
     }
   }
@@ -51,32 +79,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.wrapper {
-  width: 63.125rem;
-  height: 48.0625rem;
-  flex-shrink: 0;
-  border-radius: 1.25rem;
-  background: #F6F6F6;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+</style>
 
-.title {
-  color: #1A5796;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.chart-container {
-  width: 34.5625rem;
-  height: 34.5625rem;
-  flex-shrink: 0;
-}
+<style>
+@import 'tailwindcss/tailwind.css';
 </style>

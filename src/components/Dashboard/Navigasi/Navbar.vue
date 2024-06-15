@@ -1,22 +1,42 @@
 <template>
-  <nav :class="['mt-0 w-full h-[5.75rem] flex items-center justify-between bg-[#1A5796] drop-shadow-md p-4', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
-    <router-link to="/">
-      <div class="flex items-center gap-4 ml-16">
+  <nav :class="['bg-[#1A5796] shadow-md p-4 flex items-center justify-between', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
+    <div class="flex items-center gap-4 ml-4 lg:hidden">
+      <button @click="toggleMobileMenu" class="text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex items-center gap-4">
+      <router-link to="/" class="flex items-center gap-4 ml-10">
         <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="w-[3.875rem] h-[3.875rem] shrink-0">
-        <span class="text-white text-[2rem] font-bold" style="font-family: 'Poppins', sans-serif;">SIASPIMAN</span>
+        <span class="lg:hidden xl:inline-block text-white text-2xl font-bold" style="font-family: 'Poppins', sans-serif;">SIASPIMAN</span>
+      </router-link>
+    </div>
+    <div class="flex items-center gap-8 lg:mr-16 lg:ml-auto">
+      <div class="hidden lg:flex gap-8" :class="{'lg:hidden': isMobileMenuOpen}">
+        <router-link to="/dashboard" exact class="no-underline text-[#EBF3F5]" :exact-active-class="'font-bold'">
+          <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Aspirasi</span>
+        </router-link>
+        <router-link to="/dashboard/arsip-dokumen" class="no-underline text-[#EBF3F5]" :active-class="'font-bold'">
+          <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Arsip Dokumen</span>
+        </router-link>
+        <router-link to="/dashboard/anggaran-impolstat" class="no-underline text-[#EBF3F5]" :active-class="'font-bold'">
+          <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Anggaran Imapolstat</span>
+        </router-link>
       </div>
-    </router-link>
-    <div class="flex items-center gap-8 mr-16">
-      <router-link to="/dashboard" exact class="no-underline text-[#EBF3F5]" :exact-active-class="'font-bold'">
+      <UserDropdown />
+    </div>
+    <div v-if="isMobileMenuOpen" class="absolute top-20 left-0 w-full bg-[#1A5796] lg:hidden">
+      <router-link to="/dashboard" exact class="block px-4 py-2 text-[#EBF3F5]" :exact-active-class="'font-bold'" @click="toggleMobileMenu">
         <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Aspirasi</span>
       </router-link>
-      <router-link to="/dashboard/arsip-dokumen" class="no-underline text-[#EBF3F5]" :active-class="'font-bold'">
+      <router-link to="/dashboard/arsip-dokumen" class="block px-4 py-2 text-[#EBF3F5]" :active-class="'font-bold'" @click="toggleMobileMenu">
         <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Arsip Dokumen</span>
       </router-link>
-      <router-link to="/dashboard/anggaran-impolstat" class="no-underline text-[#EBF3F5]" :active-class="'font-bold'">
+      <router-link to="/dashboard/anggaran-impolstat" class="block px-4 py-2 text-[#EBF3F5]" :active-class="'font-bold'" @click="toggleMobileMenu">
         <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Anggaran Imapolstat</span>
       </router-link>
-      <UserDropdown />
     </div>
   </nav>
 </template>
@@ -31,12 +51,16 @@ export default {
   },
   data() {
     return {
-      isScrolled: false
+      isScrolled: false,
+      isMobileMenuOpen: false
     };
   },
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 0;
+    },
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
     }
   },
   mounted() {
@@ -50,4 +74,11 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
+
+/* Custom styles to handle the visibility of the Siaspiman text */
+@media (max-width: 1024px) {
+  .siaspiman-text {
+    display: none;
+  }
+}
 </style>

@@ -4,6 +4,18 @@
       Copyright © 2020 - 2024 Website DPM Politeknik Statistika STIS
     </div>
     <div class="flex space-x-16">
+      <a href="mailto:dpm@stis.ac.id" class="flex items-center space-x-2 text-[#1A5796]">
+        <img src="@/assets/icon/email-dashboard.svg" alt="Mail Icon" class="w-6 h-6">
+        <span class="hidden sm:inline">dpm@stis.ac.id</span>
+      </a>
+      <a href="http://dpm.stis.ac.id" class="flex items-center space-x-2 text-[#1A5796]">
+        <img src="@/assets/icon/web-dashboard.svg" alt="Website Icon" class="w-6 h-6">
+        <span class="hidden sm:inline">dpm.stis.ac.id</span>
+      </a>
+      <a href="https://instagram.com/dpmpolstatstis/" class="flex items-center space-x-2 text-[#1A5796]">
+        <img src="@/assets/icon/instagram-dashboard.svg" alt="Instagram Icon" class="w-6 h-6">
+        <span class="hidden sm:inline">@dpmpolstatstis</span>
+      </a>
     </div>
   </footer>
 </template>

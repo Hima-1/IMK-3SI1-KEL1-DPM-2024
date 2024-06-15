@@ -6,10 +6,10 @@
       <hr class="w-[103.75rem] border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-10 mb-10">
 
       <div class="flex w-full justify-between mb-6">
-        <div class="w-2/8 mr-3 flex flex-col">
+        <div class="w-3/8 mr-2 flex flex-col">
           <JumlahDana />
         </div>
-          <div class="w-5/8 ml-5 flex flex-col">
+          <div class="w-5/8 ml-2 flex flex-col">
             <DanaImapolstat />
         </div>
       </div>
