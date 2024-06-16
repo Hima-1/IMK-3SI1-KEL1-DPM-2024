@@ -1,94 +1,95 @@
 <template>
-  <div class="bg-[#ebf3f5] min-h-fit flex justify-center">
-    <div class="w-[1660px] my-6 mx-20">
+  <div class="bg-[#ebf3f5] min-h-fit justify-center">
+    <div class="grid  lg:grid-rows-1 py-6 mx-8 lg:mx-20">
       <!-- Edit Icon and My Profile Text -->
-      <div class="flex items-center space-x-6 my-4">
-        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-12 h-12 text-[#1A5796]" />
-        <h1 class="text-[#1A5796] font-poppins text-4xl" style="line-height: 60px">My Profile</h1>
+      <div class="row-span-1 grid grid-flow-col grid-cols-8 md:grid-cols-10 items-center my-4">
+        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-12 h-8 md:h-12 text-[#1A5796]" />
+        <h1 class="col-span-9 text-[#1A5796] font-poppins text-[24px] lg:text-4xl" style="line-height: 60px">My Profile</h1>
       </div>
 
       <!-- My Profile -->
-      <div class="grid grid-cols-3 my-8 h-[512px]">
+      <div class="grid grid-cols-1 lg:grid-cols-3 lg:h-[512px]">
         <!-- Foto Profil, Nama, dan NIM -->
-        <div class="grid-flow-col col-span-1 bg-[#FFFFFF] text-[#1A5796] shadow-lg">
-          <div class="grid grid-rows-5">
-            <div class="grid row-span-4 items-center justify-center">
-              <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[300px] object-cover" />
+        <div class="grid-flow-col lg:col-span-1 py-8 lg:py-0 bg-[#FFFFFF] text-[#1A5796] rounded-lg lg:rounded-none shadow-lg">
+          <div class="grid lg:grid-rows-5">
+            <div class="grid lg:row-span-4 items-center justify-center">
+              <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[200px] lg:p-4 lg:w-[300px] object-cover" />
             </div>
             <div class="text-center mt-3">
-              <p class="font-bold text-[30px]">Himacad Rijifen</p>
-              <p class="text-[24px]">2112999</p>
+              <p class="font-bold text-[24px] lg:text-[30px]">Himacad Rijifen</p>
+              <p class="text-[18px] lg:text-[24px]">2112999</p>
             </div>
           </div>
         </div>
 
         <!-- Detail Profil -->
-        <div class="grid col-span-2 bg-[#FFFFFF] text-[#1A5796] text-[20px] ml-16 h-[512px] shadow-lg">
+        <div class="lg:row-span-1 grid lg:col-span-2 bg-[#FFFFFF] text-[#1A5796] my-8 lg:my-0 lg:ml-16 lg:h-[512px] rounded-lg lg:rounded-none shadow-lg">
           <!-- Tab Detail Profil dan Ubah Password -->
-          <div class="grid grid-cols-4 font-semibold text-[#ebf3f5]">
+          <div class="grid grid-cols-2 lg:grid-cols-3 font-semibold text-[#ebf3f5] text-[16px] sm:text-[18px] lg:text-[20px]">
             <button
               @click="activeTabOne"
-              class="text-nowrap p-4 border-b-2"
+              class="text-wrap sm:text-nowrap p-2 py-4 border-b-2"
               :class="{ 'border-b-[#1A5796] text-[#1A5796]': activeTab === 'detailProfile', 'border-b-2': activeTab !== 'detailProfile' }"
               aria-selected="activeTab === 'detailProfile'"
             >
               Detail Profile
             </button>
 
-            <button @click="activeTabTwo" class="text-nowrap p-4 border-b-2" :class="{ 'border-b-[#1A5796] text-[#1A5796]': activeTab === 'ubahPassword', 'border-b-2': activeTab !== 'ubahPassword' }">Ubah Password</button>
+            <button @click="activeTabTwo" class="text-wrap sm:text-nowrap p-2 py-4 border-b-2" :class="{ 'border-b-[#1A5796] text-[#1A5796]': activeTab === 'ubahPassword', 'border-b-2': activeTab !== 'ubahPassword' }">Ubah Password</button>
 
-            <div class="col-span-2 border-b-2"></div>
+            <div class="hidden lg:grid lg:col-span-1 lg:border-b-2"></div>
           </div>
 
-          <div class="grid grid-rows-1">
+          <div class="grid grid-rows-1 text-[15px] lg:text-[20px]">
             <!-- Tab Detail Profil -->
-            <div v-if="activeTab === 'detailProfile'" class="h-full m-8" role="tab">
+            <div v-if="activeTab === 'detailProfile'" class="grid grid-rows-1 m-8" role="tab">
               <!-- Informasi User -->
-              <div class="grid grid-rows-5 gap-y-8 text-[#6A6C7A]">
+              <div class="grid grid-rows-5 gap-y-5 lg:gap-y-8 text-[#6A6C7A]">
                 <!-- Nama Lengkap -->
-                <div class="grid grid-cols-3">
-                  <p class="font-bold">Nama Lengkap</p>
-                  <p>Himacad Rijifen</p>
+                <div class="grid lg:grid-cols-5">
+                  <p class="lg:col-span-2 font-bold">Nama Lengkap</p>
+                  <p class="lg:col-span-3">Himacad Rijifen</p>
                 </div>
 
                 <!-- Kelas -->
-                <div class="grid grid-cols-3">
-                  <p class="font-bold">Kelas</p>
-                  <p>3SI1</p>
+                <div class="grid lg:grid-cols-5">
+                  <p class="lg:col-span-2 font-bold">Kelas</p>
+                  <p class="lg:col-span-3">3SI1</p>
                 </div>
 
                 <!-- NIM -->
-                <div class="grid grid-cols-3">
-                  <p class="font-bold">NIM</p>
-                  <p>222112999</p>
+                <div class="grid lg:grid-cols-5">
+                  <p class="lg:col-span-2 font-bold">NIM</p>
+                  <p class="lg:col-span-3">222112999</p>
                 </div>
 
                 <!-- Email -->
-                <div class="grid grid-cols-3">
-                  <p class="font-bold">Email</p>
-                  <p>kelompok1@gmail.com</p>
+                <div class="grid lg:grid-cols-5">
+                  <p class="lg:col-span-2 font-bold">Email</p>
+                  <p class="lg:col-span-3">kelompok1@gmail.com</p>
                 </div>
 
                 <!-- No HP -->
-                <div class="grid grid-cols-3">
-                  <p class="font-bold">No HP</p>
-                  <p>082143658709</p>
+                <div class="grid lg:grid-cols-5">
+                  <p class="lg:col-span-2 font-bold">No HP</p>
+                  <p class="lg:col-span-3">082143658709</p>
+                </div>
+
+                <!-- Button Edit Profile -->
+                <div class="grid lg:grid-cols-5">
+                  <router-link to="/dashboard/edit-profile" class="w-full nav-link lg:col-start-4 lg:col-end-6 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md" :active-class="'active-link'">
+                    <button class="p-4 font-semibold">Edit Profil</button>
+                  </router-link>
                 </div>
               </div>
 
-              <!-- Button Edit Profile -->
-              <div class="flex justify-end">
-                <router-link to="/dashboard/edit-profile" class="w-1/4 nav-link bg-[#1A5796] text-center text-[#FFFFFF] rounded-md mt-6" :active-class="'active-link'">
-                  <button class="p-4 font-semibold">Edit Profil</button>
-                </router-link>
-              </div>
             </div>
 
             <!-- Tab Ubah Password -->
-            <div v-if="activeTab === 'ubahPassword'" class="m-8" role="tab">
-              <div class="grid grid-rows-5 text-[#6A6C7A]">
+            <div v-if="activeTab === 'ubahPassword'" class="grid grid-rows-1 m-8" role="tab">
+              <div class="grid lg:grid-rows-4 gap-y-5 lg:gap-y-4 text-[#6A6C7A]">
                 <!-- Password Lama -->
-                <div class="grid grid-cols-3 items-center">
+                <div class="grid xl:grid-cols-3 items-center">
                   <p>Password Lama</p>
                   <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
                     <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
@@ -100,7 +101,7 @@
                 </div>
 
                 <!-- Password Baru -->
-                <div class="grid grid-cols-3 items-center">
+                <div class="grid xl:grid-cols-3 items-center">
                   <p>Password Baru</p>
                   <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
                     <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
@@ -112,9 +113,9 @@
                 </div>
 
                 <!-- Konfirmasi Password Baru -->
-                <div class="grid grid-cols-3 items-center">
+                <div class="grid xl:grid-cols-3 items-center">
                   <p>Konfirmasi Password Baru</p>
-                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
+                  <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
                     <input v-model="konfirmasiPassword" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full"/>
                     <div class="grid w-full justify-center object-center">
                       <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
@@ -122,11 +123,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Button Ubah Password -->
-              <div class="flex justify-end">
-                <button @click="$emit('show-success-popup')" class="w-1/3 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">Ubah Password</button>
+                <!-- Button Ubah Password -->
+                <div class="grid lg:grid-cols-5 mt-5 lg:justify-end">
+                  <button @click="$emit('show-success-popup')" class="w-full lg:col-start-3 xl:col-start-4 lg:col-end-6 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">Ubah Password</button>
+                </div>
               </div>
             </div>
           </div>
