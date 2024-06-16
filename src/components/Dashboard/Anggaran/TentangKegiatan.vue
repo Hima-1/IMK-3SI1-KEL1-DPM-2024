@@ -1,11 +1,11 @@
 <template>
-  <div class="w-[70rem] h-[60rem] flex-shrink-0 rounded-md bg-white shadow-md p-0">
-    <div class="w-full h-[5.5625rem] flex-shrink-0 rounded-t-md bg-[rgba(38,125,194,0.18)] flex items-center px-4">
+  <div class="tentang-kegiatan-container w-full max-w-[70rem] h-auto flex-shrink-0 rounded-md bg-white shadow-md p-0">
+    <div class="header w-full h-[5.5625rem] flex-shrink-0 rounded-t-md bg-[rgba(38,125,194,0.18)] flex items-center px-4">
       <h2 class="text-[#1A5796] font-poppins text-3xl font-semibold leading-[2.81025rem]">Tentang Kegiatan</h2>
     </div>
-    <div class="p-4">
+    <div class="content p-4">
       <div class="bg-white p-4 mb-6 flex">
-        <img src="@/assets/icon/deskripsi-kegiatan.svg" alt="Deskripsi Kegiatan Icon" class="w-14 h-14 shrink-0 mr-10">
+        <img src="@/assets/icon/deskripsi-kegiatan.svg" alt="Deskripsi Kegiatan Icon" class="icon w-14 h-14 shrink-0 mr-10">
         <div>
           <h3 class="text-[#5A5C6B] font-poppins text-[1.5625rem] font-semibold leading-[2.34188rem]">Deskripsi Kegiatan</h3>
           <p class="text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
@@ -18,7 +18,7 @@
       </div>
 
       <div class="bg-white p-4 mb-6 flex">
-        <img src="@/assets/icon/tujuan-kegiatan.svg" alt="Tujuan Kegiatan Icon" class="w-14 h-14 shrink-0 mr-10">
+        <img src="@/assets/icon/tujuan-kegiatan.svg" alt="Tujuan Kegiatan Icon" class="icon w-14 h-14 shrink-0 mr-10">
         <div>
           <h3 class="text-[#5A5C6B] font-poppins text-[1.5625rem] font-semibold leading-[2.34188rem]">Tujuan Kegiatan</h3>
           <ul class="list-disc list-inside text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
@@ -30,7 +30,7 @@
       </div>
 
       <div class="bg-white p-4 flex">
-        <img src="@/assets/icon/keterangan.svg" alt="Keterangan Icon" class="w-14 h-14 shrink-0 mr-10">
+        <img src="@/assets/icon/keterangan.svg" alt="Keterangan Icon" class="icon w-14 h-14 shrink-0 mr-10">
         <div>
           <h3 class="text-[#5A5C6B] font-poppins text-[1.5625rem] font-semibold leading-[2.34188rem]">Keterangan</h3>
           <ul class="list-disc list-inside text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
@@ -48,3 +48,64 @@ export default {
   name: 'TentangKegiatan'
 }
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+.header {
+  background: rgba(38, 125, 194, 0.18);
+}
+
+.tentang-kegiatan-container {
+  width: 100%;
+  max-width: 70rem;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.text-title {
+  color: #1A5796;
+  font-family: Poppins, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 2.81025rem;
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@media (max-width: 1024px) {
+  .tentang-kegiatan-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .header {
+    height: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  .icon {
+    width: 1.75rem;
+    height: 2rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  p, ul {
+    font-size: 0.9375rem;
+  }
+}
+</style>

@@ -17,8 +17,8 @@
         <span>{{ rowData.size }}</span>
       </div>
       <div class="flex items-center justify-center px-4 space-x-12" style="width: 15.6%;">
-        <img @click="viewDetails" src="@/assets/icon/seen.svg" alt="View Icon" class="w-[2.8125rem] h-[1.9375rem] flex-shrink-0 cursor-pointer"/>
-        <img src="@/assets/icon/download.svg" alt="Download Icon" class="ml-4 w-[2.625rem] h-[2.3125rem] flex-shrink-0"/>
+        <img @click="viewDetails" src="@/assets/icon/seen.svg" alt="View Icon" class="view-icon w-[2.8125rem] h-[1.9375rem] flex-shrink-0 cursor-pointer"/>
+        <img src="@/assets/icon/download.svg" alt="Download Icon" class="download-icon ml-4 w-[2.625rem] h-[2.3125rem] flex-shrink-0"/>
       </div>
     </div>
   </div>
@@ -46,5 +46,18 @@ export default {
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 965px) {
+  .view-icon, .download-icon {
+    width: 1.5rem;
+    height: auto; /* Keep aspect ratio */
+  }
+}
+
+@media (max-width: 965px) {
+  .font-poppins {
+    font-size: 0.9375rem;
+  }
 }
 </style>

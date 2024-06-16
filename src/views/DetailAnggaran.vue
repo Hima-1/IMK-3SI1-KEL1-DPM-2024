@@ -1,8 +1,8 @@
 <template>
   <div class="bg-[#ebf3f5] p-6 min-h-screen flex justify-center">
-    <div class="w-[1660px] flex flex-col">
-      <Header/>
-      <div class="flex w-full justify-between mb-6">
+    <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
+      <Header />
+      <div class="content-wrapper flex w-full justify-between mb-6">
         <div class="w-2/8 mr-3 flex flex-col">
           <Kegiatan />
         </div>
@@ -12,38 +12,45 @@
       </div>
 
       <!-- Title -->
-      <div class="text-[#267DC2] font-poppins text-[1.875rem] font-bold mb-10 mt-10">
+      <div class="text-[#267DC2] font-poppins text-[1.875rem] font-bold mb-10 mt-10 title-text">
         Detail Anggaran Kegiatan
       </div>
 
-      <div class="w-full">
-        <TableHeader />
-      </div>
+      <!-- Responsive Table Container -->
+      <div class="w-full mt-6 overflow-x-auto">
+        <div class="min-w-[800px]">
+          <!-- Table Header -->
+          <TableHeader />
 
-      <!-- Table Rows -->
-      <div class="w-full flex flex-col">
-        <TableRow
-            v-for="row in rows"
-            :key="row.no"
-            :rowData="row"
-            @viewDetails="viewDetails"
-        />
-        <!-- Subtotal Row -->
-        <div class="flex items-center h-[5.3125rem] bg-[#C8D6DF]">
-          <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 4.25%;">
-            <span>Subtotal</span>
-          </div>
-          <div class="flex items-center justify-between px-4" style="width: 19.75%;"></div>
-          <div class="flex items-center justify-between px-4" style="width: 13.94%;"></div>
-          <div class="flex items-center justify-between px-4" style="width: 9.81%;"></div>
-          <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 17.44%;">
-            <span>{{ subtotal.rincianAnggaran }}</span>
-          </div>
-          <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 16.875%;">
-            <span>{{ subtotal.imapolstat }}</span>
-          </div>
-          <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 16.875%;">
-            <span>{{ subtotal.lainnya }}</span>
+          <!-- No Margin Between Header and Rows -->
+          <div class="border-t border-[#EBF3F5] w-full"></div>
+
+          <!-- Table Rows -->
+          <div class="w-full flex flex-col">
+            <TableRow
+                v-for="row in rows"
+                :key="row.no"
+                :rowData="row"
+                @viewDetails="viewDetails"
+            />
+            <!-- Subtotal Row -->
+            <div class="flex items-center h-[5.3125rem] bg-[#C8D6DF] subtotal-row">
+              <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 4.25%;">
+                <span>Subtotal</span>
+              </div>
+              <div class="flex items-center justify-between px-4" style="width: 19.75%;"></div>
+              <div class="flex items-center justify-between px-4" style="width: 13.94%;"></div>
+              <div class="flex items-center justify-between px-4" style="width: 9.81%;"></div>
+              <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4 subtotal-text" style="width: 17.44%;">
+                <span>{{ subtotal.rincianAnggaran }}</span>
+              </div>
+              <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4 subtotal-text" style="width: 16.875%;">
+                <span>{{ subtotal.imapolstat }}</span>
+              </div>
+              <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4 subtotal-text" style="width: 16.875%;">
+                <span>{{ subtotal.lainnya }}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,5 +136,34 @@ export default {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .content-wrapper > div {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .title-text {
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .subtotal-row {
+    height: auto;
+  }
+  .subtotal-text {
+    font-size: 0.9375rem;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.min-w-[800px] {
+  min-width: 800px; /* Ensure minimum width for table container */
 }
 </style>

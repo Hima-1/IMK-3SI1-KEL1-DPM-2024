@@ -1,11 +1,11 @@
 <template>
   <header class="w-full flex items-center mb-4">
-    <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo">
+    <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="rounded-full mr-4 md:mr-8 w-14 h-14 md:w-24 md:h-24" />
     <div>
-      <p class="welcome-text">
+      <p class="text-primary font-poppins text-lg md:text-2xl font-bold">
         Welcome, <span class="font-extrabold">Himacad Rijifen</span>
       </p>
-      <p class="subtitle">
+      <p class="text-primary italic text-sm md:text-base">
         Sampaikan aspirasimu disini!
       </p>
     </div>
@@ -25,42 +25,22 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-.logo {
-  width: 5.5625rem;
-  height: 5.5625rem;
-  margin-right: 1rem;
-  border-radius: 50%;
-}
-
-.welcome-text {
+.text-primary {
   color: #1A5796;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.1875rem;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.subtitle {
-  color: #1A5796;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.25rem;
-  font-style: italic;
-  font-weight: 300;
-  line-height: normal;
 }
 
 @media (max-width: 640px) {
-  .logo {
-    width: 3.5rem;
-    height: 3.5rem;
+  .w-14 {
+    width: 2.875rem;
+    height: 2.875rem;
   }
 
-  .welcome-text {
-    font-size: 1.5rem;
+  .text-lg {
+    font-size: 1.125rem;
   }
 
-  .subtitle {
-    font-size: 0.875rem;
+  .text-sm {
+    font-size: 0.9375rem;
   }
 }
 </style>

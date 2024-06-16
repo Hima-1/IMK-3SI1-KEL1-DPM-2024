@@ -39,4 +39,10 @@ export default {
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+@media (max-width: 965px) {
+  .font-poppins {
+    font-size: 0.9375rem;
+  }
+}
 </style>

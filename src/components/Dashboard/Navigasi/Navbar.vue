@@ -1,8 +1,8 @@
 <template>
   <nav :class="['bg-[#1A5796] shadow-md p-4 flex items-center justify-between', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
     <div class="flex items-center gap-4 ml-4 lg:hidden">
-      <button @click="toggleMobileMenu" class="text-white focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <button @click="toggleMobileMenu" class="text-white focus:outline-none burger-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -75,10 +75,24 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
 
-/* Custom styles to handle the visibility of the Siaspiman text */
+.burger-icon svg {
+  width: 2rem;
+  height: 1.25rem;
+}
+
 @media (max-width: 1024px) {
+  nav {
+    height: 4.125rem;
+  }
+
   .siaspiman-text {
     display: none;
   }
+}
+
+/* Ensure user icon dimensions are consistent across devices */
+.user-icon {
+  width: 3.1875rem;
+  height: 3.1875rem;
 }
 </style>

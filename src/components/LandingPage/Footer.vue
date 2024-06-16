@@ -14,22 +14,22 @@
     <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8">
       <!-- Email -->
       <div class="flex items-center md:mb-0">
-        <img src="@/assets/icon/email.svg" alt="Email Icon" class="w-[1.125rem] h-[0.93888rem] md:w-[39.144px] md:h-[31.315px] mr-2 md:mr-4 flex-shrink-0" />
-        <a href="mailto:dpm@stis.ac.id" class="text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
+        <img src="@/assets/icon/email.svg" alt="Email Icon" class="icon w-[1.125rem] h-[0.93888rem] md:w-[39.144px] md:h-[31.315px] mr-2 md:mr-4 flex-shrink-0" />
+        <a href="mailto:dpm@stis.ac.id" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
           dpm@stis.ac.id
         </a>
       </div>
       <!-- Website -->
       <div class="flex items-center md:mb-0">
-        <img src="@/assets/icon/internet.svg" alt="Web Icon" class="w-[1.125rem] h-[1.125rem] md:w-[39px] md:h-[39px] mr-2 md:mr-4 flex-shrink-0" />
-        <a href="https://dpm.stis.ac.id" class="text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
+        <img src="@/assets/icon/internet.svg" alt="Web Icon" class="icon w-[1.125rem] h-[1.125rem] md:w-[39px] md:h-[39px] mr-2 md:mr-4 flex-shrink-0" />
+        <a href="https://dpm.stis.ac.id" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
           dpm.stis.ac.id
         </a>
       </div>
       <!-- Instagram -->
       <div class="flex items-center md:mb-0">
-        <img src="@/assets/icon/instagram.svg" alt="IG Icon" class="w-[1.125rem] h-[1.125rem] md:w-[38px] md:h-[38px] mr-2 md:mr-4 flex-shrink-0" />
-        <a href="https://www.instagram.com/dpmpolstatstis/" class="text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
+        <img src="@/assets/icon/instagram.svg" alt="IG Icon" class="icon w-[1.125rem] h-[1.125rem] md:w-[38px] md:h-[38px] mr-2 md:mr-4 flex-shrink-0" />
+        <a href="https://www.instagram.com/dpmpolstatstis/" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
           @dpmpolstatstis
         </a>
       </div>
@@ -50,16 +50,16 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 920px) and (max-width: 920px) {
-  .md\\:flex-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
+@media (min-width: 765px) and (max-width: 850px) {
+  .icon {
+    width: 0.9rem !important;
+    height: 0.9rem !important;
   }
-  .md\\:mb-0 {
-    margin-bottom: 0;
+  .link {
+    font-size: 0.85rem !important;
   }
 }
+
 @media (min-width: 920px) {
   .md\\:flex-row {
     display: flex;

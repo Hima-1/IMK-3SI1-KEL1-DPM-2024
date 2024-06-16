@@ -106,4 +106,21 @@ export default {
 .double-arrow {
   width: 11.94%;
 }
+
+@media (max-width: 640px) {
+  .pagination-wrapper {
+    width: 19.35938rem;
+    height: 2.625rem;
+    flex-shrink: 0;
+  }
+
+  .pagination-text {
+    font-size: 0.9375rem;
+  }
+
+  .single-arrow {
+    width: 2.14644rem;
+    height: 2.625rem;
+  }
+}
 </style>

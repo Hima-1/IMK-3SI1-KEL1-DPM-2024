@@ -2,12 +2,12 @@
   <div class="min-h-screen flex items-center justify-center bg-[#EBF3F5] py-2">
     <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]">
       <HeaderComponent />
-      <div class="px-4 md:px-0">
+      <div class="md:px-0">
         <hr class="w-full border-t-2 border-[#C8D6DF] mb-8">
       </div>
       <div class="flex items-center mb-8">
-        <img src="@/assets/icon/megaphone.svg" alt="Megaphone Icon" class="w-[4vw] h-[4vw] max-w-[58px] max-h-[58px] mr-4">
-        <p class="text-[#1A5796] font-poppins text-[2.5vw] max-text-[40px] font-normal leading-normal">Aspirasi/Sambatan</p>
+        <img src="@/assets/icon/megaphone.svg" alt="Megaphone Icon" class="w-[2.3125rem] h-[2.25rem] max-w-[58px] max-h-[58px] mr-4">
+        <p class="text-[#1A5796] font-poppins text-[1.5rem] max-text-[40px] font-normal leading-normal">Aspirasi/Sambatan</p>
       </div>
       <div class="flex flex-col lg:flex-row lg:space-x-8 space-y-8 lg:space-y-0">
         <IntroComponent />

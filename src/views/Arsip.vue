@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 min-h-screen flex justify-center">
-    <div class="w-[1660px] flex flex-col">
+  <div class="bg-[#ebf3f5] p-6 pt-0 min-h-screen flex justify-center">
+    <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
       <ArsipHeader
           :showDetail="showDetail"
           :currentFolder="currentFolder"
@@ -11,21 +11,24 @@
         <TableSearch />
       </div>
 
-      <div class="w-full mt-6">
-        <TableHeader />
-      </div>
+      <!-- Responsive Table Container -->
+      <div class="w-full mt-6 overflow-x-auto">
+        <div class="min-w-[800px]">
+          <TableHeader />
 
-      <!-- No Margin Between Header and Rows -->
-      <div class="border-t border-[#EBF3F5] w-full"></div>
+          <!-- No Margin Between Header and Rows -->
+          <div class="border-t border-[#EBF3F5] w-full"></div>
 
-      <!-- Table Rows -->
-      <div class="w-full flex flex-col">
-        <TableRow
-            v-for="row in rows"
-            :key="row.no"
-            :rowData="row"
-            @viewDetails="viewDetails"
-        />
+          <!-- Table Rows -->
+          <div class="w-full flex flex-col">
+            <TableRow
+                v-for="row in rows"
+                :key="row.no"
+                :rowData="row"
+                @viewDetails="viewDetails"
+            />
+          </div>
+        </div>
       </div>
 
       <!-- Pagination -->
@@ -48,37 +51,37 @@ import TableRow from "@/components/Dashboard/Arsip/ArsipTableRow.vue";
 import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
 
 export default {
-  name: 'AnggaranImpolstat',
+  name: "AnggaranImpolstat",
   components: {
     ArsipHeader,
     TableHeader,
     TableSearch,
     TableRow,
-    TablePagination
+    TablePagination,
   },
   data() {
     return {
       rows: [
         {
           no: 1,
-          namaFolder: 'AD/ART Imapolstat 21/22',
-          waktu: '2021-12-09 08:16 WIB',
-          tipe: 'PDF Document',
-          size: '223 kb',
+          namaFolder: "AD/ART Imapolstat 21/22",
+          waktu: "2021-12-09 08:16 WIB",
+          tipe: "PDF Document",
+          size: "223 kb",
         },
         {
           no: 2,
-          namaFolder: 'AD/ART Imapolstat 22/23',
-          waktu: '2021-12-09 08:16 WIB',
-          tipe: 'PDF Document',
-          size: '223 kb',
+          namaFolder: "AD/ART Imapolstat 22/23",
+          waktu: "2021-12-09 08:16 WIB",
+          tipe: "PDF Document",
+          size: "223 kb",
         },
       ],
       currentFolder: {},
       showDetail: false,
       currentPage: 1,
-      totalPages: 5
-    }
+      totalPages: 5,
+    };
   },
   methods: {
     viewDetails(row) {
@@ -91,15 +94,75 @@ export default {
     updateCurrentPage(newPage) {
       this.currentPage = newPage;
       // Fetch new data based on newPage if needed
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.min-w-[800px] {
+  min-width: 800px; /* Ensure minimum width for table container */
+}
+
+@media (max-width: 1024px) {
+  .flex-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-container,
+  .show-container {
+    width: 100%;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .show-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-text,
+  .show-text,
+  .documents-text,
+  .number-text {
+    font-size: 0.9375rem;
+  }
+
+  .container {
+    padding: 0 0; /* Ensure padding inside the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%; /* Adjust to full width on smaller screens */
+    max-width: 17.75rem; /* Maximum width constraint */
+    height: 2.1875rem;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+  }
+
+  .number-box {
+    width: 100%; /* Adjust to full width on smaller screens */
+    max-width: 5.3125rem; /* Maximum width constraint */
+    height: 2.1875rem;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+  }
 }
 </style>
