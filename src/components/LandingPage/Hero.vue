@@ -1,20 +1,21 @@
 <template>
-  <section class="bg-[#CAD8E3] h-[93vh] flex items-center">
-    <div class="container mx-auto px-6 text-center md:text-left">
-      <div class="flex flex-col md:flex-row items-center">
+  <section class="bg-[#CAD8E3] w-full h-[75vh] flex items-center">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center lg:gap-20">
         <!-- Logo DPM -->
-        <div class="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
-          <img src="../../assets/images/logo_dpm.webp" alt="Logo DPM" class="w-[481px] h-[480px] rounded shadow-lg" />
+        <div class="flex-shrink-0 lg:mx-10 mb-8 lg:mb-0">
+          <img src="../../assets/images/logo_dpm.webp" alt="Logo DPM"
+            class="w-[262px] h-[262px] lg:w-[481px] lg:h-[481px]" />
         </div>
-        <!-- Text Section -->
-        <div class="md:w-7/12">
-          <h1 class="text-[#1A5796] text-[80px] font-bold font-poppins leading-tight">
+        <!-- Text -->
+        <div class="flex-grow text-center lg:text-left">
+          <h1 class="text-[#1A5796] text-[30px] lg:text-[80px] font-bold font-poppins leading-tight">
             Dewan Perwakilan
           </h1>
-          <h1 class="text-[#1A5796] text-[80px] font-bold font-poppins leading-tight">
+          <h1 class="text-[#1A5796] text-[30px] lg:text-[80px] font-bold font-poppins leading-tight">
             Mahasiswa
           </h1>
-          <p class="mt-4 text-[#1A5796] text-[26px] font-medium font-poppins leading-snug">
+          <p class="mt-4 text-[#1A5796] text-[18px] lg:text-[26px] font-medium font-poppins leading-snug">
             Merupakan organisasi internal kampus Politeknik<br>Statistika STIS yang menjalankan fungsi legislatif
           </p>
         </div>
