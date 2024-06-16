@@ -9,7 +9,7 @@
     </div>
 
     <!-- Button Group for Larger Screens -->
-    <div class="button-group mt-8 hidden md:flex">
+    <div class="button-group mt-8 hidden lg:flex">
       <button v-for="button in buttons" :key="button" class="gallery-button"
         :class="{ active: activeButton === button }" @click="setActiveButton(button)">
         {{ button }}
@@ -17,7 +17,7 @@
     </div>
 
     <!-- Dropdown for Smaller Screens -->
-    <div class="custom-dropdown-container mt-8 md:hidden">
+    <div class="custom-dropdown-container mt-8 lg:hidden">
       <div class="custom-dropdown" @click="toggleDropdown">
         <span>{{ activeButton }}</span>
         <div class="custom-dropdown-icon">
@@ -86,6 +86,7 @@ export default {
   justify-content: center;
   gap: 0;
   margin-bottom: 25px;
+  width: 90%;
 }
 
 .gallery-button {
