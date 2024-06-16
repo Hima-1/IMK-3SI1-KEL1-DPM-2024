@@ -3,8 +3,8 @@
     <div class="py-6">
       <!-- Judul halaman -->
       <div class="flex items-center space-x-6 my-4">
-        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-12 h-12 text-[#1A5796]" />
-        <h1 class="text-[#1A5796] font-poppins text-4xl" style="line-height: 60px">My Profile/Edit</h1>
+        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-8 lg:w-12 h-8 lg:h-12 text-[#1A5796]" />
+        <h1 class="text-[#1A5796] font-poppins text-2xl lg:text-4xl" style="line-height: 60px">My Profile/Edit</h1>
       </div>
 
       <!-- Informasi Teks User -->
@@ -39,13 +39,7 @@
             <p class="font-bold">Provider</p>
             <select class="col-span-4 select select-bordered select-md text-[17px] bg-[#F6F6F6] border-2 border-[#6A6C7A] w-full max-w-xl">
               <option disabled selected>Pilih Provider</option>
-              <option>Axis</option>
-              <option>Indosat</option>
-              <option>Telkomsel</option>
-              <option>Tri</option>
-              <option>XL</option>
-              <option>By.U</option>
-              <option>Smartfren</option>
+              <option v-for="provider in providers">{{ provider }}</option>
             </select>
           </div>
         </div>
@@ -56,14 +50,24 @@
             <img src="../../assets/icon/account.svg" alt="User Photo" class="border-2 border-[#6A6C7A] p-2 w-[300px] object-center object-contain" />
           </div>
 
-            <div class="font-bold">Foto Profil</div>
-            <div class="col-span-2">
-              <input type="file" class="file-input file-input-md file-input-bordered w-full file:bg-[#C8D6DF] file:border-none file:text-[#6A6C7A] bg-[#F6F6F6] border-2 border-[#6A6C7A]"/>
-            </div>
+          <div class="font-bold">Foto Profil</div>
+          <div class="col-span-2">
+            <input type="file" class="file-input file-input-md file-input-bordered w-full file:bg-[#C8D6DF] file:border-none file:text-[#6A6C7A] bg-[#F6F6F6] border-2 border-[#6A6C7A]" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script></script>
+
+<script>
+export default {
+  data() {
+    return {
+      providers: ["Axis", "Indosat", "Telkomsel", "Tri", "XL", "By.U", "Smartfren"],
+    };
+  },
+};
+</script>
+
 <style scoped></style>
