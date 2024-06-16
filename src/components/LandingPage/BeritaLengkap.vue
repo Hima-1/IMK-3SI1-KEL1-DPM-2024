@@ -14,9 +14,9 @@
                     <!-- Tanggal Berita -->
                     <div class="flex items-center mb-2">
                         <!-- Ikon Tanggal -->
-                        <img src="../../assets/icon/time.svg" class="w-[23px] h-[23px] flex-shrink-0 text-[#15649D]" />
+                        <img src="../../assets/icon/bluecalendar.svg" class="w-[25px] h-[24.38px] flex-shrink-0 text-[#15649D]" />
                         <!-- Tanggal -->
-                        <p class="text-[#15649D] font-poppins text-[23px] font-semibold ml-2">12 Januari 2024</p>
+                        <p class="text-[#15649D] font-poppins text-[23px] font-semibold ml-2">KAMIS, 28 SEPTEMBER 2023 08:48 WIB</p>
                     </div>
                     <!-- Isi -->
                     <p class="text-[#000] font-poppins text-[23px] break-words">
@@ -40,16 +40,16 @@
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
                             <img src="../../assets/icon/person.svg"
-                                class="w-[14.183px] h-[15.697px] flex-shrink-0 text-[#15649D]" />
+                                class="w-[22.61px] h-[24px] flex-shrink-0 text-[#15649D]" />
                             <!-- Penulis -->
-                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Nama Penulis</p>
+                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Pororo ajaaah</p>
                         </div>
                         <div class="flex items-center">
                             <!-- Ikon Viewers -->
-                            <img src="../../assets/icon/time.svg"
-                                class="w-[21.938px] h-[21.938px] flex-shrink-0 text-[#15649D]" />
+                            <img src="../../assets/icon/blueeye.svg"
+                                class="w-[28.68px] h-[20.47px] flex-shrink-0 text-[#15649D]" />
                             <!-- Viewers -->
-                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">12 Januari 2024</p>
+                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">4208</p>
                         </div>
                     </div>
                 </div>
