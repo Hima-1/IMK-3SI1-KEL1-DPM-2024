@@ -3,7 +3,7 @@
     <div class="py-6">
       <!-- Judul halaman -->
       <div class="flex items-center space-x-6 my-4">
-        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-12 h-12 text-[#1A5796]" />
+        <img src="../../../assets/icon/edit.svg" alt="Edit Icon" class="w-12 h-12 text-[#1A5796]" />
         <h1 class="text-[#1A5796] font-poppins text-4xl" style="line-height: 60px">My Profile/Edit</h1>
       </div>
 
@@ -53,7 +53,7 @@
         <!-- Foto User -->
         <div class="grid grid-cols-3 gap-4 text-[18px] items-center">
           <div class="col-span-2 col-start-2 col-end-4">
-            <img src="../../assets/icon/account.svg" alt="User Photo" class="border-2 border-[#6A6C7A] p-2 w-[300px] object-center object-contain" />
+            <img src="../../../assets/icon/account.svg" alt="User Photo" class="border-2 border-[#6A6C7A] p-2 w-[300px] object-center object-contain" />
           </div>
 
             <div class="font-bold">Foto Profil</div>

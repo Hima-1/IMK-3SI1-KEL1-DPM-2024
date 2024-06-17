@@ -2,12 +2,12 @@
   <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
     <div class="modal-content">
       <img
-          src="../../assets/images/success.webp"
+          src="../../../assets/images/success.webp"
           alt="Gambar Sukses"
           class="modal-image"
       />
       <h1 class="sukses-text">SUKSES >_<</h1>
-      <p class="password-text">Password berhasil diubah!</p>
+      <p class="profil-text">Profil kamu berhasil diubah!</p>
       <div class="modal-buttons">
         <button @click="confirm" class="confirm-button">Oke</button>
       </div>
@@ -59,7 +59,7 @@ export default {
   margin-top: 1rem;
 }
 
-.password-text {
+.profil-text {
   width: 21.4375rem; /* 343px/16 */
   color: #1a5796;
   text-align: center;

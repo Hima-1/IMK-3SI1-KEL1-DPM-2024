@@ -8,15 +8,20 @@
       <img src="@/assets/icon/arrow-down.svg" alt="Dropdown Icon" class="arrow-down-icon w-[0.6875rem] h-[0.5625rem] text-[#EBF3F5]">
     </div>
     <div v-if="isDropdownVisible" class="drop absolute right-0 mt-5 w-[15.25rem] bg-[#1A5796] shadow-md rounded-md p-4 flex flex-col gap-2" @mouseenter="cancelHideDropdown" @mouseleave="scheduleHideDropdown">
-      <div class="flex items-center gap-4 w-full ml-4">
-        <img src="@/assets/icon/my-profile.svg" alt="My Profile Icon" class="w-[2.0625rem] h-[1.5625rem] shrink-0">
-        <span class="text-[#EBF3F5] text-lg font-normal" style="font-family: 'Poppins', sans-serif;">My Profile</span>
-      </div>
-      <hr class="w-full border-t border-[#EBF3F5]/50">
-      <div class="flex items-center gap-4 w-full ml-4">
-        <img src="@/assets/icon/logout.svg" alt="Logout Icon" class="w-[1.93206rem] h-[1.86231rem] shrink-0">
-        <span class="text-[#EBF3F5] text-lg font-normal" style="font-family: 'Poppins', sans-serif;">Logout</span>
-      </div>
+      <ul class="bg-[#1A5796]">
+        <div class="border-b-2 border-[#EBF3F550]">
+          <router-link to="/dashboard/my-profile" class="nav-link p-4 grid grid-cols-4" :active-class="'active-link'">
+            <img src="@/assets/icon/profile.svg" alt="Profile Icon" class="obejct-center fill-current text-[#EBF3F5]" />
+            <li class="col-span-3 text-[#EBF3F5] font-poppins text-lg">My Profile</li>
+          </router-link>
+        </div>
+        <div>
+          <router-link to="" class="nav-link p-4 grid grid-cols-4" :active-class="''">
+            <img src="@/assets/icon/logout.svg" alt="Logout Icon" class="object-center fill-current text-[#EBF3F5]" />
+            <li class="col-span-3 text-[#EBF3F5] font-poppins text-lg">Logout</li>
+          </router-link>
+        </div>
+      </ul>
     </div>
   </div>
 </template>
