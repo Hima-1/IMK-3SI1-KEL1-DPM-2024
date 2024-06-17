@@ -3,7 +3,7 @@
     <div class="grid  lg:grid-rows-1 py-6 mx-8 lg:mx-20">
       <!-- Edit Icon and My Profile Text -->
       <div class="row-span-1 grid grid-flow-col grid-cols-8 md:grid-cols-10 items-center my-4">
-        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-12 h-8 md:h-12 text-[#1A5796]" />
+        <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-12 h-8 md:h-12 text-[#1A5796]" />
         <h1 class="col-span-9 text-[#1A5796] font-poppins text-[24px] lg:text-4xl" style="line-height: 60px">My Profile</h1>
       </div>
 
@@ -13,7 +13,7 @@
         <div class="grid-flow-col lg:col-span-1 py-8 lg:py-0 bg-[#FFFFFF] text-[#1A5796] rounded-lg lg:rounded-none shadow-lg">
           <div class="grid lg:grid-rows-5">
             <div class="grid lg:row-span-4 items-center justify-center">
-              <img src="../../assets/icon/account.svg" alt="User Photo" class="w-[200px] lg:p-4 lg:w-[300px] object-cover" />
+              <img src="@/assets/icon/account.svg" alt="User Photo" class="w-[200px] lg:p-4 lg:w-[300px] object-cover" />
             </div>
             <div class="text-center mt-3">
               <p class="font-bold text-[24px] lg:text-[30px]">Himacad Rijifen</p>
@@ -94,8 +94,8 @@
                   <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
                     <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
                     <div class="grid w-full justify-center object-center">
-                      <img v-if="passwordLamaVisible === false" @click="togglePasswordLamaVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
-                      <img v-if="passwordLamaVisible === true" @click="togglePasswordLamaVisibility" src="../../assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="passwordLamaVisible === false" @click="togglePasswordLamaVisibility" src="@/assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="passwordLamaVisible === true" @click="togglePasswordLamaVisibility" src="@/assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
                 </div>
@@ -106,8 +106,8 @@
                   <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
                     <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
                     <div class="grid w-full justify-center object-center">
-                      <img v-if="passwordBaruVisible === false" @click="togglePasswordBaruVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
-                      <img v-if="passwordBaruVisible === true" @click="togglePasswordBaruVisibility" src="../../assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="passwordBaruVisible === false" @click="togglePasswordBaruVisibility" src="@/assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="passwordBaruVisible === true" @click="togglePasswordBaruVisibility" src="@/assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
                 </div>
@@ -118,8 +118,8 @@
                   <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
                     <input v-model="konfirmasiPassword" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full"/>
                     <div class="grid w-full justify-center object-center">
-                      <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="../../assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
-                      <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="../../assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/invisible.svg" class="h-10 p-2 cursor-pointer" alt="Toggle Password Visibility" />
+                      <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/visible.svg" class="h-9 p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
                 </div>

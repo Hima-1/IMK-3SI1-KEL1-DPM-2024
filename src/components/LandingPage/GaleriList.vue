@@ -23,7 +23,7 @@
     <div class="gallery-grid mt-8 rounded-[44px]">
     <div class="foto-dummy rounded-[44px]">
     <div class="image-container rounded-[44px]">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -31,7 +31,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 2" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 2" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 2</span>
           </div>
@@ -39,7 +39,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -55,7 +55,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -63,7 +63,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -71,7 +71,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -79,7 +79,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -87,7 +87,7 @@
       </div>
       <div class="foto-dummy">
         <div class="image-container">
-          <img src="../../assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
+          <img src="@/assets/images/galeri.webp" alt="Foto 1" class="image rounded-[13px]">
           <div class="overlay">
             <span class="text">Tulisan di Tengah 1</span>
           </div>
@@ -129,7 +129,7 @@ body {
 } 
 
 .galeri {
-  background-image: url('../../assets/icon/visi_misi.svg');
+  background-image: url('@/assets/icon/visi_misi.svg');
   margin-bottom: 25px;
 }
 

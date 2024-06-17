@@ -42,6 +42,6 @@ export default {
 
 <style scoped>
 .judulpage {
-  background-image: url('../assets/icon/visi_misi.svg');
+  background-image: url('@/sets/icon/visi_misi.svg');
 }
 </style>

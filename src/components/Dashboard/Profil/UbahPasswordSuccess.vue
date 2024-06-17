@@ -2,7 +2,7 @@
   <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
     <div class="modal-content">
       <img
-          src="../../../assets/images/success.webp"
+          src="@/assets/images/success.webp"
           alt="Gambar Sukses"
           class="modal-image"
       />

@@ -6,7 +6,7 @@
                 <!-- Image -->
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
                     <!-- Image container -->
-                    <img src="../../assets/images/berita.webp"
+                    <img src="@/assets/images/berita.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <!-- Content -->
@@ -14,7 +14,7 @@
                     <!-- Tanggal Berita -->
                     <div class="flex items-center mb-2">
                         <!-- Ikon Tanggal -->
-                        <img src="../../assets/icon/time.svg" class="w-[23px] h-[23px] flex-shrink-0 text-[#15649D]" />
+                        <img src="@/assets/icon/time.svg" class="w-[23px] h-[23px] flex-shrink-0 text-[#15649D]" />
                         <!-- Tanggal Berita -->
                         <p class="text-[#15649D] font-poppins text-[23px] font-semibold ml-2">12 Januari 2024</p>
                     </div>
@@ -39,14 +39,14 @@
                     <div class="flex items-center justify-between p-4">
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
-                            <img src="../../assets/icon/person.svg"
+                            <img src="@/assets/icon/person.svg"
                                 class="w-[14.183px] h-[15.697px] flex-shrink-0 text-[#15649D]" />
                             <!-- Nama Penulis -->
                             <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Nama Penulis</p>
                         </div>
                         <div class="flex items-center">
                             <!-- Ikon Tanggal -->
-                            <img src="../../assets/icon/time.svg"
+                            <img src="@/assets/icon/time.svg"
                                 class="w-[21.938px] h-[21.938px] flex-shrink-0 text-[#15649D]" />
                             <!-- Tanggal Berita -->
                             <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">12 Januari 2024</p>

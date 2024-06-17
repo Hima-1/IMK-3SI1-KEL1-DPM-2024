@@ -3,7 +3,7 @@
     <div class="py-6">
       <!-- Judul halaman -->
       <div class="flex items-center space-x-6 my-4">
-        <img src="../../assets/icon/edit.svg" alt="Edit Icon" class="w-8 lg:w-12 h-8 lg:h-12 text-[#1A5796]" />
+        <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 lg:w-12 h-8 lg:h-12 text-[#1A5796]" />
         <h1 class="text-[#1A5796] font-poppins text-2xl lg:text-4xl" style="line-height: 60px">My Profile/Edit</h1>
       </div>
 
@@ -12,9 +12,9 @@
         <!-- Foto Device Small -->
         <div class="grid lg:hidden justify-center">
           <div class="relative w-fit mb-6">
-            <img src="../../assets/icon/account.svg" alt="User Photo" class="border-4 border-[#6A6C7A] rounded-full w-[200px] md:w-[250px] h-[200px] md:h-[250px] object-center object-cover" />
+            <img src="@/assets/icon/account.svg" alt="User Photo" class="border-4 border-[#6A6C7A] rounded-full w-[200px] md:w-[250px] h-[200px] md:h-[250px] object-center object-cover" />
             <div class="absolute bottom-1 md:bottom-4 right-1 bg-[#1A5796] rounded-full p-5 w-fit">
-              <img src="../../assets/icon/camera.svg" alt="User Photo" class="scale-150" />
+              <img src="@/assets/icon/camera.svg" alt="User Photo" class="scale-150" />
             </div>
           </div>
         </div>
@@ -77,9 +77,9 @@
         <!-- Foto User -->
         <div class="hidden lg:grid grid-cols-4 gap-y-5 text-[18px] items-center">
           <div class="col-span-3 lg:max-xl:col-span-4 col-start-2 grid justify-center lg:relative lg:max-xl:mb-4">
-            <img src="../../assets/icon/account.svg" alt="User Photo" class="border-2 lg:max-xl:border-4 lg:rounded-full xl:rounded-none border-[#6A6C7A] lg:p-0 xl:p-2 w-[300px] object-center object-cover" />
+            <img src="@/assets/icon/account.svg" alt="User Photo" class="border-2 lg:max-xl:border-4 lg:rounded-full xl:rounded-none border-[#6A6C7A] lg:p-0 xl:p-2 w-[300px] object-center object-cover" />
             <div class="hidden lg:max-xl:block absolute bottom-3 right-5 bg-[#1A5796] rounded-full p-5 w-fit">
-              <img src="../../assets/icon/camera.svg" alt="User Photo" class="scale-150" />
+              <img src="@/assets/icon/camera.svg" alt="User Photo" class="scale-150" />
             </div>
           </div>
 

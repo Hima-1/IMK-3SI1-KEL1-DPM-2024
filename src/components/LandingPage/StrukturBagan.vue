@@ -7,8 +7,8 @@
         </h1>
       </div>
       <div class="mt-8 p-4">
-        <img src="../../assets/images/struktur_bagan.webp" class="hidden sm:block" alt="">
-        <img src="../../assets/images/struktur_bagan_responsive.webp" class="md:hidden" alt="">
+        <img src="@/assets/images/struktur_bagan.webp" class="hidden sm:block" alt="">
+        <img src="@/assets/images/struktur_bagan_responsive.webp" class="md:hidden" alt="">
       </div>
     </div>
   </div>
@@ -22,6 +22,6 @@ export default {
 
 <style scoped>
 .struktur-bagan {
-  background-image: url('../../assets/icon/visi_misi.svg');
+  background-image: url('@/assets/icon/visi_misi.svg');
 }
 </style>
