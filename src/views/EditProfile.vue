@@ -8,7 +8,7 @@
         <InfoRekening />
       </section>
       <section class="grid grid-cols-8 mb-8">
-        <button @click="showSuccessPopup" class="col-start-6 col-end-9 p-2 rounded-lg bg-[#1A5796] font-semibold text-[#F6F6F6]">Simpan</button>
+        <button @click="showSuccessPopup" class="col-start-6 md:col-start-8 col-end-9 p-2 rounded-lg bg-[#1A5796] font-semibold text-[#F6F6F6]">Simpan</button>
       </section>
       <EditProfileSuccess v-if="isSuccessPopupVisible" @confirm="hideSuccessPopup"></EditProfileSuccess>
     </div>
