@@ -7,10 +7,13 @@ import Galeri from '../views/Galeri.vue';
 import Struktur from '../views/Struktur.vue';
 import LoginPage from '../views/Login.vue';
 import Aspirasi from '../views/Aspirasi.vue';
-import ArsipDokumen from '../views/ArsipDokumen.vue';
-import AnggaranImpolstat from '../views/AnggaranImpolstat.vue';
+
+import ArsipDokumen from '../views/Arsip.vue';
+import AnggaranImpolstat from '../views/Anggaran.vue';
+import DetailAnggaran from '@/views/DetailAnggaran.vue';
 import MyProfile from '../views/MyProfile.vue';
 import EditProfile from '../views/EditProfile.vue';
+
 
 const routes = [
     {
@@ -31,6 +34,7 @@ const routes = [
             { path: '', name: 'Aspirasi', component: Aspirasi },
             { path: 'arsip-dokumen', name: 'ArsipDokumen', component: ArsipDokumen },
             { path: 'anggaran-impolstat', name: 'AnggaranImpolstat', component: AnggaranImpolstat },
+            { path: 'anggaran-impolstat/:id', name: 'DetailAnggaran', component: DetailAnggaran, props: true },
             { path: 'my-profile', name: 'MyProfile', component: MyProfile },
             { path: 'edit-profile', name: 'EditProfile', component: EditProfile },
         ],

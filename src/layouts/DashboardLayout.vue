@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Navbar from "../components/Dashboard/Navbar.vue";
+import Navbar from "../components/Dashboard/Navigasi/Navbar.vue";
 import ScrollToTop from "../components/LandingPage/ScrollToTop.vue";
-import Footer from "../components/Dashboard/Footer.vue";
+import Footer from "../components/Dashboard/Navigasi/Footer.vue";
 
 export default {
   name: 'DashboardLayout',

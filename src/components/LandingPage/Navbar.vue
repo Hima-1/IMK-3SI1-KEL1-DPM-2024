@@ -1,36 +1,36 @@
 <template>
-  <nav :class="['bg-[#1a5796] shadow-custom w-full z-50', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+  <nav :class="['bg-[#1a5796] shadow-lg w-full z-50', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6 md:py-4 md:px-6">
       <!-- Logo and Title on the Left -->
       <div class="flex items-center">
-        <img src="../../assets/images/logo_dpm.webp" alt="Logo" class="w-12 h-12 flex-shrink-0 rounded-full mr-4" />
-        <span class="text-white text-2xl font-bold font-poppins">DPM</span>
+        <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo mr-4" />
+        <span class="text-white text-2xl font-bold hidden md:block dpm-text">DPM</span>
       </div>
 
       <!-- Navigation Links and Login Button on the Right -->
       <div class="hidden md:flex items-center space-x-4">
-        <router-link to="/" exact class="nav-link text-white text-2xl uppercase font-poppins" :exact-active-class="'active-link'">Home</router-link>
-        <router-link to="/berita" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Berita</router-link>
-        <router-link to="/galeri" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Galeri</router-link>
-        <router-link to="/struktur" class="nav-link text-white text-2xl font-medium font-poppins" :active-class="'active-link'">Struktur</router-link>
-        <router-link to="/login" class="nav-link text-white text-2xl uppercase border-2 border-white rounded-full px-4 py-1 font-bold font-poppins" :active-class="'active-link'">Log In</router-link>
+        <router-link to="/" exact class="btn btn-ghost no-underline text-white text-2xl uppercase" :exact-active-class="'active-link'">Home</router-link>
+        <router-link to="/berita" class="btn btn-ghost no-underline text-white text-2xl font-medium" :active-class="'active-link'">Berita</router-link>
+        <router-link to="/galeri" class="btn btn-ghost no-underline text-white text-2xl font-medium" :active-class="'active-link'">Galeri</router-link>
+        <router-link to="/struktur" class="btn btn-ghost no-underline text-white text-2xl font-medium" :active-class="'active-link'">Struktur</router-link>
+        <router-link to="/login" class="btn btn-outline text-white text-2xl uppercase border-2 border-white rounded-full px-4 py-1 font-bold" :active-class="'active-link'">Log In</router-link>
       </div>
 
       <!-- Mobile Menu Button -->
-      <div class="md:hidden">
+      <div class="md:hidden flex items-center">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
-          <img src="../../assets/icon/nama_sementara.svg" alt="Menu Icon" class="w-6 h-6" />
+          <img src="@/assets/icon/hamburger.svg" alt="Menu Icon" class="burger-icon" />
         </button>
       </div>
     </div>
 
     <!-- Mobile Menu -->
     <div v-if="isMobileMenuOpen" class="md:hidden">
-      <router-link to="/" exact class="block nav-link text-white text-2xl uppercase font-poppins py-2 px-4" :exact-active-class="'active-link'">Home</router-link>
-      <router-link to="/berita" class="block nav-link text-white text-2xl font-medium font-poppins py-2 px-4" :active-class="'active-link'">Berita</router-link>
-      <router-link to="/galeri" class="block nav-link text-white text-2xl font-medium font-poppins py-2 px-4" :active-class="'active-link'">Galeri</router-link>
-      <router-link to="/struktur" class="block nav-link text-white text-2xl font-medium font-poppins py-2 px-4" :active-class="'active-link'">Struktur</router-link>
-      <router-link to="/login" class="block nav-link text-white text-2xl uppercase border-2 border-white rounded-full px-4 py-1 font-bold font-poppins mx-4 my-2" :active-class="'active-link'">Log In</router-link>
+      <router-link to="/" exact class="block btn btn-ghost no-underline text-white text-2xl font-medium py-2 px-4" :exact-active-class="'active-link'">HOME</router-link>
+      <router-link to="/berita" class="block btn btn-ghost no-underline text-white text-2xl font-medium py-2 px-4" :active-class="'active-link'">Berita</router-link>
+      <router-link to="/galeri" class="block btn btn-ghost no-underline text-white text-2xl font-medium py-2 px-4" :active-class="'active-link'">Galeri</router-link>
+      <router-link to="/struktur" class="block btn btn-ghost no-underline text-white text-2xl font-medium py-2 px-4" :active-class="'active-link'">Struktur</router-link>
+      <router-link to="/login" class="block btn btn-outline text-white text-2xl uppercase border-2 border-white rounded-full px-4 py-1 font-bold mx-4 my-2" :active-class="'active-link'">Log In</router-link>
     </div>
   </nav>
 </template>
@@ -62,17 +62,31 @@ export default {
 </script>
 
 <style scoped>
-.nav-link:hover {
-  color: #CEDBE5;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+
+.burger-icon {
+  width: 2.5rem;
+  height: 1.56481rem;
+  flex-shrink: 0;
 }
 
 .active-link {
   font-weight: bold;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
+@media (max-width: 1024px) {
+  .dpm-text {
+    display: none;
+  }
 }
 </style>
