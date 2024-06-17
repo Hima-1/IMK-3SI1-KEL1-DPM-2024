@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['bg-[#1A5796] shadow-md p-4 flex items-center justify-between', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
+  <nav :class="['bg-[#1A5796] z-10 shadow-md p-4  flex items-center justify-between', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
     <div class="flex items-center gap-4 ml-4 lg:hidden">
       <button @click="toggleMobileMenu" class="text-white focus:outline-none burger-icon">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -27,14 +27,14 @@
       </div>
       <UserDropdown />
     </div>
-    <div v-if="isMobileMenuOpen" class="absolute top-20 left-0 w-full bg-[#1A5796] lg:hidden">
-      <router-link to="/dashboard" exact class="block px-4 py-2 text-[#EBF3F5]" :exact-active-class="'font-bold'" @click="toggleMobileMenu">
+    <div v-if="isMobileMenuOpen" class="absolute top-16 left-0 w-full bg-[#1A5796] lg:hidden">
+      <router-link to="/dashboard" exact class="block px-4 py-2 text-[#EBF3F5] border-b border-white" :exact-active-class="'font-bold'" @click="toggleMobileMenu">
         <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Aspirasi</span>
       </router-link>
-      <router-link to="/dashboard/arsip-dokumen" class="block px-4 py-2 text-[#EBF3F5]" :active-class="'font-bold'" @click="toggleMobileMenu">
+      <router-link to="/dashboard/arsip-dokumen" class="block px-4 py-2 text-[#EBF3F5] border-b border-white" :active-class="'font-bold'" @click="toggleMobileMenu">
         <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Arsip Dokumen</span>
       </router-link>
-      <router-link to="/dashboard/anggaran-impolstat" class="block px-4 py-2 text-[#EBF3F5]" :active-class="'font-bold'" @click="toggleMobileMenu">
+      <router-link to="/dashboard/anggaran-impolstat" class="block px-4 py-2 text-[#EBF3F5] border-b border-white" :active-class="'font-bold'" @click="toggleMobileMenu">
         <span class="text-[#EBF3F5] text-center text-lg" style="font-family: 'Poppins', sans-serif;">Anggaran Imapolstat</span>
       </router-link>
     </div>
@@ -87,6 +87,12 @@ export default {
 
   .siaspiman-text {
     display: none;
+  }
+}
+
+@media (max-width: 756px) {
+  .border-white {
+    border-color: #fff !important;
   }
 }
 

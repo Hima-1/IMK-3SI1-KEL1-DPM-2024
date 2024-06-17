@@ -1,16 +1,16 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 min-h-screen flex justify-center">
-    <div class="w-[1660px] flex flex-col">
+  <div class="bg-[#ebf3f5] p-6 pt-0 min-h-screen flex justify-center">
+    <div class="w-full max-w-full md:max-w-[1660px] flex flex-col">
       <AnggaranHeader />
 
-      <hr class="w-[103.75rem] border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-10 mb-10">
+      <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-10 mb-10 w-full">
 
-      <div class="flex w-full justify-between mb-6">
-        <div class="w-3/8 mr-2 flex flex-col">
+      <div class="grid grid-cols-8 md:grid-cols-10 gap-6 mb-6">
+        <div class="col-span-8 md:col-span-3 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
           <JumlahDana />
         </div>
-          <div class="w-5/8 ml-2 flex flex-col">
-            <DanaImapolstat />
+        <div class="col-span-8 md:col-span-7 flex flex-col dana-imapolstat-container">
+          <DanaImapolstat />
         </div>
       </div>
 
@@ -18,19 +18,24 @@
         <TableSearch />
       </div>
 
-      <div class="w-full mt-6">
-        <TableHeader />
-      </div>
+      <!-- Responsive Table Container -->
+      <div class="w-full mt-6 overflow-x-auto">
+        <div class="min-w-[800px]">
+          <TableHeader />
 
-      <div class="border-t border-[#EBF3F5] w-full"></div>
+          <!-- No Margin Between Header and Rows -->
+          <div class="border-t border-[#EBF3F5] w-full"></div>
 
-      <div class="w-full flex flex-col">
-        <TableRow
-            v-for="row in rows"
-            :key="row.no"
-            :rowData="row"
-            @view-details="navigateToDetail"
-        />
+          <!-- Table Rows -->
+          <div class="w-full flex flex-col">
+            <TableRow
+                v-for="row in rows"
+                :key="row.no"
+                :rowData="row"
+                @view-details="navigateToDetail"
+            />
+          </div>
+        </div>
       </div>
 
       <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6">
@@ -79,7 +84,7 @@ export default {
     return {
       rows: [
         {
-          id: 1,  // Ensure the id field is present
+          id: 1,
           no: 1,
           namaFolder: 'AD/ART Imapolstat 21/22',
           waktu: '2021-12-09 08:16 WIB',
@@ -87,7 +92,7 @@ export default {
           size: '223 kb',
         },
         {
-          id: 2,  // Ensure the id field is present
+          id: 2,
           no: 2,
           namaFolder: 'AD/ART Imapolstat 22/23',
           waktu: '2021-12-09 08:16 WIB',
@@ -105,7 +110,11 @@ export default {
     navigateToDetail(id) {
       this.currentFolder = this.rows.find(row => row.id === id);
       this.showDetail = true;
-      this.$router.push({name: 'DetailAnggaran', params: {id}});
+      this.$router.push({ name: 'DetailAnggaran', params: { id } }).catch(err => {
+        if (err.name !== 'NavigationDuplicated') {
+          throw err;
+        }
+      });
     },
     toggleDetail() {
       this.showDetail = !this.showDetail;
@@ -123,5 +132,83 @@ export default {
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+.min-w-[800px] {
+  min-width: 800px; /* Ensure minimum width for table container */
+}
+
+@media (max-width: 1024px) {
+  .flex-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-container,
+  .show-container {
+    width: 100%;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .show-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .md\\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
+  .dana-imapolstat-container {
+    grid-column: span 8 / span 8;
+  }
+
+  .jumlah-dana-container {
+    grid-column: span 8 / span 8;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-text,
+  .show-text,
+  .documents-text,
+  .number-text {
+    font-size: 0.9375rem;
+  }
+
+  .container {
+    padding: 0 0; /* Ensure padding inside the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%; /* Adjust to full width on smaller screens */
+    max-width: 17.75rem; /* Maximum width constraint */
+    height: 2.1875rem;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+  }
+
+  .number-box {
+    width: 100%; /* Adjust to full width on smaller screens */
+    max-width: 5.3125rem; /* Maximum width constraint */
+    height: 2.1875rem;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+  }
 }
 </style>

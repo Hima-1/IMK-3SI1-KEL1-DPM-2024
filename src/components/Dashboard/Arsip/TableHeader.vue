@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[4.875rem] flex bg-[#c8d6df] border-b border-[#EBF3F5]">
+  <div class="w-full min-w-[90rem] h-[4.875rem] flex bg-[#c8d6df] border-b border-[#EBF3F5]">
     <div class="flex items-center justify-between text-[#1A5796] font-poppins text-[1.4375rem] font-medium border-r border-[#EBF3F5] px-4" style="width: 7.17%;">
       <span>No</span>
       <img src="@/assets/icon/sort.svg" alt="Sort Icon" class="w-5 h-4 flex-shrink-0"/>
@@ -40,7 +40,7 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 965px) {
+@media (max-width: 768px) {
   .font-poppins {
     font-size: 0.9375rem;
   }

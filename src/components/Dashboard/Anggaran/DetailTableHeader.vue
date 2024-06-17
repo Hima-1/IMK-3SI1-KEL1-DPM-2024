@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[6.06rem] flex bg-[#1a5796] border-b border-[#EBF3F5]">
+  <div class="w-full min-w-[90rem] h-[6.06rem] flex bg-[#1a5796] border-b border-[#EBF3F5]">
     <div class="flex items-center justify-center text-[#EBF3F5] font-poppins text-[1.4375rem] font-medium border-r border-[#EBF3F5] px-4 header-text" style="width: 4.25%;">
       <span>No</span>
     </div>

@@ -78,6 +78,32 @@ export default {
   height: 100%;
 }
 
+@media (min-width: 1440px) {
+  .kegiatan-container {
+    width: 29.8125rem;
+    height: 43.5rem;
+    padding: 3.19rem;
+  }
+
+  .icon-container {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  h1 {
+    font-size: 1.5625rem;
+  }
+
+  p {
+    font-size: 1.4375rem;
+  }
+
+  .flex.items-start.mb-4,
+  .flex.items-start.mb-5 {
+    margin-bottom: 3.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .icon-container {
     width: 1.75rem;

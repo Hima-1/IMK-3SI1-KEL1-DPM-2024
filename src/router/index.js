@@ -30,7 +30,7 @@ const routes = [
             { path: '', name: 'Aspirasi', component: Aspirasi },
             { path: 'arsip-dokumen', name: 'ArsipDokumen', component: ArsipDokumen },
             { path: 'anggaran-impolstat', name: 'AnggaranImpolstat', component: AnggaranImpolstat },
-            { path: 'anggaran-impolstat/:id', name: 'DetailAnggaran', component: DetailAnggaran },
+            { path: 'anggaran-impolstat/:id', name: 'DetailAnggaran', component: DetailAnggaran, props: true },
         ],
     },
 ];

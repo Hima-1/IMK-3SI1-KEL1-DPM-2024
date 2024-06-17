@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-col items-center w-[27.75rem] h-[31.6875rem] flex-shrink-0 rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
-    <img src="@/assets/icon/jumlah-dana.svg" alt="Icon" class="mt-10 w-[17.90381rem] h-[13.87494rem] flex-shrink-0">
-    <div class="w-[20.25rem] text-center">
-      <h2 class="mt-5 text-[#1A5796] text-[1.5625rem] font-poppins font-semibold leading-[2.34188rem]">Jumlah Dana</h2>
-      <h3 class="mt-1 text-[#1A5796] text-[1.5625rem] font-poppins font-semibold leading-[2.34188rem]">Imapolstat saat ini:</h3>
-      <p class="mt-5 text-[#1A5796] text-[3.125rem] font-poppins font-bold leading-normal">Rp83.752.825</p>
+  <div class="wrapper flex flex-col items-center justify-center rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+    <img src="@/assets/icon/jumlah-dana.svg" alt="Icon" class="icon">
+    <div class="text-center content">
+      <h2 class="title">Jumlah Dana</h2>
+      <h3 class="title subtitle">Imapolstat saat ini:</h3>
+      <p class="amount">Rp83.752.825</p>
     </div>
   </div>
 </template>
@@ -14,3 +14,98 @@ export default {
   name: 'JumlahDana'
 }
 </script>
+
+<style scoped>
+.wrapper {
+  width: 100%;
+  max-width: 27.75rem;
+  height: 31.6875rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 17.90381rem;
+  height: 13.87494rem;
+}
+
+.title {
+  color: #1A5796;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5625rem;
+  line-height: 2.34188rem;
+  margin-top: 0.5rem;
+}
+
+.subtitle {
+  margin-top: 0.25rem; /* Adjusted for smaller spacing */
+}
+
+.amount {
+  color: #1A5796;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3.125rem;
+  line-height: normal;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px){
+  .amount{
+    font-size: 2rem;
+  }
+  .title{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0.625rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .icon {
+    width: 7.26538rem;
+    height: 5.6875rem;
+    margin-right: 1rem;
+  }
+
+  .title {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 0.9375rem;
+    margin: 0;
+    margin-top: 0.25rem; /* Adjusted for smaller spacing */
+  }
+
+  .amount {
+    font-size: 1.625rem;
+    margin: 0;
+    margin-top: 0.25rem; /* Adjusted for smaller spacing */
+  }
+
+  .text-center {
+    text-align: left;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center border-b border-[#C8D6DF] h-[4.75rem]" v-if="!isSubtotalRow">
+  <div class="flex min-w-[90rem] items-center border-b border-[#C8D6DF] h-[4.75rem]" v-if="!isSubtotalRow">
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 4.25%;">
       <span>{{ rowData.no }}</span>
     </div>

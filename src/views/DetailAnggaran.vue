@@ -34,7 +34,7 @@
                 @viewDetails="viewDetails"
             />
             <!-- Subtotal Row -->
-            <div class="flex items-center h-[5.3125rem] bg-[#C8D6DF] subtotal-row">
+            <div class="flex items-center h-[5.3125rem] bg-[#C8D6DF] subtotal-row min-w-[90rem]">
               <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 4.25%;">
                 <span>Subtotal</span>
               </div>
@@ -115,11 +115,11 @@ export default {
   methods: {
     calculateSubtotal(key) {
       return this.rows.reduce((sum, row) => {
-        return sum + (parseFloat(row[key].replace(/[^0-9.-]+/g,"")) || 0);
-      }, 0).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+        return sum + (parseFloat(row[key].replace(/[^0-9.-]+/g, "")) || 0);
+      }, 0).toLocaleString('id-ID', {style: 'currency', currency: 'IDR'});
     },
     viewDetails(row) {
-      // Handle view details action
+
       console.log(row);
     }
   }
@@ -142,18 +142,22 @@ export default {
   .content-wrapper {
     flex-direction: column;
   }
+
   .content-wrapper > div {
     width: 100%;
     margin: 0 0 1rem 0;
   }
+
   .title-text {
     font-size: 1.125rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
   .subtotal-row {
     height: auto;
   }
+
   .subtotal-text {
     font-size: 0.9375rem;
   }
@@ -163,7 +167,14 @@ export default {
   overflow-x: auto;
 }
 
-.min-w-[800px] {
-  min-width: 800px; /* Ensure minimum width for table container */
+.min-w-[
+
+800
+px
+
+]
+{
+  min-width: 800px
+; /* Ensure minimum width for table container */
 }
 </style>

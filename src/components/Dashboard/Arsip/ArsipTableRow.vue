@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex items-center border-b border-[#C8D6DF] h-[4.875rem]">
+    <div class="flex min-w-[90rem] items-center border-b border-[#C8D6DF] h-[4.875rem]">
       <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4" style="width: 7.17%;">
         <span>{{ rowData.no }}</span>
       </div>
@@ -48,14 +48,14 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 965px) {
+@media (max-width: 768px) {
   .view-icon, .download-icon {
     width: 1.5rem;
     height: auto; /* Keep aspect ratio */
   }
 }
 
-@media (max-width: 965px) {
+@media (max-width: 768px) {
   .font-poppins {
     font-size: 0.9375rem;
   }
