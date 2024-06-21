@@ -1,35 +1,35 @@
 <template>
-  <div class="bg-[#1A5796] w-full flex-shrink-0 flex flex-col py-5 px-4 md:py-10 md:px-16">
+  <div class="bg-[#1A5796] w-full flex-shrink-0 flex flex-col py-5">
     <!-- Dewan Perwakilan Mahasiswa -->
-    <h2 class="text-[#F2BC43] font-poppins text-[1.125rem] md:text-[45px] font-bold mb-2 md:mb-4">
+    <h2 class="text-[#F2BC43] font-poppins text-[1.125rem] md:text-[28px] font-bold px-4">
       Dewan Perwakilan Mahasiswa
     </h2>
     <!-- Garis -->
-    <hr class="w-full border-t border-[rgba(206,219,229,0.90)] my-4 md:mb-8" />
+    <hr class="w-full border-t border-[rgba(206,219,229,0.90)] my-4" />
     <!-- Contact -->
-    <h3 class="text-[#EBF3F5] font-poppins text-[1rem] md:text-[30px] font-bold mb-2 md:mb-4">
+    <h3 class="text-[#EBF3F5] font-poppins text-[1rem] md:text-[20px] font-bold mb-2 md:mb-4 px-4">
       Contact
     </h3>
     <!-- Kontak Info -->
-    <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8">
+    <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8 px-4">
       <!-- Email -->
       <div class="flex items-center md:mb-0">
-        <img src="@/assets/icon/email.svg" alt="Email Icon" class="icon w-[1.125rem] h-[0.93888rem] md:w-[39.144px] md:h-[31.315px] mr-2 md:mr-4 flex-shrink-0" />
-        <a href="mailto:dpm@stis.ac.id" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
+        <img src="@/assets/icon/email.svg" alt="Email Icon" class="icon w-[1.125rem] h-[0.93888rem] md:w-[30px] md:h-[30px] mr-2 md:mr-4 flex-shrink-0" />
+        <a href="mailto:dpm@stis.ac.id" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[17px] font-medium">
           dpm@stis.ac.id
         </a>
       </div>
       <!-- Website -->
       <div class="flex items-center md:mb-0">
-        <img src="@/assets/icon/internet.svg" alt="Web Icon" class="icon w-[1.125rem] h-[1.125rem] md:w-[39px] md:h-[39px] mr-2 md:mr-4 flex-shrink-0" />
-        <a href="https://dpm.stis.ac.id" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
+        <img src="@/assets/icon/internet.svg" alt="Web Icon" class="icon w-[1.125rem] h-[1.125rem] md:w-[30px] md:h-[30px] mr-2 md:mr-4 flex-shrink-0" />
+        <a href="https://dpm.stis.ac.id" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[17px] font-medium">
           dpm.stis.ac.id
         </a>
       </div>
       <!-- Instagram -->
       <div class="flex items-center md:mb-0">
-        <img src="@/assets/icon/instagram.svg" alt="IG Icon" class="icon w-[1.125rem] h-[1.125rem] md:w-[38px] md:h-[38px] mr-2 md:mr-4 flex-shrink-0" />
-        <a href="https://www.instagram.com/dpmpolstatstis/" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[24px] font-medium">
+        <img src="@/assets/icon/instagram.svg" alt="IG Icon" class="icon w-[1.125rem] h-[1.125rem] md:w-[30px] md:h-[30px] mr-2 md:mr-4 flex-shrink-0" />
+        <a href="https://www.instagram.com/dpmpolstatstis/" class="link text-[#EBF3F5] underline font-poppins text-[0.9375rem] md:text-[17px] font-medium">
           @dpmpolstatstis
         </a>
       </div>

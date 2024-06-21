@@ -159,7 +159,6 @@ export default {
   left: 0;
   width: 100%;
   background-color: #EBF3F5;
-  border: 1px solid #ccc;
   border-radius: 8px;
   margin-top: 5px;
   list-style: none;
