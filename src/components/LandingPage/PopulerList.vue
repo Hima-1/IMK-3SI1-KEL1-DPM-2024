@@ -4,11 +4,11 @@
             <!-- Judul -->
             <p class="text-[#15649D] font-poppins text-[30px] font-medium ml-4 py-2">Berita Populer</p>
             <!-- Garis Horizontal -->
-            <hr class="border-[#15649D] mt-2 mb-10">
+            <hr class="border-[#15649D] my-2">
         </div>
 
         <!-- Wrapper Populer -->
-        <div className="grid grid-cols-1 gap-1">
+        <div className="grid grid-cols-1 gap-4 pt-2 pb-4">
             <PopulerItem />
             <PopulerItem />
             <PopulerItem />

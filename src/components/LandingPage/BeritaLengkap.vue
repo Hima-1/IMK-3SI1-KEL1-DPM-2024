@@ -3,10 +3,10 @@
         <div class="flex flex-wrap justify-center gap-8">
             <!-- Box -->
             <div class="rounded-[12px] w-full h-auto bg-[#EBF3F5] flex flex-col">
-                <!-- Image -->
+                <!-- Image container -->
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
-                    <!-- Image container -->
-                    <img src="@/assets/images/berita.webp"
+                    <!-- Image -->
+                    <img src="../../assets/images/berita.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <!-- Content -->
@@ -14,9 +14,9 @@
                     <!-- Tanggal Berita -->
                     <div class="flex items-center mb-2">
                         <!-- Ikon Tanggal -->
-                        <img src="@/assets/icon/time.svg" class="w-[23px] h-[23px] flex-shrink-0 text-[#15649D]" />
-                        <!-- Tanggal Berita -->
-                        <p class="text-[#15649D] font-poppins text-[23px] font-semibold ml-2">12 Januari 2024</p>
+                        <img src="../../assets/icon/bluecalendar.svg" class="w-[25px] h-[24.38px] flex-shrink-0 text-[#15649D]" />
+                        <!-- Tanggal -->
+                        <p class="text-[#15649D] font-poppins text-[23px] font-semibold ml-2">KAMIS, 28 SEPTEMBER 2023 08:48 WIB</p>
                     </div>
                     <!-- Isi -->
                     <p class="text-[#000] font-poppins text-[23px] break-words">
@@ -39,17 +39,17 @@
                     <div class="flex items-center justify-between p-4">
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
-                            <img src="@/assets/icon/person.svg"
-                                class="w-[14.183px] h-[15.697px] flex-shrink-0 text-[#15649D]" />
-                            <!-- Nama Penulis -->
-                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Nama Penulis</p>
+                            <img src="../../assets/icon/person.svg"
+                                class="w-[22.61px] h-[24px] flex-shrink-0 text-[#15649D]" />
+                            <!-- Penulis -->
+                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Pororo ajaaah</p>
                         </div>
                         <div class="flex items-center">
-                            <!-- Ikon Tanggal -->
-                            <img src="@/assets/icon/time.svg"
-                                class="w-[21.938px] h-[21.938px] flex-shrink-0 text-[#15649D]" />
-                            <!-- Tanggal Berita -->
-                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">12 Januari 2024</p>
+                            <!-- Ikon Viewers -->
+                            <img src="../../assets/icon/blueeye.svg"
+                                class="w-[28.68px] h-[20.47px] flex-shrink-0 text-[#15649D]" />
+                            <!-- Viewers -->
+                            <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">4208</p>
                         </div>
                     </div>
                 </div>
