@@ -5,9 +5,11 @@
 
       <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-10 mb-10 w-full">
 
-      <div class="grid grid-cols-8 md:grid-cols-10 gap-6 mb-6">
-        <div class="col-span-8 md:col-span-3 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
+      <div class="grid grid-cols-8 md:grid-cols-12 gap-6 mb-6 px-12">
+        <div class="col-span-8 md:col-span-4 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
           <JumlahDana />
+        </div>
+        <div class="col-span-8 md:col-span-1 flex flex-col h-0">
         </div>
         <div class="col-span-8 md:col-span-7 flex flex-col dana-imapolstat-container">
           <DanaImapolstat />
@@ -138,29 +140,8 @@ export default {
   min-width: 800px; /* Ensure minimum width for table container */
 }
 
-@media (max-width: 1024px) {
-  .flex-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .search-container,
-  .show-container {
-    width: 100%;
-  }
-
-  .search-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .show-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+@media (max-width: 1280px) {
+  
 }
 
 @media (max-width: 800px) {
@@ -178,37 +159,6 @@ export default {
 
   .jumlah-dana-container {
     grid-column: span 8 / span 8;
-  }
-}
-
-@media (max-width: 640px) {
-  .search-text,
-  .show-text,
-  .documents-text,
-  .number-text {
-    font-size: 0.9375rem;
-  }
-
-  .container {
-    padding: 0 0; /* Ensure padding inside the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    width: 100%;
-  }
-
-  .search-box {
-    width: 100%; /* Adjust to full width on smaller screens */
-    max-width: 17.75rem; /* Maximum width constraint */
-    height: 2.1875rem;
-    flex-shrink: 0;
-    font-size: 0.9375rem;
-  }
-
-  .number-box {
-    width: 100%; /* Adjust to full width on smaller screens */
-    max-width: 5.3125rem; /* Maximum width constraint */
-    height: 2.1875rem;
-    flex-shrink: 0;
-    font-size: 0.9375rem;
   }
 }
 </style>

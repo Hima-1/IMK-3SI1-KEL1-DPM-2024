@@ -35,6 +35,23 @@ export default {
   height: 3.5rem;
 }
 
+@media (max-width: 1280px) {
+  .folder-icon img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .return{
+    width: 2rem;
+    height: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .kembali {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 965px) {
   .folder-icon img,
   .return {

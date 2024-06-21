@@ -44,5 +44,23 @@ export default {
   .header-text {
     font-size: 0.9375rem;
   }
+  .min-w-\[90rem\]{
+    min-width: 75rem;
+  }
+}
+@media (max-width: 1280px) {
+  .font-poppins {
+    font-size: 1rem;
+  }
+  .min-w-\[90rem\]{
+    min-width: 80rem;
+  }
+  .h-\[4\.875rem\]{
+    height: 3.5rem;
+  }
+  button{
+    height: 2rem;
+    width: 5rem;
+  }
 }
 </style>

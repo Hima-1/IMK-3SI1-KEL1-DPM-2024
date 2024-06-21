@@ -138,6 +138,25 @@ export default {
   line-height: normal;
 }
 
+@media (max-width: 1280px) {
+  .font-poppins {
+    font-size: 1rem;
+  }
+  .min-w-\[90rem\]{
+    min-width: 80rem;
+  }
+  .h-\[5\.3125rem\]{
+    height: 3.5rem;
+  }
+  button{
+    height: 2rem;
+    width: 5rem;
+  }
+  .text-\[1\.875rem\]{
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;

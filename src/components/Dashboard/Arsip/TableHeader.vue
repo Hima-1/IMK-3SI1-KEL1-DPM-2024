@@ -44,5 +44,20 @@ export default {
   .font-poppins {
     font-size: 0.9375rem;
   }
+  .min-w-\[90rem\]{
+    min-width: 75rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .font-poppins {
+    font-size: 1rem;
+  }
+  .min-w-\[90rem\]{
+    min-width: 80rem;
+  }
+  .h-\[4\.875rem\]{
+    height: 3.5rem;
+  }
 }
 </style>

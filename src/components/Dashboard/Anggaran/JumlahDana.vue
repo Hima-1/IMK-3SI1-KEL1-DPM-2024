@@ -54,7 +54,24 @@ export default {
   margin-top: 0.5rem;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1280px){
+  .wrapper {
+    width: 100%;
+    max-width: 27.75rem;
+    height: 25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    width: 15rem;
+    height: 15rem;
+    margin-right: 1rem;
+  }
+
   .amount{
     font-size: 2rem;
   }

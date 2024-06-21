@@ -1,19 +1,21 @@
 <template>
   <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div class="modal-content">
+    <div class="w-11/12 max-w-md h-128 bg-[#EBF3F5] shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center">
       <img
           src="@/assets/images/konfirmasi.webp"
           alt="Gambar Konfirmasi"
-          class="modal-image"
+          class="w-3/4 h-auto"
       />
-      <p class="modal-text">
+      <p class="w-4/5 text-[#1A5796] text-center font-poppins text-lg my-6">
         Apakah anda yakin ingin sambat tentang hal tersebut?
       </p>
-      <div class="modal-buttons">
-        <button @click="confirm" class="confirm-button">
+      <div class="w-full flex justify-evenly mt-4">
+        <button @click="confirm"
+                class="w-1/3 h-14 rounded-full bg-[#1A5796] text-[#EBF3F5] font-poppins text-lg font-bold text-center leading-14 confirm-button">
           Konfirmasi
         </button>
-        <button @click="cancel" class="cancel-button">
+        <button @click="cancel"
+                class="w-1/3 h-14 rounded-full border-2 border-[#1A5796] text-[#1A5796] font-poppins text-lg font-bold text-center leading-14 cancel-button">
           Tolak
         </button>
       </div>
@@ -37,60 +39,22 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-.modal-content {
-  width: 90%;
-  max-width: 27.75rem; /* 444px/16 */
-  height: 31.6875rem; /* 507px/16 */
-  background-color: #EBF3F5;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-image {
-  width: 75%;
-  height: auto;
-}
-
-.modal-text {
-  width: 80%;
-  color: #1A5796;
-  text-align: center;
+.font-poppins {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.125rem;
-  margin: 1.5rem 0;
 }
 
-.modal-buttons {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 1rem;
-}
-
-.confirm-button,
-.cancel-button {
-  width: 33%;
-  height: 3.5rem;
-  border-radius: 9999px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.125rem;
-  font-weight: bold;
-  text-align: center;
+.leading-14 {
   line-height: 3.5rem;
 }
 
-.confirm-button {
-  background-color: #1A5796;
-  color: #EBF3F5;
+.h-128 {
+  height: 31.6875rem;
 }
 
-.cancel-button {
-  border: 2px solid #1A5796;
-  color: #1A5796;
+@media (max-width: 425px) {
+  .confirm-button, .cancel-button {
+    width: 8rem; /* 33% of 12rem increased by 10% */
+    height: 4rem; /* 3.5rem increased by 10% */
+  }
 }
 </style>

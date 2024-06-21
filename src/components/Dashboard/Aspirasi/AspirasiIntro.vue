@@ -34,8 +34,7 @@ export default {
 }
 
 .text-paragraph {
-  font-size: 1.4375rem;
-  line-height: 2.148rem;
+  @apply text-[1.4375rem] leading-[2.148rem];
 }
 
 .text-blue {
@@ -43,36 +42,31 @@ export default {
 }
 
 .text-sambat {
-  font-size: 1.4375rem;
-  font-weight: 600;
-  line-height: 2.148rem;
+  @apply text-[1.4375rem] font-semibold leading-[2.148rem];
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 33.6rem;
-  height: auto;
-  background: #FFF;
-  border-radius: 0.4375rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  @apply w-full max-w-[33.6rem] h-auto bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center;
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
+    @apply w-3/6 p-11 box-border;
+  }
+
+  .text-paragraph, .text-sambat {
+    @apply text-[1rem] leading-[1.3rem];
+  }
 }
 
 /* Media query for mobile view */
 @media (max-width: 640px) {
   .wrapper {
-    width: 100%; /* Adjust width to be responsive */
-    padding: 1rem; /* Adjust padding for smaller screens */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    @apply w-full p-4 box-border;
   }
 
-  .text-paragraph {
-    font-size: 0.9375rem;
-    line-height: 1.40513rem; /* 149.88% */
-  }
-
-  .text-sambat {
-    font-size: 0.9375rem;
-    line-height: 1.40513rem; /* 149.88% */
+  .text-paragraph, .text-sambat {
+    @apply text-[0.9375rem] leading-[1.40513rem];
   }
 }
 </style>

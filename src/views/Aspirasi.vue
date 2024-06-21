@@ -6,8 +6,8 @@
         <hr class="w-full border-t-2 border-[#C8D6DF] mb-8">
       </div>
       <div class="flex items-center mb-8">
-        <img src="@/assets/icon/megaphone.svg" alt="Megaphone Icon" class="w-[2.3125rem] h-[2.25rem] max-w-[58px] max-h-[58px] mr-4">
-        <p class="text-[#1A5796] font-poppins text-[1.5rem] max-text-[40px] font-normal leading-normal">Aspirasi/Sambatan</p>
+        <img src="@/assets/icon/megaphone.svg" alt="Megaphone Icon" class="megaphone-icon mr-4">
+        <p class="aspirasi-text text-[#1A5796] font-poppins text-[1.5rem] font-normal leading-normal">Aspirasi/Sambatan</p>
       </div>
       <div class="flex flex-col lg:flex-row lg:space-x-8 space-y-8 lg:space-y-0">
         <IntroComponent />
@@ -71,10 +71,34 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+.megaphone-icon {
+  width: 3rem;
+  height: 3rem;
+  max-width: 58px;
+  max-height: 58px;
+}
+
+.aspirasi-text {
+  font-size: 40px;
+}
+
+@media (min-width: 1280px) {
+  .megaphone-icon {
+    width: 3rem;
+    height: 3rem;
+    max-width: 72px;
+    max-height: 72px;
+  }
+
+  .aspirasi-text {
+    font-size: 1.5rem;
+  }
 }
 </style>

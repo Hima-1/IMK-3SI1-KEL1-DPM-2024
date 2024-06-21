@@ -47,7 +47,35 @@ img {
   flex-shrink: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px){
+  .search-text,
+  .show-text,
+  .documents-text,
+  .number-text {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 0 1rem; /* Ensure padding inside the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%;
+  }
+
+  .search-box {
+    width: 20rem;
+    height: 2rem;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+  }
+
+  .number-box {
+    width: 4rem;
+    height: 2rem;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 1028px) {
   .flex-wrap {
     flex-direction: column;
     align-items: flex-start;

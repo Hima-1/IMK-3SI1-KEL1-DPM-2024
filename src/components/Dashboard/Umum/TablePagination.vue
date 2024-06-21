@@ -107,6 +107,23 @@ export default {
   width: 11.94%;
 }
 
+@media (max-width: 1280px) {
+  .pagination-wrapper {
+    width: 20rem;
+    height: 2.625rem;
+    flex-shrink: 0;
+  }
+
+  .pagination-text {
+    font-size: 1rem;
+  }
+
+  .single-arrow {
+    width: 2.7rem;
+    height: 2.625rem;
+  }
+}
+
 @media (max-width: 640px) {
   .pagination-wrapper {
     width: 19.35938rem;

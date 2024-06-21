@@ -54,10 +54,32 @@ export default {
   color: #6A6C7A;
   font-family: 'Poppins', sans-serif;
   font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 2;
 }
+@media (max-width: 1280px){
+  .title {
+    font-size: 1.7rem;
+  }
 
+  .label {
+    font-size: 1rem;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .input-container {
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 768px) {
   .title {
     font-size: 1.125rem;
@@ -81,4 +103,5 @@ export default {
     margin-bottom: 0.75rem;
   }
 }
+
 </style>

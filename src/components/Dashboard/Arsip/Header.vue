@@ -58,9 +58,25 @@ export default {
   h1 {
     font-size: 1.5rem;
   }
-  .kembali{
+  .kembali {
     font-size: 1rem;
   }
 }
 
+@media (min-width: 1280px) {
+  .folder-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .return{
+    width: 2rem;
+    height: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .kembali {
+    font-size: 1.5rem;
+  }
+}
 </style>

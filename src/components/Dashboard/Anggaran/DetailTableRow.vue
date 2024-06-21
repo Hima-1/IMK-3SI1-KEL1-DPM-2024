@@ -48,9 +48,28 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
+@media (max-width: 1280px) {
+  .font-poppins {
+    font-size: 1rem;
+  }
+  .min-w-\[90rem\]{
+    min-width: 80rem;
+  }
+  .h-\[4\.875rem\]{
+    height: 3.5rem;
+  }
+  button{
+    height: 2rem;
+    width: 5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .row-text {
     font-size: 0.9375rem;
+  }
+  .min-w-\[90rem\]{
+    min-width: 75rem;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full flex items-center mb-4">
+  <header class="w-full flex items-center mb-4 mt-4">
     <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="rounded-full mr-4 md:mr-8 w-14 h-14 md:w-24 md:h-24" />
     <div>
       <p class="text-primary font-poppins text-lg md:text-2xl font-bold">
@@ -27,6 +27,21 @@ export default {
 
 .text-primary {
   color: #1A5796;
+}
+
+@media (max-width: 1280px) {
+  .w-14 {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .text-lg {
+    font-size: 1.5rem;
+  }
+
+  .text-sm {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 640px) {

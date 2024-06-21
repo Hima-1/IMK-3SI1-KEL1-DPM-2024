@@ -104,6 +104,31 @@ export default {
   }
 }
 
+@media (max-width: 1280px) {
+  .icon-container {
+    width: 1.5rem;
+    height: 2rem;
+    flex-shrink: 0;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 2rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .deskripsi {
+    margin-left: 1.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .icon-container {
     width: 1.75rem;

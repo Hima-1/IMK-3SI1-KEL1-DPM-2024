@@ -1,7 +1,7 @@
 <template>
-  <div class="flex-shrink-0 w-full max-w-[63.125rem] h-full max-h-[48.0625rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8">
+  <div class="flex-shrink-0 w-full max-w-[63.125rem] h-full max-h-[48.0625rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8 m:h-[30rem]">
     <h1 class="text-[#1A5796] text-center font-poppins text-[2rem] sm:text-[3.125rem] font-bold mb-5">Dana Imapolstat</h1>
-    <div class="w-full transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
+    <div class="w-full h-[15rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
       <Bar ref="chart" :data="chartData" :options="chartOptions" />
     </div>
   </div>
@@ -54,7 +54,7 @@ export default defineComponent({
               color: '#1A5796',
               font: {
                 family: 'Poppins',
-                size: 20,
+                size: 16,
               }
             },
           },
@@ -69,7 +69,7 @@ export default defineComponent({
               },
               font: {
                 family: 'Poppins',
-                size: 20,
+                size: 16,
               }
             },
             grid: {
@@ -89,13 +89,13 @@ export default defineComponent({
               boxHeight: 20,
               font: {
                 family: 'Poppins',
-                size: 18,
+                size: 16,
                 style: 'normal',
                 weight: 600,
                 lineHeight: 'normal'
               },
               color: '#1A5796',
-              padding: 30,
+              padding: 10,
             }
           },
           tooltip: {
@@ -161,6 +161,12 @@ div[style*="border-radius"] {
   min-height: 27.61069rem;
 }
 
+@media (max-width: 640px) {
+  .sm\:h-[30rem] {
+  height: 30rem;
+}
+}
+
 @media (max-width: 768px) {
   .chart-container {
     min-height: 10.06713rem;
@@ -177,7 +183,7 @@ div[style*="border-radius"] {
 
 @media (max-width: 768px) {
   .chartjs-render-monitor .chart-container canvas {
-    height: 10.06713rem;
+    height: 20rem;
   }
 }
 
@@ -187,7 +193,7 @@ div[style*="border-radius"] {
 
 @media (max-width: 768px) {
   .chartjs-render-monitor .chart-container canvas {
-    width: 2.85438rem;
+    width: 5rem;
   }
 }
 

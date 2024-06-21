@@ -9,8 +9,8 @@
     </div>
     <div class="hidden lg:flex items-center gap-4">
       <router-link to="/" class="flex items-center gap-4 ml-10">
-        <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="w-[3.875rem] h-[3.875rem] shrink-0">
-        <span class="lg:hidden xl:inline-block text-white text-2xl font-bold" style="font-family: 'Poppins', sans-serif;">SIASPIMAN</span>
+        <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo w-[3.875rem] h-[3.875rem] shrink-0">
+        <span class="title lg:hidden xl:inline-block text-white text-2xl font-bold" style="font-family: 'Poppins', sans-serif;">SIASPIMAN</span>
       </router-link>
     </div>
     <div class="flex items-center gap-8 lg:mr-16 lg:ml-auto">
@@ -80,13 +80,30 @@ export default {
   height: 1.25rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   nav {
-    height: 4.125rem;
+    height: 5rem;
   }
 
   .siaspiman-text {
     display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .text-lg {
+    font-size: 1rem;
+  }
+  .burger-icon svg {
+    width: 2rem;
+    height: 2.5rem;
+  }
+  .logo {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

@@ -81,6 +81,37 @@ export default {
   height: 3.5rem;
 }
 
+@media (max-width: 1280px) {
+  .tentang-kegiatan-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .header {
+    height: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 3rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p, ul {
+    font-size: 1rem;
+  }
+  .mb\-6{
+    margin-bottom: 0rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .tentang-kegiatan-container {
     width: 100%;
