@@ -7,8 +7,8 @@
         </h1>
       </div>
       <div class="mt-6 p-4">
-        <img src="@/assets/images/struktur_bagan.webp" class="hidden sm:block" alt="">
-        <img src="@/assets/images/struktur_bagan_responsive.webp" class="md:hidden" alt="">
+        <img src="@/assets/images/struktur_bagan.webp" class="hidden md:block" alt="">
+        <img src="@/assets/images/struktur_bagan_responsive.webp" class="block md:hidden" alt="">
       </div>
     </div>
   </div>
