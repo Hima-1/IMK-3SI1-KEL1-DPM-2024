@@ -27,7 +27,7 @@
             Menyelenggarakan tugas legislasi secara efektif dan efisien.
           </p>
         </div>
-        <div class="flex items-start mt-6">
+        <div class="flex items-start">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             2</div>
@@ -36,7 +36,7 @@
             lingkungan Politeknik Statistika STIS.
           </p>
         </div>
-        <div class="flex items-start mt-6">
+        <div class="flex items-start">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             3</div>
@@ -45,7 +45,7 @@
             mahasiswa Politeknik Statistika STIS kepada pihak yang bersangkutan sesuai kebutuhan.
           </p>
         </div>
-        <div class="flex items-start mt-6">
+        <div class="flex items-start">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             4</div>
@@ -54,7 +54,7 @@
             bersifat berkelanjutan dengan Badan Eksekutif Mahasiswa Politeknik Statistika STIS.
           </p>
         </div>
-        <div class="flex items-start mt-6">
+        <div class="flex items-start">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             5</div>
