@@ -5,10 +5,10 @@
                 <img src="../../assets/images/galeri.webp" alt="Foto" class="image rounded-[13px]">
                 <div class="overlay">
                     <div class="flex-grow text-center">
-                        <h1 class="text-[#FFFFFF] font-poppins text-[26px] lg:text-[40px] font-semibold leading-normal">
+                        <h1 class="text-[#FFFFFF] font-poppins text-[26px] lg:text-[26.4px] font-semibold leading-normal">
                             Berita Utama Lainnya
                         </h1>
-                        <p class="text-[#FFFFFF] text-[18px] lg:text-[24px] font-medium font-poppins leading-snug">
+                        <p class="text-[#FFFFFF] text-[18px] lg:text-[15.84px] font-medium font-poppins leading-snug">
                             ABCDE
                         </p>
                     </div>
@@ -28,7 +28,7 @@ export default {
 .foto-dummy {
     border-radius: 20px;
     position: relative;
-    width: 500px;
+    width: 350px;
     border-radius: 50%;
 }
 
@@ -39,7 +39,7 @@ export default {
 
 .image-container {
     position: relative;
-    width: 500px;
+    width: 350px;
     border-radius: 44px;
 }
 

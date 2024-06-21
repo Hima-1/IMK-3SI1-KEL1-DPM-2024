@@ -1,15 +1,15 @@
 <template>
-  <div class="bg-[#EBF3F5] flex flex-col items-center justify-start min-h-screen py-20">
+  <div class="bg-[#EBF3F5] flex flex-col items-center justify-start min-h-screen">
     <!-- Judul Galeri -->
     <div>
       <h1
-        class="galeri bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[50px]">
+        class="galeri bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
         Galeri
       </h1>
     </div>
 
     <!-- Button Group for Larger Screens -->
-    <div class="button-group mt-8 hidden lg:flex">
+    <div class="button-group mt-8 hidden md:flex">
       <button v-for="button in buttons" :key="button" class="gallery-button"
         :class="{ active: activeButton === button }" @click="setActiveButton(button)">
         {{ button }}
@@ -17,7 +17,7 @@
     </div>
 
     <!-- Dropdown for Smaller Screens -->
-    <div class="custom-dropdown-container mt-8 lg:hidden">
+    <div class="custom-dropdown-container mt-8 md:hidden">
       <div class="custom-dropdown" @click="toggleDropdown">
         <span>{{ activeButton }}</span>
         <div class="custom-dropdown-icon">
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Foto Dummy -->
-    <div class="flex flex-wrap justify-center gap-8">
+    <div class="flex flex-wrap justify-center gap-8 pb-10">
       <GaleriItem />
       <GaleriItem />
       <GaleriItem />
@@ -95,7 +95,7 @@ export default {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   padding: 15px 30px;
-  font-size: 23px;
+  font-size: 15.18px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -131,7 +131,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-  font-size: 23px;
+  font-size: 15.18px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   background-color: #15649D;
@@ -170,7 +170,7 @@ export default {
 
 .custom-dropdown-options li {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 15.18px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   background-color: #15649D;

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#EBF3F5] rounded-[12px] flex-shrink-0 w-[491px] h-[619px] flex flex-col">
+  <div class="bg-[#EBF3F5] rounded-[12px] flex-shrink-0 w-[350px] h-[517.06px] flex flex-col">
     <!-- Bagian Atas Berita -->
     <div class="relative w-full h-[376.689px] rounded-t-[13px]" style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0.00) 96.17%);">
       <!-- Foto Berita -->

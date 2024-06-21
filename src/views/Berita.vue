@@ -3,7 +3,7 @@
     <!-- Judul -->
     <div class="w-full text-center mb-16">
       <h1
-        class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold p-10 text-[35px]">
+        class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
         Berita DPM Polstat STIS
       </h1>
     </div>
@@ -42,6 +42,7 @@ export default {
 
 <style scoped>
 .judulpage {
-  background-image: url('@/sets/icon/visi_misi.svg');
+  background-image: url('@/assets/icon/visi_misi.svg');
+  margin-bottom: 25px;
 }
 </style>
