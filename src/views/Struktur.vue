@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <section id="struktur-bagan">
+  <div class="">
+    <section id="struktur-bagan" class="bg-[#EBF3F5] px-2 xl:px-7 lg:max-xl:px-14">
       <StrukturBagan />
     </section>
-    <section id="struktur-list">
+    <section id="struktur-list" class="bg-[#cddbe5] px-2 min-[425px]:px-4">
       <StrukturList />
     </section>
   </div>
