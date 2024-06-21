@@ -8,7 +8,7 @@
       </div>
 
       <!-- Informasi Teks User -->
-      <div class="grid lg:grid-cols-3 lg:max-xl:gap-x-6 xl:gap-x-2">
+      <div class="grid lg:grid-cols-3 lg:max-xl:gap-x-12 xl:gap-x-2">
         <!-- Foto Device Small -->
         <div class="grid lg:hidden justify-center">
           <div class="relative w-fit mb-6">
@@ -25,7 +25,7 @@
             <input
               type="text"
               placeholder="You can't touch this"
-              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
+              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
               disabled
             />
           </div>
@@ -35,7 +35,7 @@
             <input
               type="text"
               placeholder="You can't touch this"
-              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
+              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
               disabled
             />
           </div>
@@ -45,7 +45,7 @@
             <input
               type="text"
               placeholder="You can't touch this"
-              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
+              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
               disabled
             />
           </div>
@@ -55,19 +55,19 @@
             <input
               type="text"
               placeholder="You can't touch this"
-              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
+              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl"
               disabled
             />
           </div>
 
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
             <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">No. HP</p>
-            <input type="text" placeholder="Type here" class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[17px] py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl" />
+            <input type="text" placeholder="Type here" class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl" />
           </div>
 
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
             <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Provider</p>
-            <select class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 select select-bordered select-md text-[17px] bg-[#F6F6F6] border-2 border-[#6A6C7A] w-full max-w-xl">
+            <select class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 select select-bordered select-md text-[16px] md:text-[17px] bg-[#F6F6F6] border-2 border-[#6A6C7A] w-full max-w-xl">
               <option disabled selected>Pilih Provider</option>
               <option v-for="provider in providers">{{ provider }}</option>
             </select>
@@ -77,15 +77,12 @@
         <!-- Foto User -->
         <div class="hidden lg:grid grid-cols-4 gap-y-5 text-[18px] items-center">
           <div class="col-span-3 lg:max-xl:col-span-4 col-start-2 grid justify-center lg:relative lg:max-xl:mb-4">
-            <img src="@/assets/icon/account.svg" alt="User Photo" class="border-2 lg:max-xl:border-4 lg:rounded-full xl:rounded-none border-[#6A6C7A] lg:p-0 xl:p-2 w-[300px] object-center object-cover" />
-            <div class="hidden lg:max-xl:block absolute bottom-3 right-5 bg-[#1A5796] rounded-full p-5 w-fit">
-              <img src="@/assets/icon/camera.svg" alt="User Photo" class="scale-150" />
-            </div>
+            <img src="@/assets/icon/account.svg" alt="User Photo" class="border-2 rounded-none border-[#6A6C7A] p-2 w-[300px] object-center object-cover" />
           </div>
 
-          <div class="grid col-span-4 items-center">
-            <div class="hidden xl:grid col-span-1 font-bold pr-3">Foto Profil</div>
-            <input type="file" class="col-span-3 col-start-2 grid file-input file-input-md file-input-bordered w-full file:bg-[#C8D6DF] file:border-none file:text-[#6A6C7A] bg-[#F6F6F6] border-2 border-[#6A6C7A]" />
+          <div class="grid lg:max-xl:grid-rows-2 col-span-4 items-center">
+            <div class="grid lg:max-xl:col-span-4 font-bold pr-3">Foto Profil</div>
+            <input type="file" class="lg:max-xl:col-span-4 col-start-2 grid file-input file-input-md file-input-bordered w-full file:bg-[#C8D6DF] file:border-none file:text-[#6A6C7A] bg-[#F6F6F6] border-2 border-[#6A6C7A]" />
           </div>
         </div>
       </div>

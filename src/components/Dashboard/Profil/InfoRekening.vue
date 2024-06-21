@@ -4,10 +4,10 @@
       <!-- Judul dan Deskripsi -->
       <div class="my-4">
         <h1 class="text-[#1A5796] font-poppins text-xl lg:text-4xl">Informasi Rekening</h1>
-        <p class="text-[#2F7DC1] my-4 text-[15px] lg:text-[23px]">Pastikan isian rekening sudah benar, mencakup nomor rekening, nama bank yang digunakan, dan atas nama yang sesuai. Rekening mahasiswa harus atas nama pribadi dan pastikan rekening masih aktif</p>
+        <p class="text-[#2F7DC1] my-4 text-[15px] lg:text-[20px]">Pastikan isian rekening sudah benar, mencakup nomor rekening, nama bank yang digunakan, dan atas nama yang sesuai. Rekening mahasiswa harus atas nama pribadi dan pastikan rekening masih aktif</p>
       </div>
 
-      <div>
+      <div class="mt-6">
         <div class="grid grid-cols-1 lg:grid-cols-8 gap-y-3 lg:gap-y-0 lg:gap-x-5 text-[#6A6C7A]">
           <!-- Bank -->
           <div class="col-span-3 lg:col-span-2 grid min-[425px]:grid-cols-8 lg:grid-cols-3 items-center">
@@ -21,6 +21,12 @@
               <option value="BSI">BSI</option>
               <option value="Lainnya">Lainnya</option>
             </select>
+          </div>
+
+          <div v-if="selectedOption == 'Lainnya'" class="grid lg:hidden grid-cols-1 min-[425px]:max-lg:grid-cols-8">
+            <div class="col-span-8 min-[425px]:col-span-6 grid min-[425px]:col-start-3 text-[#6A6C7A] items-center">
+              <input type="text" placeholder="Bank Lainnya" class="grid input input-bordered input-sm text-[16px] py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl" />
+            </div>
           </div>
 
           <!-- Nomor Rekening -->
@@ -37,10 +43,9 @@
         </div>
       </div>
 
-      <div v-if="selectedOption == 'Lainnya'" class="grid grid-cols-5 gap-x-5 mt-4">
-        <div class="grid grid-cols-3 text-[#6A6C7A] items-center">
-          <p class="font-bold">Lainnya</p>
-          <input type="text" placeholder="Type here" class="col-span-2 input input-bordered input-sm text-[17px] py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl" />
+      <div v-if="selectedOption == 'Lainnya'" class="hidden lg:grid grid-cols-8 gap-x-5 mt-4">
+        <div class="col-span-2 grid grid-cols-3 text-[#6A6C7A] items-center">
+          <input type="text" placeholder="Bank Lainnya" class="col-span-2 col-start-2 input input-bordered input-sm text-[17px] py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] px-2 rounded-lg w-full max-w-xl" />
         </div>
       </div>
     </div>
