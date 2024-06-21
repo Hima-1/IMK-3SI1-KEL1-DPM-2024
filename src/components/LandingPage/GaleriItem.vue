@@ -1,8 +1,8 @@
 <template>
-    <div class="gallery-grid mt-8 rounded-[44px]">
+    <div class="grid mt-8 rounded-[44px] gap-[50px]">
         <div class="foto-dummy rounded-[44px]">
             <div class="image-container rounded-[44px]">
-                <img src="../../assets/images/galeri.webp" alt="Foto" class="image rounded-[13px]">
+                <img src="../../assets/images/galeri.webp" alt="Foto" class="w-full h-auto rounded-[13px]">
                 <div class="overlay">
                     <div class="flex-grow text-center">
                         <h1 class="text-[#FFFFFF] font-poppins text-[26px] lg:text-[26.4px] font-semibold leading-normal">
@@ -32,20 +32,10 @@ export default {
     border-radius: 50%;
 }
 
-.gallery-grid {
-    display: grid;
-    gap: 50px;
-}
-
 .image-container {
     position: relative;
     width: 350px;
     border-radius: 44px;
-}
-
-.image {
-    width: 100%;
-    height: auto;
 }
 
 .overlay {
