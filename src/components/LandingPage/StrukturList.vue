@@ -19,10 +19,6 @@
       </li>
     </div>
 
-    <!-- Wrapper Struktur -->
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-auto-rows justify-center gap-y-8">
-      <StrukturItem />
-    </div> -->
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center max-lg:gap-x-2 gap-y-8">
         <StrukturItem />
