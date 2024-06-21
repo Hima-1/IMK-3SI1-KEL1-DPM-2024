@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import InfoEdit from "../components/Dashboard/Profil/InfoEdit.vue";
-import InfoRekening from "../components/Dashboard/Profil/InfoRekening.vue";
-import EditProfileSuccess from "../components/Dashboard/Profil/EditProfileSuccess.vue";
+import InfoEdit from "@/components/Dashboard/Profil/InfoEdit.vue";
+import InfoRekening from "@/components/Dashboard/Profil/InfoRekening.vue";
+import EditProfileSuccess from "@/components/Dashboard/Profil/EditProfileSuccess.vue";
 
 export default {
   name: "EditProfile",

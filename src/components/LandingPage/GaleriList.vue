@@ -21,7 +21,7 @@
       <div class="custom-dropdown" @click="toggleDropdown">
         <span>{{ activeButton }}</span>
         <div class="custom-dropdown-icon">
-          <img src="../../assets/icon/dropdown.svg" alt="Dropdown Icon" class="icon">
+          <img src="@/assets/icon/dropdown.svg" alt="Dropdown Icon" class="icon">
         </div>
       </div>
       <ul v-show="dropdownOpen" class="custom-dropdown-options">

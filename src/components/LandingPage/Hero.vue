@@ -4,7 +4,7 @@
       <div class="flex flex-col lg:flex-row items-center lg:gap-20">
         <!-- Logo DPM -->
         <div class="flex-shrink-0 lg:mx-10 mb-8 lg:mb-0">
-          <img src="../../assets/images/logo_dpm.webp" alt="Logo DPM"
+          <img src="@/assets/images/logo_dpm.webp" alt="Logo DPM"
             class="w-[262px] h-[262px] lg:w-[300px] lg:h-[300px]" />
         </div>
         <!-- Text -->

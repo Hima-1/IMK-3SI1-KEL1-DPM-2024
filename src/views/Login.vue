@@ -49,8 +49,8 @@
 </template>
 
 <script>
-import LoginPopup from '../components/LoginPage/LoginPopup.vue'
-import ForgotPasswordPopup from '../components/LoginPage/ForgotPasswordPopup.vue'
+import LoginPopup from '@/components/LoginPage/LoginPopup.vue'
+import ForgotPasswordPopup from '@/components/LoginPage/ForgotPasswordPopup.vue'
 
 export default {
   name: 'LoginPage',

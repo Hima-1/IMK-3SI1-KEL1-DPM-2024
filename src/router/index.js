@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LandingLayout from '../layouts/LandingLayout.vue';
-import DashboardLayout from '../layouts/DashboardLayout.vue';
-import Home from '../views/Home.vue';
-import Berita from '../views/Berita.vue';
-import Galeri from '../views/Galeri.vue';
-import Struktur from '../views/Struktur.vue';
-import LoginPage from '../views/Login.vue';
-import Aspirasi from '../views/Aspirasi.vue';
+import LandingLayout from '@/layouts/LandingLayout.vue';
+import DashboardLayout from '@/layouts/DashboardLayout.vue';
+import Home from '@/views/Home.vue';
+import Berita from '@/views/Berita.vue';
+import Galeri from '@/views/Galeri.vue';
+import Struktur from '@/views/Struktur.vue';
+import LoginPage from '@/views/Login.vue';
+import Aspirasi from '@/views/Aspirasi.vue';
 
-import ArsipDokumen from '../views/Arsip.vue';
-import AnggaranImpolstat from '../views/Anggaran.vue';
+import ArsipDokumen from '@/views/Arsip.vue';
+import AnggaranImpolstat from '@/views/Anggaran.vue';
 import DetailAnggaran from '@/views/DetailAnggaran.vue';
-import MyProfile from '../views/MyProfile.vue';
-import EditProfile from '../views/EditProfile.vue';
+import MyProfile from '@/views/MyProfile.vue';
+import EditProfile from '@/views/EditProfile.vue';
 
 
 const routes = [

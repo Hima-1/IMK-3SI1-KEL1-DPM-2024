@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Profile from "../components/Dashboard/Profil/Profile.vue"
-import UbahPasswordSuccess from "../components/Dashboard/Profil/UbahPasswordSuccess.vue"
+import Profile from "@/components/Dashboard/Profil/Profile.vue"
+import UbahPasswordSuccess from "@/components/Dashboard/Profil/UbahPasswordSuccess.vue"
 
 export default {
   name: "MyProfile",

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import GaleriList from "../components/LandingPage/GaleriList.vue";
+import GaleriList from "@/components/LandingPage/GaleriList.vue";
 
 export default {
   name: 'Galeri',

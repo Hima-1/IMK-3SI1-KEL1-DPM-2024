@@ -2,7 +2,7 @@
     <div class="gallery-grid mt-8 rounded-[44px]">
         <div class="foto-dummy rounded-[44px]">
             <div class="image-container rounded-[44px]">
-                <img src="../../assets/images/galeri.webp" alt="Foto" class="image rounded-[13px]">
+                <img src="@/assets/images/galeri.webp" alt="Foto" class="image rounded-[13px]">
                 <div class="overlay">
                     <div class="flex-grow text-center">
                         <h1 class="text-[#FFFFFF] font-poppins text-[26px] lg:text-[26.4px] font-semibold leading-normal">

@@ -6,7 +6,7 @@
                 <!-- Image container -->
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
                     <!-- Image -->
-                    <img src="../../assets/images/berita.webp"
+                    <img src="@/assets/images/berita.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <!-- Content -->
@@ -14,7 +14,7 @@
                     <!-- Tanggal Berita -->
                     <div class="flex items-center mb-2">
                         <!-- Ikon Tanggal -->
-                        <img src="../../assets/icon/bluecalendar.svg" class="w-[25px] h-[24.38px] flex-shrink-0 text-[#15649D]" />
+                        <img src="@/assets/icon/bluecalendar.svg" class="w-[25px] h-[24.38px] flex-shrink-0 text-[#15649D]" />
                         <!-- Tanggal -->
                         <p class="text-[#15649D] font-poppins text-[23px] font-semibold ml-2">KAMIS, 28 SEPTEMBER 2023 08:48 WIB</p>
                     </div>
@@ -39,14 +39,14 @@
                     <div class="flex items-center justify-between p-4">
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
-                            <img src="../../assets/icon/person.svg"
+                            <img src="@/assets/icon/person.svg"
                                 class="w-[22.61px] h-[24px] flex-shrink-0 text-[#15649D]" />
                             <!-- Penulis -->
                             <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Pororo ajaaah</p>
                         </div>
                         <div class="flex items-center">
                             <!-- Ikon Viewers -->
-                            <img src="../../assets/icon/blueeye.svg"
+                            <img src="@/assets/icon/blueeye.svg"
                                 class="w-[28.68px] h-[20.47px] flex-shrink-0 text-[#15649D]" />
                             <!-- Viewers -->
                             <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">4208</p>

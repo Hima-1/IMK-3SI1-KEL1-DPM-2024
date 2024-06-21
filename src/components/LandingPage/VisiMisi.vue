@@ -80,6 +80,6 @@ export default {
 }
 
 .circle-number {
-  background-image: url('../../assets/icon/numberbg.svg');
+  background-image: url('@/assets/icon/numberbg.svg');
 }
 </style>

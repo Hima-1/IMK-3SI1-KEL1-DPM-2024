@@ -22,7 +22,7 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
-                            <img src="../../assets/icon/person.svg"
+                            <img src="@/assets/icon/person.svg"
                                 class="w-[25px] h-[24.38px] flex-shrink-0 text-[#15649D]" />
                             <!-- Nama Penulis -->
                             <p class="text-[#15649D] font-poppins text-[23px] font-medium ml-4">KAMIS, 28 SEPTEMBER 2023 08:48 WIB</p>
@@ -36,7 +36,7 @@
                     <button
                         class="bg-[#1A5796] text-white font-poppins text-[19px] font-medium rounded-[6px] w-[241px] h-[37.58px] flex items-center justify-center mt-10">
                         Selengkapnya
-                        <img src="../../assets/icon/next.svg"
+                        <img src="@/assets/icon/next.svg"
                             class="ml-4 w-[22.23px] h-[12.19px] flex-shrink-0 fill-[#EBF3F5]" />
                     </button>
                 </div>
@@ -49,14 +49,14 @@
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
-                            <img src="../../assets/icon/person.svg"
+                            <img src="@/assets/icon/person.svg"
                                 class="w-[22.61px] h-[24px] flex-shrink-0 text-[#15649D]" />
                             <!-- Nama Penulis -->
                             <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">Pororo ajaaah</p>
                         </div>
                         <div class="flex items-center">
                             <!-- Ikon Tanggal -->
-                            <img src="../../assets/icon/blueeye.svg"
+                            <img src="@/assets/icon/blueeye.svg"
                                 class="w-[28.68px] h-[20.47px] flex-shrink-0 text-[#15649D]" />
                             <!-- Tanggal Berita -->
                             <p class="text-[#15649D] font-poppins text-[18px] font-medium ml-2">1000</p>

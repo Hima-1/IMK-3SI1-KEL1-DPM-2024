@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Navbar from '../components/LandingPage/Navbar.vue';
-import Footer from '../components/LandingPage/Footer.vue';
-import ScrollToTop from "../components/LandingPage/ScrollToTop.vue";
+import Navbar from '@/components/LandingPage/Navbar.vue';
+import Footer from '@/components/LandingPage/Footer.vue';
+import ScrollToTop from "@/components/LandingPage/ScrollToTop.vue";
 
 export default {
   name: 'LandingLayout',
