@@ -1,5 +1,5 @@
 <template>
-    <div class="grid mt-8 rounded-[44px] gap-[50px]">
+    <div class="grid mt-8 rounded-[44px] gap-[50px] px-2">
         <div class="foto-dummy rounded-[44px]">
             <div class="image-container rounded-[44px]">
                 <img src="../../assets/images/galeri.webp" alt="Foto" class="w-full h-auto rounded-[13px]">

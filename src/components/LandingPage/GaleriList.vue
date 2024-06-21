@@ -34,7 +34,7 @@
     </div>
 
     <!-- Foto Dummy -->
-    <div class="flex flex-wrap justify-center gap-8 pb-10">
+    <div class="flex flex-wrap justify-center pb-10">
       <GaleriItem />
       <GaleriItem />
       <GaleriItem />
