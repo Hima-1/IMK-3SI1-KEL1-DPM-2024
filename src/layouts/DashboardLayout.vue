@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <Navbar />
-    <LoadingSpinner v-if="loading.value" />
+    <LoadingSpinner v-if="loading" />
     <router-view v-else />
     <Footer />
     <ScrollToTop />
@@ -23,34 +23,16 @@ export default {
     Footer,
     ScrollToTop,
     LoadingSpinner
-  },
-  setup() {
-    const loading = inject('loading');
-    const router = useRouter();
-
-    const startLoading = () => {
-      loading.value = true;
-    };
-
-    const stopLoading = () => {
-      loading.value = false;
-    };
-
-    onMounted(() => {
-      router.beforeEach((to, from, next) => {
-        startLoading();
-        next();
-      });
-
-      router.afterEach(() => {
-        stopLoading();
-      });
-    });
-
+  }, data() {
     return {
-      loading,
+      loading: true,
     };
   },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+  }
 };
 </script>
 
