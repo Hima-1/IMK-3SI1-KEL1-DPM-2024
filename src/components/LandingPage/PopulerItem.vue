@@ -8,7 +8,7 @@
         <div class="flex-1 flex flex-col justify-between">
             <!-- Judul -->
             <div class="mb-2">
-                <p class="text-[#15649D] font-poppins text-[18px] font-medium">
+                <p class="text-[#15649D] font-poppins text-[14px] font-medium">
                     Perpanjangan Open Recruitment Staff Ahli DPM Periode 2023/2024
                 </p>
             </div>
@@ -20,17 +20,17 @@
                     <img src="@/assets/icon/blackcalendar.svg"
                         class="w-auto h-[12px] flex-shrink-0 text-[#15649D]" />
                     <!-- Tanggal -->
-                    <p class="text-[#6A6C7A] font-poppins text-[15px] ml-2">12 Juni 2024</p>
+                    <p class="text-[#6A6C7A] font-poppins text-[12px] ml-2">12 Juni 2024</p>
                 </div>
                 <!-- Viewers -->
                 <div class="flex items-center">
                     <!-- Ikon Dot -->
-                    <img src="@/assets/icon/dot.svg" class="w-auto h-[4px] flex-shrink-0 text-[#15649D]" />
+                    <img src="@/assets/icon/dot.svg" class="w-auto h-[2px] md:h-[4px] flex-shrink-0 text-[#15649D]" />
                     <!-- Ikon Viewers -->
                     <img src="@/assets/icon/blackeye.svg"
                         class="w-auto h-[12px] flex-shrink-0 text-[#15649D] ml-2" />
                     <!-- Viewers -->
-                    <p class="text-[#6A6C7A] font-poppins text-[15px] ml-2">692</p>
+                    <p class="text-[#6A6C7A] font-poppins text-[12px] ml-2">692</p>
                 </div>
             </div>
         </div>

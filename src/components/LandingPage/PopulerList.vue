@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-[#EBF3F5] rounded-[12px] flex-shrink-0 w-full h-auto">
+    <div class="bg-[#EBF3F5] rounded-[12px] flex-shrink-0 w-full h-full">
         <div>
             <!-- Judul -->
-            <p class="text-[#15649D] font-poppins text-[25px] font-medium ml-4 py-2">Berita Populer</p>
+            <p class="text-[#15649D] font-poppins text-[20px] font-medium ml-4 py-2">Berita Populer</p>
             <!-- Garis Horizontal -->
-            <hr class="border-[#15649D] my-2">
+            <hr class="border-[#15649D] my-2 md:my-1">
         </div>
 
         <!-- Wrapper Populer -->

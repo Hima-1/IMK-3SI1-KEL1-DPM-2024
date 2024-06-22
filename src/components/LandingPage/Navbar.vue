@@ -32,7 +32,6 @@
     </div>
 
     <!-- Mobile Menu -->
-    <!-- Mobile Menu -->
     <div v-if="isMobileMenuOpen" class="flex flex-col text-[16px] md:hidden">
       <router-link to="/" exact class="flex items-center justify-center h-12 btn btn-ghost no-underline text-white font-medium px-4" :exact-active-class="'active-link'" @click.native="closeMobileMenu">
         Home
