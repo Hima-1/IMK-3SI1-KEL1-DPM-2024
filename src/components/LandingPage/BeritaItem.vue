@@ -6,7 +6,8 @@
       <!-- Foto Berita -->
       <img src="@/assets/images/berita.webp" class="w-full h-full rounded-t-[13px]" />
       <!-- Judul Foto -->
-      <div class="absolute bottom-0 left-0 w-full px-5 py-2 bg-[#041322B3] rounded-b-[13px]">
+      <div
+        class="absolute bottom-0 left-0 w-full h-full px-5 py-4 bg-gradient-to-t from-black to-90% rounded-b-[13px] flex items-end justify-center">
         <h2 class="text-[#EBF3F5] font-poppins text-[15px] font-bold leading-normal">
           Perpanjangan Open Recruitment Staff Ahli DPM Periode 2023/2024
         </h2>
@@ -32,7 +33,7 @@
       <!-- Isi Berita -->
       <p class="text-[#000] font-poppins text-[13px] mb-4 flex-grow">
         Dewan Perwakilan Mahasiswa (DPM) mengumumkan perpanjangan masa Open Recruitment untuk posisi
-        Staff Ahli periode 2023/2024.
+        Staff Ahli periode 2023/2024 ...
       </p>
       <!-- Tombol Selengkapnya -->
       <router-link to="/berita/selengkapnya">

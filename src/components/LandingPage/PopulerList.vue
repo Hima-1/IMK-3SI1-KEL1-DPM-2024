@@ -9,10 +9,10 @@
 
         <!-- Wrapper Populer -->
         <div className="grid grid-cols-1 gap-10 pt-6 pb-8">
-            <PopulerItem />
-            <PopulerItem />
-            <PopulerItem />
-            <PopulerItem />
+            <router-link to="/berita/selengkapnya"><PopulerItem /></router-link>
+            <router-link to="/berita/selengkapnya"><PopulerItem /></router-link>
+            <router-link to="/berita/selengkapnya"><PopulerItem /></router-link>
+            <router-link to="/berita/selengkapnya"><PopulerItem /></router-link>
         </div>
     </div>
 </template>

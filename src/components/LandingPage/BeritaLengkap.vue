@@ -21,7 +21,7 @@
                             Juni 2024 08:48 WIB</p>
                     </div>
                     <!-- Isi -->
-                    <p class="text-[#000] font-poppins text-[15px] break-words">
+                    <p class="text-[#000] font-poppins text-[15px] break-words my-4">
                         Dewan Perwakilan Mahasiswa (DPM) mengumumkan perpanjangan masa Open Recruitment untuk posisi
                         Staff Ahli periode 2023/2024. Langkah ini diambil untuk memberikan kesempatan lebih luas bagi
                         mahasiswa yang ingin bergabung dan berkontribusi dalam organisasi kampus. Posisi Staff Ahli

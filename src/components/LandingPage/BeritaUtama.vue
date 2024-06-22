@@ -9,7 +9,7 @@
                     <!-- Foto Berita -->
                     <img src="@/assets/images/berita.webp" class="w-full h-full rounded-t-[13px] object-cover" />
                     <!-- Judul Foto -->
-                    <div class="absolute bottom-0 left-0 w-full px-8 py-2 bg-[#041322B3] rounded-b-[13px]">
+                    <div class="absolute content-end bottom-0 left-0 w-full px-8 py-6 h-full bg-gradient-to-t from-black to-90% rounded-b-[13px]">
                         <h2 class="text-[#EBF3F5] font-poppins text-[20px] font-bold leading-normal">
                             Perpanjangan Open Recruitment Staff Ahli DPM Periode 2023/2024
                         </h2>
