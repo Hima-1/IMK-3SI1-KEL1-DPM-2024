@@ -106,7 +106,7 @@ export default {
     width: 3rem;
     height: 3rem;
   }
-  .font-poppins{
+  .font-medium{
     font-size: 1rem;
   }
 }
