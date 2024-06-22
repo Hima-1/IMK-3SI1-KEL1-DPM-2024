@@ -8,34 +8,11 @@
       />
 
       <div class="mt-10 w-full">
-        <TableSearch />
-      </div>
-
-      <!-- Responsive Table Container -->
-      <div class="w-full mt-6 overflow-x-auto">
-        <div class="min-w-[800px]">
-          <TableHeader />
-
-          <!-- No Margin Between Header and Rows -->
-          <div class="border-t border-[#EBF3F5] w-full"></div>
-
-          <!-- Table Rows -->
-          <div class="w-full flex flex-col">
-            <TableRow
-                v-for="row in rows"
-                :key="row.no"
-                :rowData="row"
-                @viewDetails="viewDetails"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination -->
-      <div class="mt-10 w-full flex justify-center">
-        <TablePagination
+        <Table
+            :rows="rows"
             :currentPage="currentPage"
             :totalPages="totalPages"
+            @viewDetails="viewDetails"
             @update:currentPage="updateCurrentPage"
         />
       </div>
@@ -45,19 +22,13 @@
 
 <script>
 import ArsipHeader from "@/components/Dashboard/Arsip/Header.vue";
-import TableHeader from "@/components/Dashboard/Arsip/TableHeader.vue";
-import TableSearch from "@/components/Dashboard/Umum/TableSearch.vue";
-import TableRow from "@/components/Dashboard/Arsip/ArsipTableRow.vue";
-import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
+import Table from "@/components/Dashboard/Arsip/Table.vue";
 
 export default {
   name: "AnggaranImpolstat",
   components: {
     ArsipHeader,
-    TableHeader,
-    TableSearch,
-    TableRow,
-    TablePagination,
+    Table,
   },
   data() {
     return {
@@ -101,68 +72,4 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
-
-.font-poppins {
-  font-family: "Poppins", sans-serif;
-}
-
-.min-w-[800px] {
-  min-width: 800px; /* Ensure minimum width for table container */
-}
-
-@media (max-width: 1024px) {
-  .flex-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .search-container,
-  .show-container {
-    width: 100%;
-  }
-
-  .search-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .show-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .search-text,
-  .show-text,
-  .documents-text,
-  .number-text {
-    font-size: 0.9375rem;
-  }
-
-  .container {
-    padding: 0 0; /* Ensure padding inside the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    width: 100%;
-  }
-
-  .search-box {
-    width: 100%; /* Adjust to full width on smaller screens */
-    max-width: 17.75rem; /* Maximum width constraint */
-    height: 2.1875rem;
-    flex-shrink: 0;
-    font-size: 0.9375rem;
-  }
-
-  .number-box {
-    width: 100%; /* Adjust to full width on smaller screens */
-    max-width: 5.3125rem; /* Maximum width constraint */
-    height: 2.1875rem;
-    flex-shrink: 0;
-    font-size: 0.9375rem;
-  }
-}
 </style>

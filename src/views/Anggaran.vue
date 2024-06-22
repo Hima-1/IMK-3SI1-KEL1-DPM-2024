@@ -14,43 +14,19 @@
         </div>
       </div>
 
-      <div class="mt-10 w-full margin">
-        <TableSearch />
-      </div>
-
-      <!-- Responsive Table Container -->
-      <div class="w-full mt-6 overflow-x-auto margin">
-        <div class="min-w-[800px]">
-          <TableHeader />
-
-          <!-- No Margin Between Header and Rows -->
-          <div class="border-t border-[#EBF3F5] w-full"></div>
-
-          <!-- Table Rows -->
-          <div class="w-full flex flex-col">
-            <TableRow
-                v-for="row in rows"
-                :key="row.no"
-                :rowData="row"
-                @view-details="navigateToDetail"
-            />
-          </div>
-        </div>
-      </div>
+      <Table
+          :rows="rows"
+          :currentPage="currentPage"
+          :totalPages="totalPages"
+          @view-details="navigateToDetail"
+          @update:currentPage="updateCurrentPage"
+      />
 
       <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6">
         <img src="@/assets/icon/return.svg" alt="Return Icon" class="w-[56px] h-[56px] flex-shrink-0 cursor-pointer" @click="toggleDetail" />
         <div class="ml-4">
           <p class="text-[#267DC2] font-poppins text-[30px] font-semibold leading-normal">{{ currentFolder.namaFolder }}</p>
         </div>
-      </div>
-
-      <div class="mt-10 w-full flex justify-center">
-        <TablePagination
-            :currentPage="currentPage"
-            :totalPages="totalPages"
-            @update:currentPage="updateCurrentPage"
-        />
       </div>
     </div>
   </div>
@@ -60,10 +36,7 @@
 import AnggaranHeader from "@/components/Dashboard/Anggaran/Header.vue";
 import DanaImapolstat from "@/components/Dashboard/Anggaran/DanaImapolstat.vue";
 import JumlahDana from "@/components/Dashboard/Anggaran/JumlahDana.vue";
-import TableHeader from "@/components/Dashboard/Anggaran/TableHeader.vue";
-import TableSearch from "@/components/Dashboard/Umum/TableSearch.vue";
-import TableRow from "@/components/Dashboard/Anggaran/TableRow.vue";
-import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
+import Table from "@/components/Dashboard/Anggaran/Table.vue";
 import Kegiatan from "@/components/Dashboard/Anggaran/Kegiatan.vue";
 import TentangKegiatan from "@/components/Dashboard/Anggaran/TentangKegiatan.vue";
 
@@ -75,10 +48,7 @@ export default {
     Kegiatan,
     JumlahDana,
     AnggaranHeader,
-    TableHeader,
-    TableSearch,
-    TableRow,
-    TablePagination,
+    Table,
   },
   data() {
     return {
@@ -103,7 +73,7 @@ export default {
       currentFolder: {},
       showDetail: false,
       currentPage: 1,
-      totalPages: 5,
+      totalPages: 1,
     };
   },
   methods: {
@@ -134,10 +104,6 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-.min-w-[800px] {
-  min-width: 800px; /* Ensure minimum width for table container */
-}
-
 @media (max-width: 800px) {
   .grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -157,10 +123,10 @@ export default {
 }
 
 @media (max-width: 425px) {
-  .gap-10{
+  .gap-10 {
     gap: 0px;
   }
-  .px-12{
+  .px-12 {
     padding: 0;
   }
 }

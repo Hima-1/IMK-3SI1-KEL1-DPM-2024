@@ -9,6 +9,7 @@
           type="text"
           placeholder="Search"
           class="search-box lg:w-[20rem] lg:h-[2.8125rem] rounded-[1.40625rem] border-2 border-[#6A6C7A] bg-[#F6F6F6] px-4 py-2 text-[#6A6C7A] font-poppins text-2xl"
+          @input="onSearch"
       />
     </div>
 
@@ -30,9 +31,15 @@
 
 <script>
 export default {
-  name: 'TableSearch'
+  name: 'TableSearch',
+  methods: {
+    onSearch(event) {
+      this.$emit('search', event.target.value);
+    }
+  }
 }
 </script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
