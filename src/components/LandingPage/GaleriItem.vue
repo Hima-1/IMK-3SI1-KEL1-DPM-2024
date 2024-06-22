@@ -5,11 +5,11 @@
                 <img src="../../assets/images/galeri.webp" alt="Foto" class="w-full h-auto rounded-[13px]">
                 <div class="overlay">
                     <div class="flex-grow text-center">
-                        <h1 class="text-[#FFFFFF] font-poppins text-[26px] lg:text-[26.4px] font-semibold leading-normal">
-                            Berita Utama Lainnya
+                        <h1 class="text-[#FFFFFF] font-poppins text-[25px] font-semibold leading-normal">
+                            Sambutan Ketua
                         </h1>
-                        <p class="text-[#FFFFFF] text-[18px] lg:text-[15.84px] font-medium font-poppins leading-snug">
-                            ABCDE
+                        <p class="text-[#FFFFFF] text-[18px] font-normal font-poppins leading-snug">
+                            25 Februari 2024
                         </p>
                     </div>
                 </div>
