@@ -61,7 +61,7 @@ export default {
     font-size: 1rem;
   }
   .min-w-\[90rem\]{
-    min-width: 80rem;
+    min-width: 65rem;
   }
   .h-\[4\.875rem\]{
     height: 3.5rem;
@@ -77,7 +77,7 @@ export default {
     font-size: 0.9375rem;
   }
   .min-w-\[90rem\]{
-    min-width: 80rem;
+    min-width: 65rem;
   }
 }
 </style>

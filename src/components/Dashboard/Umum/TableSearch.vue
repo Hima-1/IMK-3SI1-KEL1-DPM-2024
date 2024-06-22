@@ -55,8 +55,8 @@ img {
     font-size: 1rem;
   }
   .container {
-    padding: 0 1rem; /* Ensure padding inside the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 0 ;
+    box-sizing: border-box;
     width: 100%;
   }
 

@@ -2,7 +2,7 @@
   <div class="bg-[#ebf3f5] p-6 min-h-screen flex justify-center">
     <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
       <Header />
-      <div class="content-wrapper flex w-full justify-between mb-6">
+      <div class="content-wrapper flex w-full justify-between mb-6 padding">
         <div class="w-2/8 mr-3 flex flex-col">
           <Kegiatan />
         </div>
@@ -12,13 +12,13 @@
       </div>
 
       <!-- Title -->
-      <div class="text-[#267DC2] font-poppins text-[1.875rem] font-bold mb-10 mt-10 title-text">
+      <div class="padding text-[#267DC2] font-poppins text-[1.875rem] font-bold mb-0 mt-6 title-text">
         Detail Anggaran Kegiatan
       </div>
 
       <!-- Responsive Table Container -->
-      <div class="w-full mt-6 overflow-x-auto">
-        <div class="min-w-[800px]">
+      <div class="w-full mt-6 overflow-x-auto padding">
+        <div class="min-w-[600px]">
           <!-- Table Header -->
           <TableHeader />
 
@@ -154,6 +154,12 @@ export default {
   }
   .text-\[1\.875rem\]{
     font-size: 2rem;
+  }
+  @media (min-width: 1280px) {
+    .padding{
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 }
 

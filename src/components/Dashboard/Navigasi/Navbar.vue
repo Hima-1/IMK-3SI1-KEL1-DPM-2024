@@ -92,18 +92,21 @@ export default {
 
 @media (max-width: 1280px) {
   .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .text-lg {
-    font-size: 1rem;
+    font-size: 0.88rem;
   }
   .burger-icon svg {
     width: 2rem;
     height: auto;
   }
   .logo {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  nav {
+    height: 4rem;
   }
 }
 

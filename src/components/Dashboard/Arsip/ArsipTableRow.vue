@@ -53,13 +53,13 @@ export default {
     font-size: 1rem;
   }
   .min-w-\[90rem\]{
-    min-width: 80rem;
+    min-width: 65rem;
   }
   .h-\[4\.875rem\]{
-    height: 3.5rem;
+    height: 3rem;
   }
   .view-icon, .download-icon {
-    width: 2rem;
+    width: 1.5rem;
     height: auto;
   }
 }

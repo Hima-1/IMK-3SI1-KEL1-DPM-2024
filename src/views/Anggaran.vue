@@ -3,9 +3,9 @@
     <div class="w-full max-w-full md:max-w-[1660px] flex flex-col">
       <AnggaranHeader />
 
-      <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-10 mb-10 w-full">
+      <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-8 mb-8 w-full">
 
-      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-6 px-12">
+      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-6 px-12 margin">
         <div class="col-span-8 md:col-span-4 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
           <JumlahDana />
         </div>
@@ -14,12 +14,12 @@
         </div>
       </div>
 
-      <div class="mt-10 w-full">
+      <div class="mt-10 w-full margin">
         <TableSearch />
       </div>
 
       <!-- Responsive Table Container -->
-      <div class="w-full mt-6 overflow-x-auto">
+      <div class="w-full mt-6 overflow-x-auto margin">
         <div class="min-w-[800px]">
           <TableHeader />
 
@@ -136,10 +136,6 @@ export default {
 
 .min-w-[800px] {
   min-width: 800px; /* Ensure minimum width for table container */
-}
-
-@media (max-width: 1280px) {
-  
 }
 
 @media (max-width: 800px) {

@@ -9,7 +9,7 @@
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 13.94%;">
       <span>{{ rowData.hargaSatuan }}</span>
     </div>
-    <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 9.81%;">
+    <div class="flex items-center justify-center text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 9.81%;">
       <span>{{ rowData.pengali }}</span>
     </div>
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 17.44%;">
@@ -53,7 +53,7 @@ export default {
     font-size: 1rem;
   }
   .min-w-\[90rem\]{
-    min-width: 80rem;
+    min-width: 50rem;
   }
   .h-\[4\.875rem\]{
     height: 3.5rem;

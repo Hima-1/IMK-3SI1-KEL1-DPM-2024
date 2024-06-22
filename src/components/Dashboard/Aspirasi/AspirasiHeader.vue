@@ -42,6 +42,10 @@ export default {
   .text-sm {
     font-size: 1rem;
   }
+
+  .mt-4{
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 640px) {

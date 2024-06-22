@@ -69,10 +69,13 @@ export default {
     height: 2rem;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .kembali {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .mt-12{
+    margin-top: 2rem;
   }
 }
 
@@ -94,7 +97,7 @@ export default {
 
 @media (max-width: 425px) {
   .mt-12{
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
   .mt-6{
     margin-top: 1rem;

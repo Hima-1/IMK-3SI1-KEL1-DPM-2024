@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full h-[171px] bg-[#CEDBE5] flex flex-col items-center justify-center p-4">
+  <footer class="w-full h-[6.5rem] bg-[#CEDBE5] flex flex-col items-center justify-center p-4">
     <div class="text-center text-[#1A5796] font-poppins text-lg font-normal mb-4">
       Copyright © 2020 - 2024 Website DPM Politeknik Statistika STIS
     </div>
@@ -31,5 +31,14 @@ export default {
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 1280px) {
+  .font-poppins {
+    font-size: 0.88rem;
+  }
+  footer .text-lg {
+    font-size: 0.88rem;
+  }
 }
 </style>

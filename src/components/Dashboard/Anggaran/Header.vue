@@ -45,7 +45,7 @@ export default {
     height: 2rem;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .kembali {
     font-size: 1.5rem;

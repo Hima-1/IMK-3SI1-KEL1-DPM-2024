@@ -103,11 +103,11 @@ export default {
 
 @media (max-width: 1280px) {
   .profile-photo {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .font-medium{
-    font-size: 1rem;
+    font-size: 0.88rem;
   }
 }
 
