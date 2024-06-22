@@ -23,7 +23,7 @@
         </div>
 
         <!-- Konten -->
-        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-8">
+        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-8 mb-8">
             <section id="lengkap" class="w-full lg:w-2/3">
                 <BeritaLengkap />
             </section>
