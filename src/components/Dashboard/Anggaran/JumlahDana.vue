@@ -77,6 +77,7 @@ export default {
   }
   .title{
     font-size: 1.5rem;
+    line-height: 1.3rem;
   }
 }
 

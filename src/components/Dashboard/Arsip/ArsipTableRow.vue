@@ -58,12 +58,16 @@ export default {
   .h-\[4\.875rem\]{
     height: 3.5rem;
   }
+  .view-icon, .download-icon {
+    width: 2rem;
+    height: auto;
+  }
 }
 
 @media (max-width: 768px) {
   .view-icon, .download-icon {
     width: 1.5rem;
-    height: auto; /* Keep aspect ratio */
+    height: auto;
   }
   .font-poppins {
     font-size: 0.9375rem;

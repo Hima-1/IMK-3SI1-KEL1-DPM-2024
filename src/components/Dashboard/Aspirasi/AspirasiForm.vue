@@ -1,6 +1,6 @@
 <template>
   <div class="w-full max-w-[65.625rem] h-auto bg-white rounded-lg shadow-md">
-    <div class="w-full h-[5.5625rem] bg-[rgba(38,125,194,0.18)] rounded-t-lg flex items-center px-6">
+    <div class="w-full h-[5.5625rem] bg-[rgba(38,125,194,0.18)] rounded-t-lg flex items-center px-6 title-wrap">
       <p class="text-[#1A5796] font-poppins text-[1.875rem] font-semibold leading-[2.81025rem] title">Form Sambatan</p>
     </div>
     <div class="p-6 bg-white">
@@ -80,6 +80,7 @@ export default {
     margin-bottom: 1rem;
   }
 }
+
 @media (max-width: 768px) {
   .title {
     font-size: 1.125rem;
@@ -98,9 +99,20 @@ export default {
   .btn {
     font-size: 0.9375rem;
   }
-
   .input-container {
     margin-bottom: 0.75rem;
+  }
+  .p-6{
+    padding-top: 1rem;
+  }
+  .title-wrap{
+    height: 4rem;
+  }
+}
+
+@media (max-width: 425px){
+  .btn{
+    width: 8rem;
   }
 }
 

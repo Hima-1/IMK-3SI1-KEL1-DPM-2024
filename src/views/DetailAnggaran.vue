@@ -174,7 +174,7 @@ export default {
   }
 
   .subtotal-row {
-    height: auto;
+    height: 3rem;
   }
 
   .subtotal-text {
@@ -184,16 +184,5 @@ export default {
 
 .table-container {
   overflow-x: auto;
-}
-
-.min-w-[
-
-800
-px
-
-]
-{
-  min-width: 800px
-; /* Ensure minimum width for table container */
 }
 </style>

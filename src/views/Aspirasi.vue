@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-[#EBF3F5] py-2">
+  <div class=" flex items-center justify-center bg-[#EBF3F5] py-2">
     <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]">
       <HeaderComponent />
       <div class="md:px-0">
@@ -89,7 +89,7 @@ export default {
   font-size: 40px;
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
   .megaphone-icon {
     width: 3rem;
     height: 3rem;
@@ -99,6 +99,19 @@ export default {
 
   .aspirasi-text {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .megaphone-icon {
+    width: 2rem;
+    height: 2rem;
+    max-width: 72px;
+    max-height: 72px;
+  }
+
+  .aspirasi-text {
+    font-size: 1.25rem;
   }
 }
 </style>

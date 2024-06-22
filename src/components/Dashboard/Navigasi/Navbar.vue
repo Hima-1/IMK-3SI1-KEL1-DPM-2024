@@ -99,7 +99,7 @@ export default {
   }
   .burger-icon svg {
     width: 2rem;
-    height: 2.5rem;
+    height: auto;
   }
   .logo {
     width: 3rem;
@@ -107,9 +107,19 @@ export default {
   }
 }
 
-@media (max-width: 756px) {
+@media (max-width: 425px) {
   .border-white {
     border-color: #fff !important;
+  }
+  .burger-icon svg {
+    width: auto;
+    height: 2rem;
+  }
+  nav {
+    height: 3.5rem;
+  }
+  .top-16{
+    top: 3.55rem;
   }
 }
 

@@ -92,4 +92,13 @@ export default {
   }
 }
 
+@media (max-width: 425px) {
+  .mt-12{
+    margin-top: 1rem;
+  }
+  .mt-6{
+    margin-top: 1rem;
+  }
+}
+
 </style>

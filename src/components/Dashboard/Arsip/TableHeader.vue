@@ -40,15 +40,6 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 768px) {
-  .font-poppins {
-    font-size: 0.9375rem;
-  }
-  .min-w-\[90rem\]{
-    min-width: 75rem;
-  }
-}
-
 @media (max-width: 1280px) {
   .font-poppins {
     font-size: 1rem;
@@ -58,6 +49,15 @@ export default {
   }
   .h-\[4\.875rem\]{
     height: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .font-poppins {
+    font-size: 0.9375rem;
+  }
+  .min-w-\[90rem\]{
+    min-width: 75rem;
   }
 }
 </style>

@@ -5,13 +5,11 @@
 
       <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-10 mb-10 w-full">
 
-      <div class="grid grid-cols-8 md:grid-cols-12 gap-6 mb-6 px-12">
+      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-6 px-12">
         <div class="col-span-8 md:col-span-4 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
           <JumlahDana />
         </div>
-        <div class="col-span-8 md:col-span-1 flex flex-col h-0">
-        </div>
-        <div class="col-span-8 md:col-span-7 flex flex-col dana-imapolstat-container">
+        <div class="col-span-8 md:col-span-8 flex flex-col dana-imapolstat-container">
           <DanaImapolstat />
         </div>
       </div>
@@ -159,6 +157,15 @@ export default {
 
   .jumlah-dana-container {
     grid-column: span 8 / span 8;
+  }
+}
+
+@media (max-width: 425px) {
+  .gap-10{
+    gap: 0px;
+  }
+  .px-12{
+    padding: 0;
   }
 }
 </style>

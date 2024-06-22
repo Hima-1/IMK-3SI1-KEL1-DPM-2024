@@ -50,16 +50,6 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 765px) and (max-width: 850px) {
-  .icon {
-    width: 0.9rem !important;
-    height: 0.9rem !important;
-  }
-  .link {
-    font-size: 0.85rem !important;
-  }
-}
-
 @media (min-width: 920px) {
   .md\\:flex-row {
     display: flex;
@@ -68,6 +58,16 @@ export default {
   }
   .md\\:mb-0 {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 765px) and (max-width: 850px) {
+  .icon {
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+  }
+  .link {
+    font-size: 0.85rem !important;
   }
 }
 </style>

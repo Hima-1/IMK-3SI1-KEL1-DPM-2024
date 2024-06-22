@@ -67,4 +67,10 @@ export default {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 765px){
+  .mt-12{
+    margin-top: 1.5rem;
+  }
+}
 </style>

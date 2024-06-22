@@ -101,10 +101,32 @@ export default {
   display: block;
 }
 
+@media (max-width: 1280px) {
+  .profile-photo {
+    width: 3rem;
+    height: 3rem;
+  }
+  .font-poppins{
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .profile-photo {
     width: 3.1875rem;
     height: 3.1875rem;
+  }
+  .arrow-down-icon {
+    display: none;
+  }
+  .drop{
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .profile-photo {
+    width: auto;
+    height: 3rem;
   }
   .arrow-down-icon {
     display: none;

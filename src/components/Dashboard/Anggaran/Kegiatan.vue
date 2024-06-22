@@ -105,6 +105,9 @@ export default {
 }
 
 @media (max-width: 1280px) {
+  .kegiatan-container {
+    padding: 2rem;
+  }
   .icon-container {
     width: 1.5rem;
     height: 2rem;
@@ -142,15 +145,21 @@ export default {
   }
 
   h1 {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
 
   p {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
 
   .deskripsi {
     margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .kegiatan-container{
+    margin-bottom: 1rem;
   }
 }
 </style>

@@ -8,7 +8,7 @@
         <img src="@/assets/icon/deskripsi-kegiatan.svg" alt="Deskripsi Kegiatan Icon" class="icon w-14 h-14 shrink-0 mr-10">
         <div>
           <h3 class="text-[#5A5C6B] font-poppins text-[1.5625rem] font-semibold leading-[2.34188rem]">Deskripsi Kegiatan</h3>
-          <p class="text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
+          <p class="text-[#6A6C7A] text-justify font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
             Unit Kesenian (Ukes) akan menggelar Welcome Party Ukes 2021 dengan tema
             <i>"Finding Yourself In The Exploration of A New World"</i>.
             Melalui jalan cerita yang diperankan oleh Teater Antik, penampilan musik dari Xbar dan Excelsior, serta gerakan tari gemulai dari Paradise, tema yang dibawakan berhasil dihidupkan.
@@ -21,7 +21,7 @@
         <img src="@/assets/icon/tujuan-kegiatan.svg" alt="Tujuan Kegiatan Icon" class="icon w-14 h-14 shrink-0 mr-10">
         <div>
           <h3 class="text-[#5A5C6B] font-poppins text-[1.5625rem] font-semibold leading-[2.34188rem]">Tujuan Kegiatan</h3>
-          <ul class="list-disc list-inside text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
+          <ul class="list-disc text-justify list-inside text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
             <li>Pengenalan kegiatan dan pelantikan anggota baru UKM Kesenian</li>
             <li>Peningkatan rasa kekeluargaan antaranggota UKM Kesenian</li>
             <li>Pengembangan minat dan bakat yang dimiliki mahasiswa STIS dalam bidang kesenian</li>
@@ -33,7 +33,7 @@
         <img src="@/assets/icon/keterangan.svg" alt="Keterangan Icon" class="icon w-14 h-14 shrink-0 mr-10">
         <div>
           <h3 class="text-[#5A5C6B] font-poppins text-[1.5625rem] font-semibold leading-[2.34188rem]">Keterangan</h3>
-          <ul class="list-disc list-inside text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
+          <ul class="list-disc text-justify list-inside text-[#6A6C7A] font-poppins text-[1.4375rem] font-normal leading-[2.1545rem]">
             <li><strong>Urgensi:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo augue ac est accumsan laoreet.</li>
             <li><strong>Kondisi:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo augue ac est accumsan laoreet.</li>
           </ul>
@@ -112,7 +112,7 @@ export default {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .tentang-kegiatan-container {
     width: 100%;
     height: auto;
@@ -129,6 +129,7 @@ export default {
   .icon {
     width: 1.75rem;
     height: 2rem;
+    margin-right: 1rem;
   }
 
   h3 {

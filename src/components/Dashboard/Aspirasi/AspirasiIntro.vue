@@ -51,22 +51,30 @@ export default {
 
 @media (max-width: 1280px) {
   .wrapper {
-    @apply w-3/6 p-11 box-border;
+    @apply w-3/6 p-10 box-border;
   }
 
   .text-paragraph, .text-sambat {
-    @apply text-[1rem] leading-[1.3rem];
+    @apply text-[1rem] leading-[1.5rem];
   }
 }
 
 /* Media query for mobile view */
 @media (max-width: 640px) {
   .wrapper {
-    @apply w-full p-4 box-border;
+    @apply w-full p-6 box-border;
   }
 
   .text-paragraph, .text-sambat {
     @apply text-[0.9375rem] leading-[1.40513rem];
+  }
+
+  .mt-9{
+   margin-top: 2rem;
+  }
+
+  .mt-12{
+    margin-top: 2rem;
   }
 }
 </style>
