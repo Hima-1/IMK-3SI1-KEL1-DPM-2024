@@ -15,11 +15,12 @@
       </div>
 
       <Table
-          :rows="rows"
+          :rows="paginatedRows"
           :currentPage="currentPage"
           :totalPages="totalPages"
-          @view-details="navigateToDetail"
-          @update:currentPage="updateCurrentPage"
+          @viewDetails="viewDetails"
+          @update:currentPage="updateCurrentPageHandler"
+          @search="searchRowsHandler"
       />
 
       <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6">
@@ -33,6 +34,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex';
 import AnggaranHeader from "@/components/Dashboard/Anggaran/Header.vue";
 import DanaImapolstat from "@/components/Dashboard/Anggaran/DanaImapolstat.vue";
 import JumlahDana from "@/components/Dashboard/Anggaran/JumlahDana.vue";
@@ -50,33 +52,18 @@ export default {
     AnggaranHeader,
     Table,
   },
+  computed: {
+    ...mapState('anggaran', ['currentPage']),
+    ...mapGetters('anggaran', ['paginatedRows', 'totalPages']),
+  },
   data() {
     return {
-      rows: [
-        {
-          id: 1,
-          no: 1,
-          namaFolder: 'AD/ART Imapolstat 21/22',
-          waktu: '2021-12-09 08:16 WIB',
-          tipe: 'PDF Document',
-          size: '223 kb',
-        },
-        {
-          id: 2,
-          no: 2,
-          namaFolder: 'AD/ART Imapolstat 22/23',
-          waktu: '2021-12-09 08:16 WIB',
-          tipe: 'PDF Document',
-          size: '223 kb',
-        },
-      ],
       currentFolder: {},
       showDetail: false,
-      currentPage: 1,
-      totalPages: 1,
     };
   },
   methods: {
+    ...mapActions('anggaran', ['updateCurrentPage', 'searchRows']),
     navigateToDetail(id) {
       this.currentFolder = this.rows.find(row => row.id === id);
       this.showDetail = true;
@@ -89,13 +76,16 @@ export default {
     toggleDetail() {
       this.showDetail = !this.showDetail;
     },
-    updateCurrentPage(newPage) {
-      this.currentPage = newPage;
-      // Logic to handle pagination change
-    }
+    updateCurrentPageHandler(newPage) {
+      this.updateCurrentPage(newPage);
+    },
+    searchRowsHandler(query) {
+      this.searchRows(query);
+    },
   },
 };
 </script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');

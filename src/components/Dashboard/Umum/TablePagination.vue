@@ -53,6 +53,7 @@ export default {
 </script>
 
 
+
 <style scoped>
 .pagination-wrapper {
   width: 100%;

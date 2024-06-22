@@ -13,7 +13,7 @@
         <!-- Table Rows -->
         <div class="w-full flex flex-col">
           <TableRow
-              v-for="row in paginatedRows"
+              v-for="row in rows"
               :key="row.no"
               :rowData="row"
               @viewDetails="viewDetails"
@@ -61,25 +61,6 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      searchQuery: '',
-      itemsPerPage: 10,
-    };
-  },
-  computed: {
-    filteredRows() {
-      if (this.searchQuery) {
-        return this.rows.filter(row => row.namaFolder.toLowerCase().includes(this.searchQuery.toLowerCase()));
-      }
-      return this.rows;
-    },
-    paginatedRows() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      const end = this.currentPage * this.itemsPerPage;
-      return this.filteredRows.slice(start, end);
-    },
-  },
   methods: {
     viewDetails(row) {
       this.$emit("viewDetails", row);
@@ -88,8 +69,7 @@ export default {
       this.$emit("update:currentPage", newPage);
     },
     searchRows(query) {
-      this.searchQuery = query;
-      this.$emit("update:currentPage", 1);
+      this.$emit("search", query);
     },
   },
 };

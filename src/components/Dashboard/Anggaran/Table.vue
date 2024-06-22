@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-10 w-full margin">
-    <TableSearch @search="searchRows" />
+  <div class="w-full flex flex-col overflow-x-auto">
+    <TableSearch @search="handleSearchRows" />
 
     <!-- Responsive Table Container -->
-    <div class="w-full mt-6 overflow-x-auto margin">
+    <div class="w-full mt-6 overflow-x-auto">
       <div class="min-w-[800px]">
         <TableHeader />
 
@@ -16,7 +16,7 @@
               v-for="row in paginatedRows"
               :key="row.no"
               :rowData="row"
-              @view-details="viewDetails"
+              @viewDetails="viewDetails"
           />
         </div>
       </div>
@@ -27,17 +27,18 @@
       <TablePagination
           :currentPage="currentPage"
           :totalPages="totalPages"
-          @update:currentPage="updateCurrentPage"
+          @update:currentPage="handleUpdateCurrentPage"
       />
     </div>
   </div>
 </template>
 
 <script>
-import TableHeader from "@/components/Dashboard/Anggaran/TableHeader.vue";
+import TableHeader from "@/components/Dashboard/Arsip/TableHeader.vue";
 import TableSearch from "@/components/Dashboard/Umum/TableSearch.vue";
-import TableRow from "@/components/Dashboard/Anggaran/TableRow.vue";
+import TableRow from "@/components/Dashboard/Arsip/ArsipTableRow.vue";
 import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: "Table",
@@ -47,53 +48,25 @@ export default {
     TableRow,
     TablePagination,
   },
-  props: {
-    rows: {
-      type: Array,
-      required: true,
-    },
-    currentPage: {
-      type: Number,
-      required: true,
-    },
-    totalPages: {
-      type: Number,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      searchQuery: '',
-      itemsPerPage: 10,
-    };
-  },
   computed: {
-    filteredRows() {
-      if (this.searchQuery) {
-        return this.rows.filter(row => row.namaFolder.toLowerCase().includes(this.searchQuery.toLowerCase()));
-      }
-      return this.rows;
-    },
-    paginatedRows() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      const end = this.currentPage * this.itemsPerPage;
-      return this.filteredRows.slice(start, end);
-    },
+    ...mapState('anggaran', ['currentPage']),
+    ...mapGetters('anggaran', ['paginatedRows', 'totalPages']),
   },
   methods: {
+    ...mapActions('anggaran', ['updateCurrentPage', 'searchRows']),
     viewDetails(row) {
-      this.$emit("view-details", row);
+      this.$router.push({ name: 'DetailAnggaran', params: { id: row.id } });
     },
-    updateCurrentPage(newPage) {
-      this.$emit("update:currentPage", newPage);
+    handleUpdateCurrentPage(newPage) {
+      this.updateCurrentPage(newPage);
     },
-    searchRows(query) {
-      this.searchQuery = query;
-      this.$emit("update:currentPage", 1);
+    handleSearchRows(query) {
+      this.searchRows(query);
     },
   },
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 </style>
