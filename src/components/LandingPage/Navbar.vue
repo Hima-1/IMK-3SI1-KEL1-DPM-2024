@@ -24,7 +24,7 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
+      <div class="py-2 md:hidden flex items-center">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
           <img src="@/assets/icon/hamburger.svg" alt="Menu Icon" class="burger-icon" />
         </button>
@@ -32,26 +32,20 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="isMobileMenuOpen" class="text-[16px] md:hidden">
-      <router-link to="/" exact class="block btn btn-ghost no-underline text-white font-medium px-4"
-        :exact-active-class="'active-link'" @click.native="closeMobileMenu">
+    <div v-if="isMobileMenuOpen" class="flex flex-col text-[16px] md:hidden">
+      <router-link to="/" exact class="flex items-center justify-center h-12 btn btn-ghost no-underline text-white font-medium px-4" :exact-active-class="'active-link'" @click.native="closeMobileMenu">
         Home
       </router-link>
-      <router-link to="/berita" class="block btn btn-ghost no-underline text-white font-medium px-4"
-        :active-class="'active-link'" @click.native="closeMobileMenu">
+      <router-link to="/berita" class="flex items-center justify-center h-12 btn btn-ghost no-underline text-white font-medium px-4" :active-class="'active-link'" @click.native="closeMobileMenu">
         Berita
       </router-link>
-      <router-link to="/galeri" class="block btn btn-ghost no-underline text-white font-medium px-4"
-        :active-class="'active-link'" @click.native="closeMobileMenu">
+      <router-link to="/galeri" class="flex items-center justify-center h-12 btn btn-ghost no-underline text-white font-medium px-4" :active-class="'active-link'" @click.native="closeMobileMenu">
         Galeri
       </router-link>
-      <router-link to="/struktur" class="block btn btn-ghost no-underline text-white font-medium px-4"
-        :active-class="'active-link'" @click.native="closeMobileMenu">
+      <router-link to="/struktur" class="flex items-center justify-center h-12 btn btn-ghost no-underline text-white font-medium px-4" :active-class="'active-link'" @click.native="closeMobileMenu">
         Struktur
       </router-link>
-      <router-link to="/login"
-        class="block btn btn-outline text-white uppercase border-2 border-white rounded-full px-4 font-bold mx-4 mb-2 flex items-center justify-center"
-        :active-class="'active-link'" @click.native="closeMobileMenu">
+      <router-link to="/login" class="flex items-center justify-center h-12 btn btn-outline text-white uppercase border-2 border-white rounded-full px-4 font-bold mx-4 my-2" :active-class="'active-link'" @click.native="closeMobileMenu">
         Log In
       </router-link>
     </div>

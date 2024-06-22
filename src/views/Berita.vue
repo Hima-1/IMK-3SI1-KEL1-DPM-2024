@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-[#cddbe5] flex flex-col items-start justify-start min-h-screen py-20 px-16">
+  <div class="bg-[#cddbe5] flex flex-col items-center justify-start min-h-screen pb-10 md:pb-0 px-16">
     <!-- Judul -->
-    <div class="w-full text-center mb-16">
+    <div class="w-full text-center mb-10">
       <h1
         class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
         Berita DPM Polstat STIS
@@ -10,7 +10,7 @@
 
     <!-- Konten -->
     <div>
-      <div class="flex flex-wrap lg:flex-nowrap justify-center gap-8">
+      <div class="w-full flex flex-wrap lg:flex-nowrap justify-center gap-8 hidden md:flex">
         <section id="berita-utama" class="w-full lg:w-2/3">
           <BeritaUtama />
         </section>
@@ -20,6 +20,9 @@
       </div>
       <section id="berita-lain">
         <BeritaLain />
+      </section>
+      <section id="populer-small" class="md:hidden">
+        <PopulerList />
       </section>
     </div>
   </div>

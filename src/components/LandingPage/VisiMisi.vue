@@ -7,14 +7,14 @@
           Visi
         </h1>
       </div>
-      <p class="text-[#1A5796] text-[16px] lg:text-[18px] text-center font-poppins font-normal mt-4 lg:mt-8 lg:px-40">
+      <p class="text-[#1A5796] text-[16px] lg:text-[18px] text-center font-poppins font-normal mt-4 mb-10 lg:mt-8 lg:px-40">
         Menjadikan Dewan Perwakilan Mahasiswa Politeknik Statistika STIS sebagai organisasi / majelis permusyawaratan
         mahasiswa yang kredibel dalam mengemban tanggung jawab secara inspiratif, kontributif, komunikatif dan juga
         selaras dengan Spiritualitas.
       </p>
       <div>
         <h1
-          class="visi-misi bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-16 p-5 text-[30px] lg:text-[33px]">
+          class="visi-misi bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold p-5 text-[30px] lg:text-[33px]">
           Misi
         </h1>
       </div>

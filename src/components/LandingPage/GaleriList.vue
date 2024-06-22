@@ -114,6 +114,7 @@ export default {
 
 .gallery-button:hover {
   color: #C7D6DD;
+  font-weight: bold;
 }
 
 .gallery-button.active {
