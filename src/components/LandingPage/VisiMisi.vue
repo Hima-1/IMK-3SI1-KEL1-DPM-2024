@@ -18,7 +18,7 @@
           Misi
         </h1>
       </div>
-      <div class="text-[#1A5796] text-[16px] lg:text-[18px] font-normal mt-4 lg:mt-8 lg:px-10">
+      <div class="text-[#1A5796] text-[16px] lg:text-[18px] font-normal mt-4 lg:mt-8 lg:px-10 mb-4 lg:mb-10 ">
         <div class="flex items-start">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">

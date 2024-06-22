@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 flex">
+    <div class="px-4 md:px-6 flex">
         <!-- Foto -->
         <div class="flex-shrink-0 w-[110px] h-[68px] overflow-hidden mr-4 mt-2 bg-white">
             <img src="@/assets/images/berita.webp" alt="Foto Berita Populer" class="w-full h-full object-cover">
