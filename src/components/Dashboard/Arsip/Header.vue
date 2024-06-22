@@ -7,7 +7,7 @@
           alt="Folder Icon"
           class="folder-icon w-12 h-12"
       />
-      <h1 class="text-[#1A5796] font-poppins text-4xl" style="line-height: 60px;">
+      <h1 class="text-[#1A5796] font-poppins text-4xl">
         Arsip Dokumen
       </h1>
     </div>
