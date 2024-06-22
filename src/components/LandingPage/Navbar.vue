@@ -24,7 +24,7 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
+      <div class="py-2 md:hidden flex items-center">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
           <img src="@/assets/icon/hamburger.svg" alt="Menu Icon" class="burger-icon" />
         </button>
