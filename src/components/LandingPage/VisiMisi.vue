@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#EBF3F5] min-h-screen flex items-center justify-center">
-    <div class="wrapper flex flex-col items-center justify-center pt-10 pb-20 px-10">
+    <div class="wrapper flex flex-col items-center justify-center pt-10 pb-10 px-10">
       <div>
         <h1
           class="visi-misi bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold p-5 text-[30px] lg:text-[33px]">

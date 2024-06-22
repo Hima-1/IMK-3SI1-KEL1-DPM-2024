@@ -9,7 +9,7 @@
     </div>
 
     <div class="container mx-auto relative z-10">
-      <router-link to="/" class="absolute top-6 left-6 z-20">
+      <router-link to="/" class="absolute top-6 left-6 md:left-10 z-20">
         <div class="flex flex-col items-center w-10 h-14">
           <img src="@/assets/icon/home.svg" class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" alt="Beranda Icon" />
           <p class="text-[#1A5796] text-center font-poppins text-[12px] lg:text-sm font-medium mt-2">
@@ -30,23 +30,24 @@
         <div class="pt-10 lg:pt-0 mt-10 flex space-x-2 lg:space-x-8">
           <div @click="showLoginPopup"
             class="w-[150px] h-[200px] md:w-[200px] md:h-[225px] justify-center bg-[#EBF3F5] rounded-lg shadow-lg flex flex-col items-center p-4 cursor-pointer">
-            <div class="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] bg-[#FAC950] rounded-full flex items-center justify-center mb-4">
+            <div
+              class="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] bg-[#FAC950] rounded-full flex items-center justify-center mb-4">
               <img src="@/assets/images/logo_dpm.webp" class="w-[100px] md:w-[120px] h-auto" alt="Logo DPM" />
             </div>
             <p class="text-[#1A5796] text-center font-poppins text-sm lg:text-lg font-bold">
               AKUN DPM
             </p>
           </div>
-
-          <div @click="showLoginPopup"
-            class="w-[150px] h-[200px] md:w-[200px] md:h-[225px] justify-center bg-[#EBF3F5] rounded-lg shadow-lg flex flex-col items-center p-4 cursor-pointer">
-            <div class="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] bg-[#FAC950] rounded-full flex items-center justify-center mb-4">
-              <img src="@/assets/images/logo_sipadu.webp" class="w-[100px] md:w-[120px] h-auto" alt="Logo SIPADU" />
+          <router-link to="/dashboard">
+            <div class="w-[150px] h-[200px] md:w-[200px] md:h-[225px] justify-center bg-[#EBF3F5] rounded-lg shadow-lg flex flex-col items-center p-4 cursor-pointer">
+              <div class="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] bg-[#FAC950] rounded-full flex items-center justify-center mb-4">
+                <img src="@/assets/images/logo_sipadu.webp" class="w-[100px] md:w-[120px] h-auto" alt="Logo SIPADU" />
+              </div>
+              <p class="text-[#1A5796] text-center font-poppins text-sm lg:text-lg font-bold">
+                SIPADU
+              </p>
             </div>
-            <p class="text-[#1A5796] text-center font-poppins text-sm lg:text-lg font-bold">
-              SIPADU
-            </p>
-          </div>
+          </router-link>
         </div>
       </div>
 
