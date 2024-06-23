@@ -132,7 +132,12 @@
 
                 <!-- Button Ubah Password -->
                 <div class="grid lg:grid-cols-7 xl:grid-cols-8 lg:justify-end">
-                  <button @click="$emit('show-confirmation-popup')" class="w-full lg:col-start-5 xl:col-start-6 lg:col-end-8 xl:col-end-9 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">
+                  <button
+                    :disabled="!isFormValid"
+                    :class="{ 'bg-[#ebf3f5]': isFormValid === false }"
+                    @click="$emit('show-confirmation-popup')"
+                    class="w-full lg:col-start-5 xl:col-start-6 lg:col-end-8 xl:col-end-9 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold"
+                  >
                     Ubah Password
                   </button>
                 </div>
@@ -193,27 +198,27 @@ export default {
       this.activeTab = "ubahPassword";
     },
     validateForm() {
-      this.passwordLamaError = '';
-      this.passwordBaruError = '';
-      this.konfirmasiPasswordBaruError = '';
+      this.passwordLamaError = "";
+      this.passwordBaruError = "";
+      this.konfirmasiPasswordBaruError = "";
 
       // Validasi Password Lama
       if (!this.passwordLama) {
-        this.passwordLamaError = 'Password lama harus diisi.';
+        this.passwordLamaError = "Password lama harus diisi.";
       }
 
       // Validasi Password Baru
       if (!this.passwordBaru) {
-        this.passwordBaruError = 'Password baru harus diisi.';
+        this.passwordBaruError = "Password baru harus diisi.";
       } else if (!this.validPassword(this.passwordBaru)) {
-        this.passwordBaruError = 'Password baru harus terdiri dari minimal 8 karakter dan mengandung angka, karakter khusus, dan huruf kapital.';
+        this.passwordBaruError = "Password baru harus terdiri dari minimal 8 karakter dan mengandung angka, karakter khusus, dan huruf kapital.";
       }
 
       // Validasi Konfirmasi Password Baru
       if (!this.konfirmasiPasswordBaru) {
-        this.konfirmasiPasswordBaruError = 'Konfirmasi password baru harus diisi.';
+        this.konfirmasiPasswordBaruError = "Konfirmasi password baru harus diisi.";
       } else if (this.konfirmasiPasswordBaru !== this.passwordBaru) {
-        this.konfirmasiPasswordBaruError = 'Konfirmasi password baru tidak cocok dengan password baru.';
+        this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak cocok dengan password baru.";
       }
     },
     validPassword(password) {
