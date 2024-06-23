@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(anggota, index) in anggotas" :key="index" :class="`basis-full sm:basis-1/3 lg:basis-1/4 xl:basis-1/5`" class="mx-4 bg-[#EBF3F5] rounded-3xl drop-shadow-md hover:scale-105 ease-in-out duration-300">
+  <div v-for="(anggota, index) in anggotas" :key="index" :class="`basis-3/4 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5`" class="mx-4 bg-[#EBF3F5] rounded-3xl drop-shadow-md hover:scale-105 ease-in-out duration-300">
     <!-- Bagian Atas Struktur -->
     <div class="relative rounded-t-[13px]" style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0) 96.17%)">
       <!-- Foto -->
