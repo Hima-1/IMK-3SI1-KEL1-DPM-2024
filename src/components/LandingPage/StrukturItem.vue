@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(anggota, index) in anggotas" :key="index" :class="`basis-3/4 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5`" class="mx-4 bg-[#EBF3F5] rounded-3xl drop-shadow-md hover:scale-105 ease-in-out duration-300">
+  <div :class="`basis-3/4 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5`" class="mx-4 bg-[#EBF3F5] rounded-3xl drop-shadow-md hover:scale-105 ease-in-out duration-300">
     <!-- Bagian Atas Struktur -->
     <div class="relative rounded-t-[13px]" style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0) 96.17%)">
       <!-- Foto -->
@@ -23,19 +23,13 @@
 </template>
 
 <script>
+
 export default {
   name: "StrukturItem",
-  data() {
-    return {
-      anggotas: [
-        { id: 1, nama: "Saifullah Fatah", nim: "212011313", foto: "ketua.webp", jabatan: "KETUA DPM", divisi: "BPH" },
-        { id: 2, nama: "Faqih Indra Lesmana", nim: "222112039", foto: "waketu.webp", jabatan: "WAKIL KETUA DPM", divisi: "BPH" },
-        { id: 3, nama: "Adinda Batrisyibazla", nim: "212212444", foto: "bend1.webp", jabatan: "BENDAHARA I", divisi: "BPH" },
-        { id: 4, nama: "Aurelia Dini Syafnadiva", nim: "212313007", foto: "bend2.webp", jabatan: "BENDAHARA II", divisi: "BPH" },
-        { id: 5, nama: "Masna Novita Rahmaniar", nim: "222011296", foto: "sekre1.webp", jabatan: "SEKRETARIS I", divisi: "BPH" },
-        { id: 6, nama: "Yohana Herdianly Br Nainggolan", nim: "112313432", foto: "sekre2.webp", jabatan: "SEKRETARIS II", divisi: "BPH" },
-      ],
-    };
-  },
+  props: {
+    anggota: {
+      type: Object,
+    }
+  }
 };
 </script>

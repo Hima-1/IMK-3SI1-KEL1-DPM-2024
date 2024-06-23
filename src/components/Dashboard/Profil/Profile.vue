@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#ebf3f5] justify-center">
-    <div class="grid  lg:grid-rows-1 py-6 mx-8 lg:mx-20 ">
+    <div class="grid lg:grid-rows-1 py-6 mx-8 lg:mx-20">
       <!-- Edit Icon and My Profile Text -->
       <div class="row-span-1 grid grid-flow-col grid-cols-8 md:grid-cols-10 items-center my-4">
         <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-12 h-8 md:h-12 text-[#1A5796]" />
@@ -8,22 +8,22 @@
       </div>
 
       <!-- My Profile -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 lg:h-[512px]">
+      <div class="grid grid-cols-1 lg:grid-cols-3 lg:min-h-fit">
         <!-- Foto Profil, Nama, dan NIM -->
-        <div class="grid-flow-col lg:col-span-1 py-8 lg:py-0 bg-[#FFFFFF] text-[#1A5796] rounded-lg lg:rounded-none shadow-lg">
-          <div class="grid lg:grid-rows-5">
+        <div class="grid-flow-col lg:col-span-1 items-center py-8 lg:py-auto bg-[#FFFFFF] text-[#1A5796] rounded-lg lg:rounded-none shadow-lg">
+          <div class="grid lg:grid-rows-auto items-center">
             <div class="grid lg:row-span-4 items-center justify-center">
-              <img src="@/assets/icon/account.svg" alt="User Photo" class="w-[200px] lg:p-4 lg:w-[300px] object-cover" />
+              <img :src="`/mahasiswa/${mahasiswa.foto}`" alt="User Photo" class="w-[200px] lg:p-4 lg:w-[300px] rounded-full object-cover" />
             </div>
-            <div class="text-center mt-3">
-              <p class="font-bold text-[24px] lg:text-[26px] xl:text-[30px]">Himacad Rijifen</p>
-              <p class="text-[18px] lg:text-[24px]">222112999</p>
+            <div class="grid grid-flow-row row-span-3 text-center">
+              <p class="font-bold text-[24px] lg:text-[26px] xl:text-[30px]">{{ mahasiswa.namaLengkap }}</p>
+              <p class="text-[18px] lg:text-[24px]">{{ mahasiswa.nim }}</p>
             </div>
           </div>
         </div>
 
         <!-- Detail Profil -->
-        <div class="lg:row-span-1 grid lg:col-span-2 bg-[#FFFFFF] text-[#1A5796] my-8 lg:my-0 lg:ml-16 lg:h-[512px] rounded-lg lg:rounded-none shadow-lg">
+        <div class="lg:row-span-1 grid lg:col-span-2 bg-[#FFFFFF] text-[#1A5796] my-8 lg:my-0 lg:ml-16 rounded-lg lg:rounded-none shadow-lg">
           <!-- Tab Detail Profil dan Ubah Password -->
           <div class="grid grid-cols-2 lg:grid-cols-3 font-semibold text-[#ebf3f5] text-[16px] sm:text-[18px] lg:text-[20px]">
             <button
@@ -44,10 +44,10 @@
             <!-- Tab Detail Profil -->
             <div v-if="activeTab === 'detailProfile'" class="grid grid-rows-1 m-8" role="tab">
               <!-- Informasi User -->
-              <div class="grid grid-rows-5 gap-y-5 lg:gap-y-8 text-[#6A6C7A] ">
+              <div class="grid grid-rows-5 gap-y-5 lg:gap-y-8 text-[#6A6C7A]">
                 <!-- Nama Lengkap -->
                 <div class="grid lg:grid-cols-5">
-                  <p class="lg:col-span-2 font-bold">Nama Lengkap</p>
+                  <p class="lg:col-span-2 font-bold">Nama</p>
                   <p class="lg:col-span-3">{{ mahasiswa.namaLengkap }}</p>
                 </div>
 
@@ -77,86 +77,106 @@
 
                 <!-- Button Edit Profile -->
                 <div class="grid justify-end grid-cols-6 md:grid-cols-7 lg:grid-cols-5">
-                  <router-link to="/dashboard/edit-profile" class="grid col-start-4 col-end-7 md:col-start-6 md:col-span-2 nav-link lg:col-start-4 lg:col-end-6 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md" :active-class="'active-link'">
+                  <router-link
+                    to="/dashboard/edit-profile"
+                    class="grid col-start-4 col-end-7 md:col-start-6 md:col-span-2 nav-link lg:col-start-4 lg:col-end-6 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md"
+                    :active-class="'active-link'"
+                  >
                     <button class="py-2 md:p-4 font-semibold">Edit Profil</button>
                   </router-link>
                 </div>
               </div>
-
             </div>
 
             <!-- Tab Ubah Password -->
             <div v-if="activeTab === 'ubahPassword'" class="grid grid-rows-1 m-8" role="tab">
-              <div class="grid lg:grid-rows-4 gap-y-5 lg:gap-y-4 text-[#6A6C7A]">
+              <form @submit.prevent="validateForm" class="grid lg:grid-rows-auto gap-y-5 lg:gap-y-4 text-[#6A6C7A]">
                 <!-- Password Lama -->
                 <div class="grid xl:grid-cols-3 items-center">
-                  <p>Password Lama</p>
-                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
-                    <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
+                  <label>Password Lama</label>
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(passwordLamaError)">
+                    <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="passwordLamaVisible === false" @click="togglePasswordLamaVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="passwordLamaVisible === true" @click="togglePasswordLamaVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
+                  <span v-if="passwordLamaError" class="label-text-alt text-red-500">{{ passwordLamaError }}</span>
                 </div>
 
                 <!-- Password Baru -->
                 <div class="grid xl:grid-cols-3 items-center">
-                  <p>Password Baru</p>
-                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
-                    <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full" />
+                  <label>Password Baru</label>
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(passwordBaruError)">
+                    <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="passwordBaruVisible === false" @click="togglePasswordBaruVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="passwordBaruVisible === true" @click="togglePasswordBaruVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
+                  <span v-if="passwordBaruError" class="label-text-alt text-red-500">{{ passwordBaruError }}</span>
                 </div>
 
                 <!-- Konfirmasi Password Baru -->
                 <div class="grid xl:grid-cols-3 items-center">
-                  <p>Konfirmasi Password Baru</p>
-                  <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg">
-                    <input v-model="konfirmasiPassword" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input w-full"/>
+                  <label>Konfirmasi Password Baru</label>
+                  <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(konfirmasiPasswordBaruError)">
+                    <input v-model="konfirmasiPassword" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
+                  <span v-if="konfirmasiPasswordBaruError" class="label-text-alt text-red-500">{{ konfirmasiPasswordBaruError }}</span>
                 </div>
 
                 <!-- Button Ubah Password -->
-                <div class="grid lg:grid-cols-7 xl:grid-cols-8 mt-5 lg:justify-end">
-                  <button @click="$emit('show-success-popup')" class="w-full lg:col-start-5 xl:col-start-6 lg:col-end-8 xl:col-end-9 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">Ubah Password</button>
+                <div class="grid lg:grid-cols-7 xl:grid-cols-8 h-fit lg:justify-end">
+                  <button @click="$emit('show-confirmation-popup')" class="w-full lg:col-start-5 xl:col-start-6 lg:col-end-8 xl:col-end-9 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">
+                    Ubah Password
+                  </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Profile",
+  components: {},
   data() {
     return {
       activeTab: "detailProfile",
       passwordLamaVisible: false,
       passwordBaruVisible: false,
       konfirmasiPasswordVisible: false,
+      passwordLama: "",
+      passwordBaru: "",
+      konfirmasiPasswordBaru: "",
+      passwordLamaError: "",
+      passwordBaruError: "",
+      konfirmasiPasswordBaruError: "",
     };
   },
   computed: {
-    ...mapState('mahasiswa', ['mahasiswa']),
-    ...mapGetters('mahasiswa', ['mahasiswa']),
+    ...mapState("mahasiswa", ["mahasiswa"]),
+    ...mapGetters("mahasiswa", ["mahasiswa"]),
+    isFormValid() {
+      return this.passwordLama !== "" && this.passwordBaru !== "" && this.konfirmasiPasswordBaru !== "" && this.passwordBaru === this.konfirmasiPasswordBaru && this.validPassword(this.passwordBaru);
+    },
+    inputClass() {
+      return (error) => (error ? "input-error " : "");
+    },
   },
   methods: {
-    ...mapActions('mahasiswa', ['updateMahasiswa']),
+    ...mapActions("mahasiswa", ["updateMahasiswa"]),
     togglePasswordLamaVisibility() {
       this.passwordLamaVisible = !this.passwordLamaVisible;
     },
@@ -171,6 +191,42 @@ export default {
     },
     activeTabTwo() {
       this.activeTab = "ubahPassword";
+    },
+    validateForm() {
+      this.passwordLamaError = "";
+      this.passwordBaruError = "";
+      this.konfirmasiPasswordBaruError = "";
+
+      // Validasi Password Lama
+      if (!this.passwordLama) {
+        this.passwordLamaError = "Password lama tidak boleh kosong.";
+      }
+
+      // Validasi Password Baru
+      if (!this.passwordBaru) {
+        this.passwordBaruError = "Password baru tidak boleh kosong.";
+      } else if (!this.validPassword(this.passwordBaru)) {
+        this.passwordBaruError = "Password baru harus terdiri dari minimal 8 karakter dan mengandung angka, karakter khusus, dan huruf kapital.";
+      }
+
+      // Validasi Konfirmasi Password Baru
+      if (this.passwordBaru !== this.konfirmasiPasswordBaru) {
+        this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak cocok dengan password baru.";
+      } else if (!this.konfirmasiPasswordBaru) {
+        this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak boleh kosong.";
+      }
+
+      // Cek jika ada pesan kesalahan
+      if (this.passwordLamaError || this.passwordBaruError || this.konfirmasiPasswordBaruError) {
+        return false; // Form tidak valid
+      }
+
+      return true; // Form valid
+    },
+    validPassword(password) {
+      // Minimal 8 karakter, minimal satu huruf besar, satu huruf kecil, satu angka, dan satu karakter khusus
+      const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      return re.test(password);
     },
   },
 };

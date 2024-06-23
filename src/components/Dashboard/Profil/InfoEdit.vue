@@ -12,10 +12,11 @@
         <!-- Foto Device Small -->
         <div class="grid lg:hidden justify-center">
           <div class="relative w-fit mb-6">
-            <img src="@/assets/icon/account.svg" alt="User Photo" class="border-4 border-[#6A6C7A] rounded-full w-[200px] md:w-[250px] h-[200px] md:h-[250px] object-center object-cover" />
-            <div class="absolute bottom-1 md:bottom-4 right-1 bg-[#1A5796] rounded-full p-5 w-fit">
+            <img :src="`/mahasiswa/${ mahasiswa.foto }`" alt="User Photo" class="border-4 border-[#6A6C7A] rounded-full w-[200px] md:w-[250px] h-[200px] md:h-[250px] object-center object-cover" />
+            <button @click="triggerFileInput" class="absolute bottom-1 md:bottom-4 right-1 bg-[#1A5796] rounded-full p-5 w-fit">
               <img src="@/assets/icon/camera.svg" alt="User Photo" class="scale-150" />
-            </div>
+            </button>
+            <input type="file" ref="fileInput" @change="handleFileChange" class="hidden">
           </div>
         </div>
 
@@ -32,7 +33,7 @@
           </div>
 
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
-            <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Nama Lengkap</p>
+            <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Nama</p>
             <input
               v-model="mahasiswa.namaLengkap"
               type="text"
@@ -80,8 +81,8 @@
 
         <!-- Foto User -->
         <div class="hidden lg:grid grid-cols-4 gap-y-5 items-center text-[18px]">
-          <div class="col-span-3 lg:max-xl:col-span-4 col-start-2 grid justify-center lg:relative lg:max-xl:mb-4">
-            <img src="@/assets/icon/account.svg" alt="User Photo" class="border-2 rounded-none border-[#6A6C7A] p-2 w-[300px] object-center object-cover" />
+          <div class="col-span-3 lg:max-xl:col-span-4 col-start-2 grid justify-center rounded-none border-2 border-[#6A6C7A] p-2 lg:relative lg:max-xl:mb-4">
+            <img :src="`/mahasiswa/${ mahasiswa.foto }`" alt="User Photo" class="rounded-full w-[300px] object-center object-cover" />
           </div>
 
           <div class="grid lg:max-xl:grid-rows-2 col-span-4 items-center">
@@ -105,11 +106,29 @@ export default {
   },
   data() {
     return {
+      fileName: '',
       providers: ["Axis", "Indosat", "Telkomsel", "Tri", "XL", "By.U", "Smartfren"],
     };
   },
   methods: {
     ...mapActions('mahasiswa', ['updateMahasiswa']),
+    triggerFileInput() {
+      this.$refs.fileInput.click();
+    },
+    handleFileChange(event) {
+      const file = event.target.files[0];
+      const validImageTypes = ['image/gif', 'image/jpeg', 'image/png', 'image/webp'];
+
+      if (file) {
+        if (validImageTypes.includes(file.type)) {
+          this.fileName = file.name;
+          this.errorMessage = '';
+        } else {
+          this.fileName = '';
+          this.errorMessage = 'Hanya file gambar yang diperbolehkan!';
+        }
+      }
+    }
   },
 };
 </script>

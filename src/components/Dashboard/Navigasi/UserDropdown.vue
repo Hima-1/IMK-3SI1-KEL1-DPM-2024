@@ -1,9 +1,9 @@
 <template>
   <div class="relative" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
     <div class="flex items-center gap-2 p-2" aria-haspopup="true" :aria-expanded="isDropdownVisible.toString()" role="button" @click="handleClick">
-      <img src="@/assets/icon/account.svg" alt="User Photo" class="profile-photo w-[3.75rem] h-[3.75rem] shrink-0 rounded-full">
+      <img :src="`/mahasiswa/${ mahasiswa.foto }`" alt="User Photo" class="profile-photo w-[3.75rem] h-[3.75rem] shrink-0 rounded-full">
       <div class="text-right hide-on-910 hidden md:block">
-        <span class="text-[#EBF3F5] text-lg font-medium" style="font-family: 'Poppins', sans-serif;">Himacad Rijifen</span>
+        <span class="text-[#EBF3F5] text-lg font-medium" style="font-family: 'Poppins', sans-serif;">{{ mahasiswa.namaLengkap }}</span>
       </div>
       <img src="@/assets/icon/arrow-down.svg" alt="Dropdown Icon" class="arrow-down-icon w-[0.6875rem] h-[0.5625rem] text-[#EBF3F5]">
     </div>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex';
+
 export default {
   name: 'UserDropdown',
   data() {
@@ -36,7 +38,12 @@ export default {
       isMobile: window.innerWidth <= 768
     };
   },
+  computed: {
+    ...mapState('mahasiswa', ['mahasiswa']),
+    ...mapGetters('mahasiswa', ['mahasiswa']),
+  },
   methods: {
+    ...mapActions('mahasiswa', ['updateMahasiswa']),
     handleMouseOver() {
       if (!this.isMobile) {
         this.showDropdown();

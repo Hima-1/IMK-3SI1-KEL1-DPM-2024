@@ -18,29 +18,29 @@
       </div>
       <ul v-show="dropdownOpen" class="absolute w-1/2 bg-[#EBF3F5] text-[#1A5796] text-[18px] shadow-lg border-none font-bold text-center mt-16 z-10">
         <li
-          v-for="(item, index) in items"
-          :key="index"
-          :class="{ active: activeButton === item, hovered: hoveredOption === item }"
-          @click="setActiveButton(item)"
-          @mouseover="hoveredOption = item"
+          v-for="button in buttons"
+          :key="button"
+          :class="{ active: activeButton === button, hovered: hoveredOption === button }"
+          @click="setActiveButton(button)"
+          @mouseover="hoveredOption = button"
           @mouseleave="hoveredOption = null"
-          class="py-2 hover:bg-[#FCB316] active:bg-[#C6C6C6] cursor-pointer"
-        >
-          {{ item }}
+          class="py-2 active:bg-[#C6C6C6] hover:bg-[#FCB316] cursor-pointer"
+          >
+          {{ button }}
         </li>
       </ul>
     </div>
 
     <!-- Struktur Button Group -->
     <div class="hidden lg:flex bg-[#EBF3F5] text-[#1A5796] text-[15px] xl:text-[18px] mx-4 mb-12 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
-      <li v-for="item in items" class="list-none">
-        <button class="mx-2 px-4 active:font-bold focus:text-[#F7941D] focus:font-bold hover:text-[#F7941D] hover:font-bold">{{ item }}</button>
+      <li v-for="button in buttons" :key="button" :class="{ active: activeButton === button, hovered: hoveredOption === button }" @click="setActiveButton(button)" class="list-none">
+        <button class="mx-2 px-4 active:font-bold focus:text-[#F7941D] focus:font-bold hover:text-[#F7941D] hover:font-bold">{{ button }}</button>
       </li>
     </div>
 
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center max-lg:gap-x-2 gap-y-8">
-        <StrukturItem />
+        <StrukturItem v-for="anggota in filteredButton" :key="anggota.id" :anggota="anggota" />
       </div>
     </div>
   </div>
@@ -48,30 +48,46 @@
 
 <script>
 import StrukturItem from "./StrukturItem.vue";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   name: "StrukturList",
   components: {
     StrukturItem,
   },
+  computed: {
+    ...mapState("anggotas", ["anggotas"]),
+    ...mapGetters("anggotas", ["anggotas"]),
+  },
   data() {
     return {
       activeButton: "Semua",
-      buttons: ["Semua", "LDKM", "Sidang Umum I", "Sidang Umum II", "Sidang Umum III", "Sidang Umum IV", "Lainnya"],
       dropdownOpen: false,
       hoveredOption: null,
-      items: ["Semua", "BPH", "Komisi I", "Komisi II", "Komisi III", "Komisi IV", "Pubmedkraf", "IT"],
+      buttons: ["Semua", "BPH", "Komisi I", "Komisi II", "Komisi III", "Komisi IV", "Pubmedkraf", "IT"],
+      filteredButton: [],
     };
   },
   methods: {
     setActiveButton(buttonName) {
       this.activeButton = buttonName;
+      this.filterItems();
       this.dropdownOpen = false;
     },
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
     },
+    filterItems() {
+      if (this.activeButton === "Semua") {
+        this.filteredButton= this.anggotas;
+      } else {
+        this.filteredButton = this.anggotas.filter(anggota => anggota.divisi === this.activeButton);
+      }
+    }
   },
+  mounted() {
+    this.filterItems();
+  }
 };
 </script>
 

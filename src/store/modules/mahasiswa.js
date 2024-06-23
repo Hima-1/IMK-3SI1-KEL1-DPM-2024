@@ -1,10 +1,11 @@
 const state = {
   mahasiswa: {
-    namaLengkap: "Lutfi Rahmatuti Maghfiroh",
+    namaLengkap: "Himacad Rijifen",
     kelas: "3SI1",
     nim: "222112999",
     email: "kelompok1@gmail.com",
     noHp: "082143658709",
+    foto: "dummy.webp"
   },
 };
 

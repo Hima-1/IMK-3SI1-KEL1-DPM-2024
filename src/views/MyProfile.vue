@@ -1,24 +1,29 @@
 <template>
   <div>
     <section id="myProfile">
-      <Profile @show-success-popup="showSuccessPopup"/>
+      <Profile @show-confirmation-popup="showConfirmationPopup"/>
     </section>
+    <KonfirmasiUbahPassword v-if="isConfirmationPopupVisible" @confirm="handleConfirmation"
+                               @cancel="hideConfirmationPopup"/>
     <UbahPasswordSuccess v-if="isSuccessPopupVisible" @confirm="hideSuccessPopup"></UbahPasswordSuccess>
   </div>  
 </template>
 
 <script>
 import Profile from "@/components/Dashboard/Profil/Profile.vue"
+import KonfirmasiUbahPassword from "@/components/Dashboard/Profil/KonfirmasiUbahPassword.vue"
 import UbahPasswordSuccess from "@/components/Dashboard/Profil/UbahPasswordSuccess.vue"
 
 export default {
   name: "MyProfile",
   components: {
     Profile,
+    KonfirmasiUbahPassword,
     UbahPasswordSuccess
   },
   data() {
     return {
+      isConfirmationPopupVisible: false,
       isSuccessPopupVisible: false,
       tab: 1,
       currentFolder: {},
@@ -28,7 +33,14 @@ export default {
     };
   },
   methods: {
-    showSuccessPopup() {
+    showConfirmationPopup() {
+      this.isConfirmationPopupVisible = true;
+    },
+    hideConfirmationPopup() {
+      this.isConfirmationPopupVisible = false;
+    },
+    handleConfirmation() {
+      this.isConfirmationPopupVisible = false;
       this.isSuccessPopupVisible = true;
     },
     hideSuccessPopup() {

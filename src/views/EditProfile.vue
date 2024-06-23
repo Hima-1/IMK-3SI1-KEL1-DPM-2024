@@ -8,8 +8,10 @@
         <InfoRekening />
       </section>
       <section class="grid grid-cols-8 mb-8">
-        <button @click="showSuccessPopup" class="col-start-6 md:col-start-8 col-end-9 p-2 rounded-lg bg-[#1A5796] font-semibold text-[#F6F6F6]">Simpan</button>
+        <button @click="showConfirmationPopup" class="col-start-6 md:col-start-8 col-end-9 p-2 rounded-lg bg-[#1A5796] font-semibold text-[#F6F6F6]">Simpan</button>
       </section>
+      <KonfirmasiSimpanProfil v-if="isConfirmationPopupVisible" @confirm="handleConfirmation"
+                               @cancel="hideConfirmationPopup"/>
       <EditProfileSuccess v-if="isSuccessPopupVisible" @confirm="hideSuccessPopup"></EditProfileSuccess>
     </div>
   </div>
@@ -18,6 +20,7 @@
 <script>
 import InfoEdit from "@/components/Dashboard/Profil/InfoEdit.vue";
 import InfoRekening from "@/components/Dashboard/Profil/InfoRekening.vue";
+import KonfirmasiSimpanProfil from "../components/Dashboard/Profil/KonfirmasiSimpanProfil.vue";
 import EditProfileSuccess from "@/components/Dashboard/Profil/EditProfileSuccess.vue";
 
 export default {
@@ -25,15 +28,24 @@ export default {
   components: {
     InfoEdit,
     InfoRekening,
+    KonfirmasiSimpanProfil,
     EditProfileSuccess
   },
   data() {
     return {
+      isConfirmationPopupVisible: false,
       isSuccessPopupVisible: false,
     };
   },
   methods: {
-    showSuccessPopup() {
+    showConfirmationPopup() {
+      this.isConfirmationPopupVisible = true;
+    },
+    hideConfirmationPopup() {
+      this.isConfirmationPopupVisible = false;
+    },
+    handleConfirmation() {
+      this.isConfirmationPopupVisible = false;
       this.isSuccessPopupVisible = true;
     },
     hideSuccessPopup() {
