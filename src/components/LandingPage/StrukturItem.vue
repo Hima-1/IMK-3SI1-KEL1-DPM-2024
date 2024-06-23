@@ -3,7 +3,7 @@
     <!-- Bagian Atas Struktur -->
     <div class="relative rounded-t-[13px]" style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0) 96.17%)">
       <!-- Foto -->
-      <img :src="anggota.foto" class="object-cover w-full rounded-t-[13px]" />
+      <img :src="`/src/assets/images/${anggota.foto}`" class=" object-cover w-full rounded-t-[13px]" />
       <!-- Jabatan -->
       <div class="absolute content-end bottom-0 left-0 w-full h-1/2 py-3 bg-gradient-to-t from-black to-90%">
         <h2 class="text-[#EBF3F5] font-poppins text-[16px] min-[375px]:text-[23px] min-[425px]:text-[27px] sm:text-[20px] font-bold text-center">{{ anggota.jabatan }}</h2>
@@ -28,12 +28,12 @@ export default {
   data() {
     return {
       anggotas: [
-        { id: 1, nama: "Saifullah Fatah", nim: "212011313", foto: "/images/ketua.webp", jabatan: "KETUA DPM", divisi: "BPH" },
-        { id: 2, nama: "Faqih Indra Lesmana", nim: "222112039", foto: "/images/waketu.webp", jabatan: "WAKIL KETUA DPM", divisi: "BPH" },
-        { id: 3, nama: "Adinda Batrisyibazla", nim: "212212444", foto: "/images/bend1.webp", jabatan: "BENDAHARA I", divisi: "BPH" },
-        { id: 4, nama: "Aurelia Dini Syafnadiva", nim: "212313007", foto: "/images/bend2.webp", jabatan: "BENDAHARA II", divisi: "BPH" },
-        { id: 5, nama: "Masna Novita Rahmaniar", nim: "222011296", foto: "/images/sekre1.webp", jabatan: "SEKRETARIS I", divisi: "BPH" },
-        { id: 6, nama: "Yohana Herdianly Br Nainggolan", nim: "112313432", foto: "/images/sekre2.webp", jabatan: "SEKRETARIS II", divisi: "BPH" },
+        { id: 1, nama: "Saifullah Fatah", nim: "212011313", foto: "ketua.webp", jabatan: "KETUA DPM", divisi: "BPH" },
+        { id: 2, nama: "Faqih Indra Lesmana", nim: "222112039", foto: "waketu.webp", jabatan: "WAKIL KETUA DPM", divisi: "BPH" },
+        { id: 3, nama: "Adinda Batrisyibazla", nim: "212212444", foto: "bend1.webp", jabatan: "BENDAHARA I", divisi: "BPH" },
+        { id: 4, nama: "Aurelia Dini Syafnadiva", nim: "212313007", foto: "bend2.webp", jabatan: "BENDAHARA II", divisi: "BPH" },
+        { id: 5, nama: "Masna Novita Rahmaniar", nim: "222011296", foto: "sekre1.webp", jabatan: "SEKRETARIS I", divisi: "BPH" },
+        { id: 6, nama: "Yohana Herdianly Br Nainggolan", nim: "112313432", foto: "sekre2.webp", jabatan: "SEKRETARIS II", divisi: "BPH" },
       ],
     };
   },
