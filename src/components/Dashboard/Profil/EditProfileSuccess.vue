@@ -8,9 +8,9 @@
       />
       <h1 class="sukses-text">SUKSES >_<</h1>
       <p class="profil-text">Profil kamu berhasil diubah!</p>
-      <div class="modal-buttons">
+      <router-link to="/dashboard/my-profile" class="modal-buttons" :active-class="'active-link'" >
         <button @click="confirm" class="confirm-button">Oke</button>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>

@@ -1,31 +1,31 @@
 <template>
   <div class="bg-[#ebf3f5] justify-center">
-    <div class="grid lg:grid-rows-1 py-6 mx-8 lg:mx-20">
+    <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]" class="grid lg:grid-rows-1 mx-8 pb-12 lg:mx-20 sm:text-[1.15rem] leading-[1.875rem] text-[#1A5796]">
       <!-- Edit Icon and My Profile Text -->
-      <div class="row-span-1 grid grid-flow-col grid-cols-8 md:grid-cols-10 items-center my-4">
-        <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-12 h-8 md:h-12 text-[#1A5796]" />
-        <h1 class="col-span-9 text-[#1A5796] font-poppins text-[24px] lg:text-4xl" style="line-height: 60px">My Profile</h1>
+      <div class="flex items-center space-x-6 my-4">
+        <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-10 h-8 md:h-10" />
+        <h1 class="ml-5 font-poppins text-[1.85rem]" style="line-height: 60px">My Profile</h1>
       </div>
 
       <!-- My Profile -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 lg:min-h-fit">
+      <div class="grid grid-cols-1 lg:grid-cols-3 lg:h-4/5">
         <!-- Foto Profil, Nama, dan NIM -->
-        <div class="grid-flow-col lg:col-span-1 items-center py-8 lg:py-auto bg-[#FFFFFF] text-[#1A5796] rounded-lg lg:rounded-none shadow-lg">
+        <div class="grid-flow-col lg:col-span-1 items-center py-8 lg:py-auto bg-[#FFFFFF] rounded-lg lg:rounded-none shadow-lg">
           <div class="grid lg:grid-rows-auto items-center">
-            <div class="grid lg:row-span-4 items-center justify-center">
+            <div class="grid lg:row-span-4 items-center justify-center mb-7">
               <img :src="`/mahasiswa/${mahasiswa.foto}`" alt="User Photo" class="w-[200px] lg:p-4 lg:w-[300px] rounded-full object-cover" />
             </div>
-            <div class="grid grid-flow-row row-span-3 text-center">
-              <p class="font-bold text-[24px] lg:text-[26px] xl:text-[30px]">{{ mahasiswa.namaLengkap }}</p>
-              <p class="text-[18px] lg:text-[24px]">{{ mahasiswa.nim }}</p>
+            <div class="grid grid-flow-row items-center text-center">
+              <p class="grid font-bold text-[1.5rem]">{{ mahasiswa.namaLengkap }}</p>
+              <p class="grid text-[1.25rem]">{{ mahasiswa.nim }}</p>
             </div>
           </div>
         </div>
 
         <!-- Detail Profil -->
-        <div class="lg:row-span-1 grid lg:col-span-2 bg-[#FFFFFF] text-[#1A5796] my-8 lg:my-0 lg:ml-16 rounded-lg lg:rounded-none shadow-lg">
+        <div class="lg:row-span-1 grid lg:col-span-2 bg-[#FFFFFF] my-8 lg:my-0 lg:ml-16 rounded-lg lg:rounded-none shadow-lg">
           <!-- Tab Detail Profil dan Ubah Password -->
-          <div class="grid grid-cols-2 lg:grid-cols-3 font-semibold text-[#ebf3f5] text-[16px] sm:text-[18px] lg:text-[20px]">
+          <div class="grid grid-cols-2 lg:grid-cols-3 font-semibold text-[#ebf3f5]">
             <button
               @click="activeTabOne"
               class="text-wrap sm:text-nowrap p-2 py-4 border-b-2"
@@ -40,7 +40,7 @@
             <div class="hidden lg:grid lg:col-span-1 lg:border-b-2"></div>
           </div>
 
-          <div class="grid grid-rows-1 text-[15px] lg:text-[17px] xl:text-[20px]">
+          <div class="grid grid-rows-1">
             <!-- Tab Detail Profil -->
             <div v-if="activeTab === 'detailProfile'" class="grid grid-rows-1 m-8" role="tab">
               <!-- Informasi User -->
@@ -121,7 +121,7 @@
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Konfirmasi Password Baru</label>
                   <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(konfirmasiPasswordBaruError)">
-                    <input v-model="konfirmasiPassword" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
+                    <input v-model="konfirmasiPasswordBaru" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
@@ -131,7 +131,7 @@
                 </div>
 
                 <!-- Button Ubah Password -->
-                <div class="grid lg:grid-cols-7 xl:grid-cols-8 h-fit lg:justify-end">
+                <div class="grid lg:grid-cols-7 xl:grid-cols-8 lg:justify-end">
                   <button @click="$emit('show-confirmation-popup')" class="w-full lg:col-start-5 xl:col-start-6 lg:col-end-8 xl:col-end-9 bg-[#1A5796] text-center text-[#FFFFFF] rounded-md p-4 text-nowrap font-semibold">
                     Ubah Password
                   </button>
@@ -193,35 +193,28 @@ export default {
       this.activeTab = "ubahPassword";
     },
     validateForm() {
-      this.passwordLamaError = "";
-      this.passwordBaruError = "";
-      this.konfirmasiPasswordBaruError = "";
+      this.passwordLamaError = '';
+      this.passwordBaruError = '';
+      this.konfirmasiPasswordBaruError = '';
 
       // Validasi Password Lama
       if (!this.passwordLama) {
-        this.passwordLamaError = "Password lama tidak boleh kosong.";
+        this.passwordLamaError = 'Password lama harus diisi.';
       }
 
       // Validasi Password Baru
       if (!this.passwordBaru) {
-        this.passwordBaruError = "Password baru tidak boleh kosong.";
+        this.passwordBaruError = 'Password baru harus diisi.';
       } else if (!this.validPassword(this.passwordBaru)) {
-        this.passwordBaruError = "Password baru harus terdiri dari minimal 8 karakter dan mengandung angka, karakter khusus, dan huruf kapital.";
+        this.passwordBaruError = 'Password baru harus terdiri dari minimal 8 karakter dan mengandung angka, karakter khusus, dan huruf kapital.';
       }
 
       // Validasi Konfirmasi Password Baru
-      if (this.passwordBaru !== this.konfirmasiPasswordBaru) {
-        this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak cocok dengan password baru.";
-      } else if (!this.konfirmasiPasswordBaru) {
-        this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak boleh kosong.";
+      if (!this.konfirmasiPasswordBaru) {
+        this.konfirmasiPasswordBaruError = 'Konfirmasi password baru harus diisi.';
+      } else if (this.konfirmasiPasswordBaru !== this.passwordBaru) {
+        this.konfirmasiPasswordBaruError = 'Konfirmasi password baru tidak cocok dengan password baru.';
       }
-
-      // Cek jika ada pesan kesalahan
-      if (this.passwordLamaError || this.passwordBaruError || this.konfirmasiPasswordBaruError) {
-        return false; // Form tidak valid
-      }
-
-      return true; // Form valid
     },
     validPassword(password) {
       // Minimal 8 karakter, minimal satu huruf besar, satu huruf kecil, satu angka, dan satu karakter khusus
