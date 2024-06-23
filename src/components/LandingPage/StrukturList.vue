@@ -37,7 +37,13 @@
         <button class="mx-2 px-4 active:font-bold focus:text-[#F7941D] focus:font-bold hover:text-[#F7941D] hover:font-bold">{{ button }}</button>
       </li>
     </div>
-</div>
+
+    <div class="container mx-auto">
+      <div class="flex flex-wrap justify-center max-lg:gap-x-2 gap-y-8">
+        <StrukturItem v-for="anggota in filteredButton" :key="anggota.id" :anggota="anggota" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
