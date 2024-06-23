@@ -21,15 +21,6 @@ export default {
     return {
       isSuccessPopupVisible: false,
       tab: 1,
-      detail: [
-        {
-          namaLengkap: "Himacad Rijifen",
-          kelas: "3SI1",
-          nim: "222112999",
-          email: "kelompok1@gmail.com",
-          noHp: "082143658709",
-        },
-      ],
       currentFolder: {},
       showDetail: false,
       currentPage: 1,

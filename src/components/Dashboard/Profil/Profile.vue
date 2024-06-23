@@ -48,31 +48,31 @@
                 <!-- Nama Lengkap -->
                 <div class="grid lg:grid-cols-5">
                   <p class="lg:col-span-2 font-bold">Nama Lengkap</p>
-                  <p class="lg:col-span-3">Himacad Rijifen</p>
+                  <p class="lg:col-span-3">{{ mahasiswa.namaLengkap }}</p>
                 </div>
 
                 <!-- Kelas -->
                 <div class="grid lg:grid-cols-5">
                   <p class="lg:col-span-2 font-bold">Kelas</p>
-                  <p class="lg:col-span-3">3SI1</p>
+                  <p class="lg:col-span-3">{{ mahasiswa.kelas }}</p>
                 </div>
 
                 <!-- NIM -->
                 <div class="grid lg:grid-cols-5">
                   <p class="lg:col-span-2 font-bold">NIM</p>
-                  <p class="lg:col-span-3">222112999</p>
+                  <p class="lg:col-span-3">{{ mahasiswa.nim }}</p>
                 </div>
 
                 <!-- Email -->
                 <div class="grid lg:grid-cols-5">
                   <p class="lg:col-span-2 font-bold">Email</p>
-                  <p class="lg:col-span-3">kelompok1@gmail.com</p>
+                  <p class="lg:col-span-3">{{ mahasiswa.email }}</p>
                 </div>
 
                 <!-- No HP -->
                 <div class="grid lg:grid-cols-5">
                   <p class="lg:col-span-2 font-bold">No HP</p>
-                  <p class="lg:col-span-3">082143658709</p>
+                  <p class="lg:col-span-3">{{ mahasiswa.noHp }}</p>
                 </div>
 
                 <!-- Button Edit Profile -->
@@ -139,7 +139,10 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex';
+
 export default {
+  name: "Profile",
   data() {
     return {
       activeTab: "detailProfile",
@@ -148,7 +151,12 @@ export default {
       konfirmasiPasswordVisible: false,
     };
   },
+  computed: {
+    ...mapState('mahasiswa', ['mahasiswa']),
+    ...mapGetters('mahasiswa', ['mahasiswa']),
+  },
   methods: {
+    ...mapActions('mahasiswa', ['updateMahasiswa']),
     togglePasswordLamaVisibility() {
       this.passwordLamaVisible = !this.passwordLamaVisible;
     },

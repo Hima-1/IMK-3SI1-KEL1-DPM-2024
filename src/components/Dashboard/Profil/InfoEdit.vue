@@ -23,18 +23,20 @@
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
             <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Email</p>
             <input
+              v-model="mahasiswa.email"
               type="text"
-              placeholder="You can't touch this"
+              placeholder="Email"
               class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] px-2 py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl"
               disabled
             />
           </div>
 
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
-            <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Nama</p>
+            <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Nama Lengkap</p>
             <input
+              v-model="mahasiswa.namaLengkap"
               type="text"
-              placeholder="You can't touch this"
+              placeholder="Nama Lengkap"
               class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] px-2 py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl"
               disabled
             />
@@ -43,8 +45,9 @@
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
             <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">NIM</p>
             <input
+            v-model="mahasiswa.nim"
               type="text"
-              placeholder="You can't touch this"
+              placeholder="NIM"
               class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] px-2 py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl"
               disabled
             />
@@ -53,8 +56,9 @@
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
             <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">Kelas</p>
             <input
+            v-model="mahasiswa.kelas"
               type="text"
-              placeholder="You can't touch this"
+              placeholder="Kelas"
               class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] px-2 py-5 bg-[#C8D6DF] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl"
               disabled
             />
@@ -62,7 +66,7 @@
 
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
             <p class="min-[425px]:col-span-2 lg:col-span-1 font-bold">No. HP</p>
-            <input type="text" placeholder="Type here" class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] px-2 py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl" />
+            <input v-model="mahasiswa.noHp" type="text" placeholder="Type here" class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[16px] md:text-[17px] px-2 py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl" />
           </div>
 
           <div class="grid min-[425px]:grid-cols-8 lg:grid-cols-5 items-center">
@@ -91,11 +95,21 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex';
+
 export default {
+  name: "InfoEdit",
+  computed: {
+    ...mapState('mahasiswa', ['mahasiswa']),
+    ...mapGetters('mahasiswa', ['mahasiswa']),
+  },
   data() {
     return {
       providers: ["Axis", "Indosat", "Telkomsel", "Tri", "XL", "By.U", "Smartfren"],
     };
+  },
+  methods: {
+    ...mapActions('mahasiswa', ['updateMahasiswa']),
   },
 };
 </script>
