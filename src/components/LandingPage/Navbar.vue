@@ -19,7 +19,7 @@
         <router-link to="/struktur" class="btn btn-ghost no-underline text-white font-medium"
           :active-class="'active-link'">Struktur</router-link>
         <router-link to="/login"
-          class="btn loginbtn btn-outline text-white uppercase border-4 border-white rounded-full px-4 py-1 font-bold"
+          class="btn loginbtn btn-outline text-white uppercase border-white rounded-full px-4 py-1 font-bold"
           :active-class="'active-link'">Log In</router-link>
       </div>
 
@@ -103,6 +103,12 @@ export default {
 .active-link {
   font-weight: bold;
   text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.loginbtn {
+  border-width: 4px;
+  padding: 0rem 1.5rem;
 }
 
 .loginbtn:hover {

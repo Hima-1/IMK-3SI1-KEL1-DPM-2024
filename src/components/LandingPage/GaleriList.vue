@@ -3,34 +3,41 @@
     <!-- Judul Galeri -->
     <div>
       <h1
-        class="galeri bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
+        class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
         Galeri
       </h1>
     </div>
 
-    <!-- Button Group for Larger Screens -->
-    <div class="button-group mt-8 hidden md:flex">
-      <button v-for="button in buttons" :key="button" class="gallery-button"
-        :class="{ active: activeButton === button }" @click="setActiveButton(button)">
-        {{ button }}
-      </button>
-    </div>
-
-    <!-- Dropdown for Smaller Screens -->
-    <div class="custom-dropdown-container mt-8 md:hidden">
-      <div class="custom-dropdown" @click="toggleDropdown">
-        <span>{{ activeButton }}</span>
-        <div class="custom-dropdown-icon">
-          <img src="@/assets/icon/dropdown.svg" alt="Dropdown Icon" class="icon">
+    <!-- Dropdown -->
+    <div class="flex w-full mt-8 justify-center md:hidden">
+      <div
+        class="grid grid-cols-5 items-center bg-[#15649D] text-[#FFFFFF] text-[18px] mb-6 p-3 shadow-lg rounded-[44px] border-none font-bold text-center min-[425px]:text-left min-[425px]:pl-6 max-w-xl min-[425px]:w-1/2 md:w-1/3"
+        @click="toggleDropdown">
+        <span class="col-span-4 mx-3">{{ activeButton }}</span>
+        <div class="grid col-start-5 justify-center">
+          <img src="@/assets/icon/dropdown.svg" alt="Dropdown Icon" class="icon mx-1">
         </div>
       </div>
-      <ul v-show="dropdownOpen" class="custom-dropdown-options">
+      <ul v-show="dropdownOpen"
+        class="absolute w-1/2 bg-[#15649D] text-[#FFFFFF] text-[18px] shadow-lg border-none font-bold text-center mt-16 z-10">
         <li v-for="button in buttons" :key="button"
           :class="{ active: activeButton === button, hovered: hoveredOption === button }"
-          @click="setActiveButton(button)" @mouseover="hoveredOption = button" @mouseleave="hoveredOption = null">
+          @click="setActiveButton(button)" @mouseover="hoveredOption = button" @mouseleave="hoveredOption = null"
+          class="py-2 hover:bg-[#FCB316] hover:text-[#15649D] active:bg-[#1C7DC7]">
           {{ button }}
         </li>
       </ul>
+    </div>
+
+    <!-- Button Group -->
+    <div
+      class="hidden md:flex bg-[#15649D] text-[#FFFFFF] text-[15px] xl:text-[18px] mt-8 mb-6 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
+      <li v-for="button in buttons" class="list-none">
+        <button
+          class="mx-2 px-4 active:font-bold focus:text-[#C7D6DD] focus:font-bold hover:text-[#C7D6DD] hover:font-bold">
+          {{ button }}
+        </button>
+      </li>
     </div>
 
     <!-- Foto Dummy -->
@@ -77,113 +84,7 @@ export default {
 </script>
 
 <style scoped>
-.galeri {
+.judulpage {
   background-image: url('@/assets/icon/visi_misi.svg');
-  margin-bottom: 25px;
-}
-
-.button-group {
-  justify-content: center;
-  gap: 0;
-  margin-bottom: 25px;
-  width: 90%;
-}
-
-.gallery-button {
-  background-color: #15649D;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  padding: 15px 30px;
-  font-size: 15.18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: font-weight 0.3s ease;
-}
-
-.gallery-button:first-child {
-  border-top-left-radius: 44px;
-  border-bottom-left-radius: 44px;
-}
-
-.gallery-button:last-child {
-  border-top-right-radius: 44px;
-  border-bottom-right-radius: 44px;
-}
-
-.gallery-button:hover {
-  color: #C7D6DD;
-  font-weight: bold;
-}
-
-.gallery-button.active {
-  font-weight: bold;
-  color: #C7D6DD;
-}
-
-.custom-dropdown-container {
-  position: relative;
-  width: 90%;
-}
-
-.custom-dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  font-size: 15.18px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  background-color: #15649D;
-  color: #EBF3F5;
-  border-radius: 44px;
-  cursor: pointer;
-}
-
-.custom-dropdown-icon {
-  margin-left: 10px;
-}
-
-.custom-dropdown-icon img.icon {
-  width: 24px;
-  height: 24px;
-}
-
-.custom-dropdown:hover {
-  background-color: #1C7DC7;
-}
-
-.custom-dropdown-options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #EBF3F5;
-  border-radius: 8px;
-  margin-top: 5px;
-  list-style: none;
-  padding: 0;
-  max-height: 200px;
-  z-index: 1000;
-}
-
-.custom-dropdown-options li {
-  padding: 10px 20px;
-  font-size: 15.18px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  background-color: #15649D;
-  color: #EBF3F5;
-  cursor: pointer;
-}
-
-.custom-dropdown-options li.active {
-  background-color: #1C7DC7;
-}
-
-.custom-dropdown-options li.hovered {
-  background-color: #FCB316;
-  color: #15649D;
 }
 </style>
