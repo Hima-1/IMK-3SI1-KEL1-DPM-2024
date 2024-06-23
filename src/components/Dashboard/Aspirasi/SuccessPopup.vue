@@ -1,6 +1,6 @@
 <template>
   <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div class="w-11/12 max-w-[27.75rem] h-[31.6875rem] bg-[#ebf3f5] shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center">
+    <div class="modal-wrapper">
       <img
           src="@/assets/images/success.webp"
           alt="Gambar Sukses"
@@ -38,13 +38,21 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
+.modal-wrapper {
+  width: 90%;
+  max-width: 27.75rem;
+  height: 31.6875rem;
+  background-color: #ebf3f5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 1280px) {
-  .max-w-\[27\.75rem\] {
-    max-width: 30rem;
-  }
-  .h-\[31\.6875rem\] {
-    height: 35rem;
-  }
   .w-\[17\.9038rem\] {
     width: 22rem;
   }

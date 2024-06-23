@@ -1,5 +1,5 @@
 <template>
-  <div class=" flex items-center justify-center bg-[#EBF3F5] py-2">
+  <div class="pb-16 flex items-center justify-center bg-[#EBF3F5] py-2">
     <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]">
       <HeaderComponent />
       <div class="md:px-0">
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/Dashboard/Aspirasi/AspirasiHeader.vue'
-import IntroComponent from '@/components/Dashboard/Aspirasi/AspirasiIntro.vue'
-import FormComponent from '@/components/Dashboard/Aspirasi/AspirasiForm.vue'
-import AspirasiConfirmationPopup from "@/components/Dashboard/Aspirasi/AspirasiConfirmationPopup.vue";
-import AspirasiSuccess from "@/components/Dashboard/Aspirasi/AspirasiSuccess.vue";
+import HeaderComponent from '@/components/Dashboard/Aspirasi/Header.vue'
+import IntroComponent from '@/components/Dashboard/Aspirasi/Intro.vue'
+import FormComponent from '@/components/Dashboard/Aspirasi/Form.vue'
+import AspirasiConfirmationPopup from "@/components/Dashboard/Aspirasi/ConfirmationPopup.vue";
+import AspirasiSuccess from "@/components/Dashboard/Aspirasi/SuccessPopup.vue";
 
 export default {
   name: 'AspirasiIntro',

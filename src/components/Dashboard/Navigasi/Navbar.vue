@@ -8,7 +8,7 @@
       </button>
     </div>
     <div class="hidden lg:flex items-center gap-4">
-      <router-link to="/" class="flex items-center gap-4 ml-10">
+      <router-link to="/dashboard" class="flex items-center gap-4 ml-10">
         <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo w-[3.875rem] h-[3.875rem] shrink-0">
         <span class="title lg:hidden xl:inline-block text-white text-2xl font-bold" style="font-family: 'Poppins', sans-serif;">SIASPIMAN</span>
       </router-link>

@@ -12,8 +12,8 @@
       </h1>
     </div>
 
-    <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6">
-      <img src="@/assets/icon/return.svg" alt="Return Icon" class="return w-[56px] h-[56px] flex-shrink-0 cursor-pointer" @click="toggleDetail"/>
+    <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6 cursor-pointer" @click="toggleDetail">
+      <img src="@/assets/icon/return.svg" alt="Return Icon" class="return w-[56px] h-[56px] flex-shrink-0 cursor-pointer"/>
       <div class="ml-4">
         <p class="kembali text-[#267DC2] font-poppins text-[30px] font-semibold leading-normal">{{ currentFolder.namaFolder }}</p>
       </div>
@@ -41,6 +41,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -78,11 +79,34 @@ export default {
   .kembali {
     font-size: 1.5rem;
   }
-}
+  .mt-6 {
+    margin-top: 1rem;
+  }
 
-@media (max-width: 765px){
-  .mt-12{
-    margin-top: 1.5rem;
+  .p-4 {
+    padding-bottom: 0rem;
+  }
+  .text-\[30px\] {
+    font-size: 1.5rem;
   }
 }
+
+@media (max-width: 765px) {
+  .mt-12 {
+    margin-top: 1.5rem;
+  }
+
+  .mt-6 {
+    margin-top: 0.75rem;
+  }
+
+  .p-4 {
+    padding-bottom: 0rem;
+  }
+
+  .text-\[30px\] {
+    font-size: 1rem;
+  }
+}
+
 </style>

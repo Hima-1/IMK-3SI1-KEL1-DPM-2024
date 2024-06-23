@@ -36,7 +36,7 @@
 <script>
 import TableHeader from "@/components/Dashboard/Arsip/TableHeader.vue";
 import TableSearch from "@/components/Dashboard/Umum/TableSearch.vue";
-import TableRow from "@/components/Dashboard/Arsip/ArsipTableRow.vue";
+import TableRow from "@/components/Dashboard/Arsip/TableRow.vue";
 import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
 
 export default {

@@ -147,4 +147,10 @@ img {
     font-size: 0.9375rem;
   }
 }
+
+@media (max-width: 425px) {
+  .container {
+    padding: 0;
+  }
+}
 </style>

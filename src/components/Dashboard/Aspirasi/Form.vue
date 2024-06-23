@@ -10,12 +10,16 @@
       </div>
       <div class="flex flex-col md:flex-row md:items-center mb-[2rem] input-container">
         <label class="w-full md:w-[13.75rem] text-[#6A6C7A] font-poppins text-[1.25rem] leading-[1.875rem] label">Ditujukan kepada</label>
-        <select class="select w-full h-[3.125rem] mt-2 md:mt-0 md:ml-4 p-2 border border-[#D9D9D9] bg-white rounded-md">
+        <select v-model="selectedOption" class="select w-full h-[3.125rem] mt-2 md:mt-0 md:ml-4 p-2 border border-[#D9D9D9] bg-white rounded-md">
           <option>Kampus</option>
           <option>Ormawa</option>
           <option>Pengurus Tingkat</option>
           <option>Lainnya</option>
         </select>
+      </div>
+      <div v-if="selectedOption === 'Lainnya'" class="flex flex-col md:flex-row md:items-center mb-[2rem] input-container">
+        <label class="w-full md:w-[13.75rem] text-[#6A6C7A] font-poppins text-[1.25rem] leading-[1.875rem] label">Lainnya</label>
+        <input type="text" class="input w-full h-[3.125rem] mt-2 md:mt-0 md:ml-4 p-2 border border-[#D9D9D9] bg-white rounded-md" placeholder="Tuliskan penerima lainnya">
       </div>
       <div class="flex flex-col md:flex-row md:items-start mb-[2rem] input-container">
         <label class="w-full md:w-[13.75rem] text-[#6A6C7A] font-poppins text-[1.25rem] leading-[1.875rem] label">Isi Sambatan</label>
@@ -38,6 +42,11 @@
 <script>
 export default {
   name: 'FormComponent',
+  data() {
+    return {
+      selectedOption: '',
+    };
+  },
 }
 </script>
 
@@ -115,5 +124,4 @@ export default {
     width: 8rem;
   }
 }
-
 </style>

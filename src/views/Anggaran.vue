@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 pt-0 min-h-screen flex justify-center">
+  <div class="bg-[#ebf3f5] p-6 pb-16 pt-0 min-h-screen flex justify-center">
     <div class="w-full max-w-full md:max-w-[1660px] flex flex-col">
       <AnggaranHeader />
 
       <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-8 mb-8 w-full">
 
-      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-6 px-12 margin">
+      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-16 px-12 margin">
         <div class="col-span-8 md:col-span-4 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
           <JumlahDana />
         </div>
@@ -18,17 +18,10 @@
           :rows="paginatedRows"
           :currentPage="currentPage"
           :totalPages="totalPages"
-          @viewDetails="viewDetails"
+          @navigateToDetail="navigateToDetail"
           @update:currentPage="updateCurrentPageHandler"
           @search="searchRowsHandler"
       />
-
-      <div v-if="showDetail" class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6">
-        <img src="@/assets/icon/return.svg" alt="Return Icon" class="w-[56px] h-[56px] flex-shrink-0 cursor-pointer" @click="toggleDetail" />
-        <div class="ml-4">
-          <p class="text-[#267DC2] font-poppins text-[30px] font-semibold leading-normal">{{ currentFolder.namaFolder }}</p>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -65,7 +58,7 @@ export default {
   methods: {
     ...mapActions('anggaran', ['updateCurrentPage', 'searchRows']),
     navigateToDetail(id) {
-      this.currentFolder = this.rows.find(row => row.id === id);
+      this.currentFolder = this.paginatedRows.find(row => row.id === id);
       this.showDetail = true;
       this.$router.push({ name: 'DetailAnggaran', params: { id } }).catch(err => {
         if (err.name !== 'NavigationDuplicated') {

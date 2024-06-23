@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 pt-0 min-h-screen flex justify-center">
+  <div class="bg-[#ebf3f5] p-6 pb-16 pt-0 min-h-screen flex justify-center">
     <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
       <ArsipHeader
           :showDetail="showDetail"
@@ -9,7 +9,7 @@
 
       <div class="mt-10 w-full">
         <Table
-            :rows="paginatedRows"
+            :rows="displayedRows"
             :currentPage="currentPage"
             :totalPages="totalPages"
             @viewDetails="viewDetails"
@@ -35,6 +35,18 @@ export default {
   computed: {
     ...mapState('arsip', ['currentPage']),
     ...mapGetters('arsip', ['paginatedRows', 'totalPages']),
+    displayedRows() {
+      if (this.showDetail) {
+        return this.currentFolder.isiFolder.map((item, index) => {
+          return {
+            ...item,
+            no: index + 1
+          };
+        });
+      } else {
+        return this.paginatedRows;
+      }
+    }
   },
   data() {
     return {
@@ -50,6 +62,7 @@ export default {
     },
     toggleDetail() {
       this.showDetail = false;
+      this.currentFolder = {};
     },
     updateCurrentPageHandler(newPage) {
       this.updateCurrentPage(newPage);

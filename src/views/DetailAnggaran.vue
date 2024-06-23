@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 min-h-screen flex justify-center">
+  <div class="bg-[#ebf3f5] p-6 pb-16 min-h-screen flex justify-center">
     <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
       <Header />
-      <div class="content-wrapper flex w-full justify-between mb-6 padding">
+      <div class="content-wrapper flex w-full justify-between mb-6 padding px-12">
         <div class="w-2/8 mr-3 flex flex-col">
           <Kegiatan />
         </div>
@@ -12,7 +12,7 @@
       </div>
 
       <!-- Title -->
-      <div class="padding text-[#267DC2] font-poppins text-[1.875rem] font-bold mb-0 mt-6 title-text">
+      <div class="padding text-[#267DC2] font-poppins text-[1.875rem] font-bold mb-0 mt-6 title-text px-12">
         Detail Anggaran Kegiatan
       </div>
 
@@ -106,6 +106,9 @@ export default {
     font-size: 1.125rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+  .px-12{
+    padding: 0;
   }
 }
 </style>

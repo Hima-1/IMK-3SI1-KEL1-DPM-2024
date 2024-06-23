@@ -1,6 +1,6 @@
 <template>
   <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div class="w-11/12 max-w-md h-128 bg-[#EBF3F5] shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center">
+    <div class="modal-wrapper">
       <img
           src="@/assets/images/konfirmasi.webp"
           alt="Gambar Konfirmasi"
@@ -47,8 +47,18 @@ export default {
   line-height: 3.5rem;
 }
 
-.h-128 {
+.modal-wrapper {
+  width: 90%;
+  max-width: 27.75rem;
   height: 31.6875rem;
+  background-color: #ebf3f5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 425px) {

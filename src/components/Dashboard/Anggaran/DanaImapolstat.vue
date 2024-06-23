@@ -1,7 +1,7 @@
 <template>
   <div class="flex-shrink-0 w-full max-w-[63.125rem] h-full max-h-[48.0625rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8 m:h-[30rem]">
     <h1 class="text-[#1A5796] text-center font-poppins text-[2rem] sm:text-[3.125rem] font-bold mb-5">Dana Imapolstat</h1>
-    <div class="w-full h-[15rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
+    <div class="w-full h-[12rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
       <Bar ref="chart" :data="chartData" :options="chartOptions" />
     </div>
   </div>
@@ -20,30 +20,43 @@ export default defineComponent({
     Bar
   },
   data() {
-    return {
-      chartData: {
-        labels: ['2020', '2021', '2022', '2023', '2024'],
-        datasets: [
-          {
-            label: 'Pemasukan',
-            backgroundColor: '#1a5796',
-            barThickness: 'flex',
-            minBarLength: 46,
-            data: [70, 80, 75, 85, 90]
+    const actualData = {
+      labels: ['2020', '2021', '2022', '2023', '2024'],
+      pemasukan: [70000000, 80000000, 75000000, 85000000, 90000000],
+      pengeluaran: [30000000, 20000000, 25000000, 15000000, 10000000]
+    };
+
+    const totalData = actualData.labels.map((_, index) =>
+        actualData.pemasukan[index] + actualData.pengeluaran[index]
+    );
+
+    const chartData = {
+      labels: actualData.labels,
+      datasets: [
+        {
+          label: 'Pemasukan',
+          backgroundColor: '#1a5796',
+          barThickness: 'flex',
+          minBarLength: 46,
+          data: actualData.pemasukan.map((value, index) => (value / totalData[index]) * 100)
+        },
+        {
+          label: 'Pengeluaran',
+          backgroundColor: '#267dc2',
+          borderRadius: {
+            topLeft: 9,
+            topRight: 9,
           },
-          {
-            label: 'Pengeluaran',
-            backgroundColor: '#267dc2',
-            borderRadius: {
-              topLeft: 9,
-              topRight: 9,
-            },
-            barThickness: 'flex',
-            minBarLength: 46,
-            data: [30, 20, 25, 15, 10]
-          }
-        ]
-      },
+          barThickness: 'flex',
+          minBarLength: 46,
+          data: actualData.pengeluaran.map((value, index) => (value / totalData[index]) * 100)
+        }
+      ]
+    };
+
+    return {
+      actualData,
+      chartData,
       chartOptions: {
         responsive: true,
         maintainAspectRatio: false,
@@ -100,15 +113,14 @@ export default defineComponent({
           },
           tooltip: {
             callbacks: {
-              label: function(context) {
-                let label = context.dataset.label || '';
-                if (label) {
-                  label += ': ';
-                }
-                if (context.parsed.y !== null) {
-                  label += `${context.parsed.y}%`;
-                }
-                return label;
+              label: (context) => {
+                const index = context.dataIndex;
+                const percentageValue = context.raw;
+                const actualValue = context.dataset.label === 'Pemasukan'
+                    ? this.actualData.pemasukan[index]
+                    : this.actualData.pengeluaran[index];
+                const actualValueFormatted = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(actualValue);
+                return `${context.dataset.label}: ${actualValueFormatted} (${percentageValue.toFixed(2)}%)`;
               }
             }
           }

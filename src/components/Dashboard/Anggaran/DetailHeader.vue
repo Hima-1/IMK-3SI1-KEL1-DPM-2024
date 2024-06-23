@@ -13,10 +13,16 @@
     </div>
 
     <div class="flex items-center bg-[#EBF3F5] p-4 pl-0 mt-6">
-      <img src="@/assets/icon/return.svg" alt="Return Icon" class="return w-[56px] h-[56px] flex-shrink-0 cursor-pointer" @click="toggleDetail" />
-      <div class="ml-4">
-        <p class="kembali text-[#267DC2] font-poppins text-[30px] font-semibold leading-normal">Welcome Party Unit Kesenian 2024</p>
-      </div>
+      <router-link to="/dashboard/anggaran-impolstat" class="flex items-center space-x-4">
+        <img
+            src="@/assets/icon/return.svg"
+            alt="Return Icon"
+            class="w-12 h-12 return"
+        />
+        <p class="kembali text-[#267DC2] font-poppins text-2xl font-semibold leading-normal">
+          Kembali
+        </p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -69,10 +75,10 @@ export default {
     height: 2rem;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .kembali {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .mt-12{
     margin-top: 2rem;
@@ -91,7 +97,7 @@ export default {
   }
 
   .kembali {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 

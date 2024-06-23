@@ -16,7 +16,7 @@
               v-for="row in paginatedRows"
               :key="row.no"
               :rowData="row"
-              @viewDetails="viewDetails"
+              @navigateToDetail="handleNavigateToDetail"
           />
         </div>
       </div>
@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import TableHeader from "@/components/Dashboard/Arsip/TableHeader.vue";
+import TableHeader from "@/components/Dashboard/Anggaran/TableHeader.vue";
 import TableSearch from "@/components/Dashboard/Umum/TableSearch.vue";
-import TableRow from "@/components/Dashboard/Arsip/ArsipTableRow.vue";
+import TableRow from "@/components/Dashboard/Anggaran/TableRow.vue";
 import TablePagination from "@/components/Dashboard/Umum/TablePagination.vue";
 import { mapState, mapGetters, mapActions } from 'vuex';
 
@@ -54,8 +54,8 @@ export default {
   },
   methods: {
     ...mapActions('anggaran', ['updateCurrentPage', 'searchRows']),
-    viewDetails(row) {
-      this.$router.push({ name: 'DetailAnggaran', params: { id: row.id } });
+    handleNavigateToDetail(id) {
+      this.$emit('navigateToDetail', id);
     },
     handleUpdateCurrentPage(newPage) {
       this.updateCurrentPage(newPage);
@@ -66,7 +66,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
-</style>
