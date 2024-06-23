@@ -18,8 +18,8 @@
           Misi
         </h1>
       </div>
-      <div class="text-[#1A5796] text-[16px] lg:text-[18px] font-normal mt-4 lg:mt-8 lg:px-10 mb-10 ">
-        <div class="flex items-start">
+      <div class="text-[#1A5796] text-[16px] lg:text-[18px] font-normal mt-4 lg:mt-8 lg:px-10 mb-10">
+        <div class="flex items-start mb-1">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             1</div>
@@ -27,7 +27,7 @@
             Menyelenggarakan tugas legislasi secara efektif dan efisien.
           </p>
         </div>
-        <div class="flex items-start">
+        <div class="flex items-start mb-1 sm:mt-2 lg:mt-0">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             2</div>
@@ -36,7 +36,7 @@
             lingkungan Politeknik Statistika STIS.
           </p>
         </div>
-        <div class="flex items-start">
+        <div class="flex items-start mb-1 sm:mt-2 lg:mt-1">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             3</div>
@@ -45,7 +45,7 @@
             mahasiswa Politeknik Statistika STIS kepada pihak yang bersangkutan sesuai kebutuhan.
           </p>
         </div>
-        <div class="flex items-start">
+        <div class="flex items-start mb-1 sm:mt-2 lg:mt-3">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             4</div>
@@ -54,7 +54,7 @@
             bersifat berkelanjutan dengan Badan Eksekutif Mahasiswa Politeknik Statistika STIS.
           </p>
         </div>
-        <div class="flex items-start">
+        <div class="flex items-start sm:mt-2 lg:mt-3">
           <div
             class="circle-number bg-no-repeat bg-contain h-[27.3px] w-[48px] lg:h-[40px] lg:w-[40px] flex-shrink-0 text-center">
             5</div>

@@ -28,7 +28,7 @@
                 <BeritaLengkap />
             </section>
             <section id="populer" class="w-full lg:w-1/3">
-                <PopulerList />
+                <PopulerLengkap />
             </section>
         </div>
     </div>
@@ -36,13 +36,13 @@
 
 <script>
 import BeritaLengkap from "../components/LandingPage/BeritaLengkap.vue";
-import PopulerList from "../components/LandingPage/PopulerList.vue";
+import PopulerLengkap from "../components/LandingPage/PopulerLengkap.vue";
 
 export default {
     name: 'Selengkapnya',
     components: {
         BeritaLengkap,
-        PopulerList,
+        PopulerLengkap,
     }
 }
 </script>

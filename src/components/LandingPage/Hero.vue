@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#CAD8E3] w-full h-screen h-[70vh] flex items-center">
+  <section class="bg-[#CAD8E3] w-full h-screen h-[69.99vh] flex items-center">
     <div class="mx-auto flex flex-col lg:flex-row justify-between items-center lg:gap-10">
       <!-- Logo DPM -->
       <div class="flex-shrink-0 lg:mx-10 mb-8 lg:mb-0">
