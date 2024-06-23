@@ -1,9 +1,9 @@
 <template>
     <div class="grid mt-8 rounded-[44px] gap-[50px] px-2">
         <div class="foto-dummy rounded-[44px]">
-            <div class="image-container rounded-[44px]">
+            <div class="image-container rounded-[44px]" @click="toggleFullscreen">
                 <img src="../../assets/images/galeri.webp" alt="Foto" class="w-full h-auto rounded-[13px]">
-                <div class="overlay">
+                <div class="textlay">
                     <div class="flex-grow text-center">
                         <h1 class="text-[#FFFFFF] font-poppins text-[25px] font-semibold leading-normal">
                             Sambutan Ketua
@@ -13,6 +13,10 @@
                         </p>
                     </div>
                 </div>
+                <div class="overlay" v-if="showFullscreen">
+                    <img src="../../assets/images/galeri.webp" alt="Full Foto" class="full-image">
+
+                </div>
             </div>
         </div>
     </div>
@@ -21,6 +25,16 @@
 <script>
 export default {
     name: 'GaleriItem',
+    data() {
+        return {
+            showFullscreen: false
+        };
+    },
+    methods: {
+        toggleFullscreen() {
+            this.showFullscreen = !this.showFullscreen;
+        }
+    }
 };
 </script>
 
@@ -36,9 +50,30 @@ export default {
     position: relative;
     width: 350px;
     border-radius: 44px;
+    cursor: pointer;
 }
 
 .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.full-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.textlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +87,7 @@ export default {
     align-items: center;
 }
 
-.overlay:hover {
+.textlay:hover {
     opacity: 1;
 }
 </style>
