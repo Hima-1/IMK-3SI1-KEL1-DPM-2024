@@ -21,9 +21,9 @@
       <ul v-show="dropdownOpen"
         class="absolute w-1/2 bg-[#15649D] text-[#FFFFFF] text-[18px] shadow-lg border-none font-bold text-center mt-16 z-10">
         <li v-for="button in buttons" :key="button"
-          :class="{ active: activeButton === button, hovered: hoveredOption === button }"
+          :class="{ 'active': activeButton === button, 'hovered': hoveredOption === button, 'bg-[#267DC2]': activeButton === button }"
           @click="setActiveButton(button)" @mouseover="hoveredOption = button" @mouseleave="hoveredOption = null"
-          class="py-2 hover:bg-[#FCB316] hover:text-[#15649D] active:bg-[#1C7DC7]">
+          class="py-2 hover:bg-[#FCB316] hover:text-[#15649D]">
           {{ button }}
         </li>
       </ul>
@@ -32,9 +32,10 @@
     <!-- Button Group -->
     <div
       class="hidden md:flex bg-[#15649D] text-[#FFFFFF] text-[15px] xl:text-[18px] mt-8 mb-6 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
-      <li v-for="button in buttons" class="list-none">
-        <button
-          class="mx-2 px-4 active:font-bold focus:text-[#C7D6DD] focus:font-bold hover:text-[#C7D6DD] hover:font-bold">
+      <li v-for="button in buttons" :key="button" class="list-none">
+        <button :class="{ 'font-bold': activeButton === button, 'text-[#C7D6DD]': activeButton === button }"
+          @click="setActiveButton(button)"
+          class="mx-2 px-4 focus:text-[#C7D6DD] focus:font-bold hover:text-[#C7D6DD] hover:font-bold">
           {{ button }}
         </button>
       </li>
