@@ -38,6 +38,8 @@
       </li>
     </div>
 </div>
+</template>
+
 <script>
 import StrukturItem from "./StrukturItem.vue";
 import { mapState, mapGetters } from "vuex";
