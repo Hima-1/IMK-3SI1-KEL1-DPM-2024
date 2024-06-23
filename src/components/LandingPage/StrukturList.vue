@@ -20,7 +20,7 @@
         <li
           v-for="button in buttons"
           :key="button"
-          :class="{ active: activeButton === button, hovered: hoveredOption === button }"
+          :class="{ active: activeButton === button, hovered: hoveredOption === button, 'bg-[#cddbe5]': activeButton === button }"
           @click="setActiveButton(button)"
           @mouseover="hoveredOption = button"
           @mouseleave="hoveredOption = null"
@@ -33,7 +33,7 @@
 
     <!-- Struktur Button Group -->
     <div class="hidden lg:flex bg-[#EBF3F5] text-[#1A5796] text-[15px] xl:text-[18px] mx-4 mb-12 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
-      <li v-for="button in buttons" :key="button" :class="{ active: activeButton === button, hovered: hoveredOption === button }" @click="setActiveButton(button)" class="list-none">
+      <li v-for="button in buttons" :key="button" :class="{ 'font-bold': activeButton === button, 'text-[#F7941D]': activeButton === button, hovered: hoveredOption === button }" @click="setActiveButton(button)" class="list-none">
         <button class="mx-2 px-4 active:font-bold focus:text-[#F7941D] focus:font-bold hover:text-[#F7941D] hover:font-bold">{{ button }}</button>
       </li>
     </div>
