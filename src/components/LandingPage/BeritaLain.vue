@@ -23,15 +23,15 @@
       <div class="flex space-x-2">
         <button @click="prevPage" :disabled="currentPage === 1"
           class="w-[30px] h-[35px] flex items-center justify-center">
-          <p class="text-[#1A5796] font-poppins text-[23px] md:text-[30px] font-bold"><</p>
+          <p class="text-[#1A5796] font-poppins text-[23px] md:text-[30px] font-semibold"><</p>
         </button>
         <button v-for="page in totalPages" :key="page" @click="setPage(page)"
           :class="['w-[35px] h-[35px] flex items-center justify-center', currentPage === page ? 'bg-[#EEA449] rounded-full' : '']">
-          <p class="text-[#1A5796] font-poppins text-[23px] md:text-[25px] font-bold">{{ page }}</p>
+          <p class="text-[#1A5796] font-poppins text-[23px] md:text-[25px] font-semibold">{{ page }}</p>
         </button>
         <button @click="nextPage" :disabled="currentPage === totalPages"
           class="w-[30px] h-[35px] flex items-center justify-center">
-          <p class="text-[#1A5796] font-poppins text-[23px] md:text-[30px] font-bold">></p>
+          <p class="text-[#1A5796] font-poppins text-[23px] md:text-[30px] font-semibold">></p>
         </button>
       </div>
     </div>

@@ -18,10 +18,10 @@
           <PopulerList />
         </section>
       </div>
-      <section id="berita-lain">
+      <section id="berita-lain" class="md:mb-8">
         <BeritaLain />
       </section>
-      <section id="populer-small" class="md:hidden">
+      <section id="populer-small" class="mb-8 md:hidden">
         <PopulerList />
       </section>
     </div>
