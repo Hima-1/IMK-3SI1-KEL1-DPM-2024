@@ -28,12 +28,12 @@ export default {
   data() {
     return {
       anggotas: [
-        { id: 1, nama: "Saifullah Fatah", nim: "212011313", foto: "src/assets/images/ketua.webp", jabatan: "KETUA DPM", divisi: "BPH" },
-        { id: 2, nama: "Faqih Indra Lesmana", nim: "222112039", foto: "src/assets/images/waketu.webp", jabatan: "WAKIL KETUA DPM", divisi: "BPH" },
-        { id: 3, nama: "Adinda Batrisyibazla", nim: "212212444", foto: "src/assets/images/bend1.webp", jabatan: "BENDAHARA I", divisi: "BPH" },
-        { id: 4, nama: "Aurelia Dini Syafnadiva", nim: "212313007", foto: "src/assets/images/bend2.webp", jabatan: "BENDAHARA II", divisi: "BPH" },
-        { id: 5, nama: "Masna Novita Rahmaniar", nim: "222011296", foto: "src/assets/images/sekre1.webp", jabatan: "SEKRETARIS I", divisi: "BPH" },
-        { id: 6, nama: "Yohana Herdianly Br Nainggolan", nim: "112313432", foto: "src/assets/images/sekre2.webp", jabatan: "SEKRETARIS II", divisi: "BPH" },
+        { id: 1, nama: "Saifullah Fatah", nim: "212011313", foto: "/images/ketua.webp", jabatan: "KETUA DPM", divisi: "BPH" },
+        { id: 2, nama: "Faqih Indra Lesmana", nim: "222112039", foto: "/images/waketu.webp", jabatan: "WAKIL KETUA DPM", divisi: "BPH" },
+        { id: 3, nama: "Adinda Batrisyibazla", nim: "212212444", foto: "/images/bend1.webp", jabatan: "BENDAHARA I", divisi: "BPH" },
+        { id: 4, nama: "Aurelia Dini Syafnadiva", nim: "212313007", foto: "/images/bend2.webp", jabatan: "BENDAHARA II", divisi: "BPH" },
+        { id: 5, nama: "Masna Novita Rahmaniar", nim: "222011296", foto: "/images/sekre1.webp", jabatan: "SEKRETARIS I", divisi: "BPH" },
+        { id: 6, nama: "Yohana Herdianly Br Nainggolan", nim: "112313432", foto: "/images/sekre2.webp", jabatan: "SEKRETARIS II", divisi: "BPH" },
       ],
     };
   },
