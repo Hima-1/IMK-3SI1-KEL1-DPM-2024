@@ -16,7 +16,7 @@
           </router-link>
         </div>
         <div>
-          <router-link to="" class="nav-link p-4 grid grid-cols-4 hover:bg-[#15649D] hover:rounded-br-xl hover:rounded-bl-xl" :active-class="''">
+          <router-link to="/" class="nav-link p-4 grid grid-cols-4 hover:bg-[#15649D] hover:rounded-br-xl hover:rounded-bl-xl" :active-class="''">
             <img src="@/assets/icon/logout.svg" alt="Logout Icon" class="object-center fill-current text-[#EBF3F5]" />
             <li class="col-span-3 text-[#EBF3F5] font-poppins text-[1.1rem]">Logout</li>
           </router-link>
