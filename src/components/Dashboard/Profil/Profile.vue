@@ -128,6 +128,7 @@
                       <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
+                  <span v-if="!konfirmasiPasswordBaruError" class="label-text-alt text-[#1A5796] pl-1 xl:col-start-2 xl:col-span-2">Konfirmasi password baru harus sama dengan password baru</span>
                   <span v-if="konfirmasiPasswordBaruError" class="label-text-alt text-red-500">{{ konfirmasiPasswordBaruError }}</span>
                 </div>
 
@@ -205,19 +206,19 @@ export default {
 
       // Validasi Password Lama
       if (!this.passwordLama) {
-        this.passwordLamaError = "Password lama harus diisi.";
+        this.passwordLamaError = "Password lama tidak boleh kosong.";
       }
 
       // Validasi Password Baru
       if (!this.passwordBaru) {
-        this.passwordBaruError = "Password baru harus diisi.";
+        this.passwordBaruError = "Password baru tidak boleh kosong.";
       } else if (!this.validPassword(this.passwordBaru)) {
         this.passwordBaruError = "Password baru harus terdiri dari minimal 8 karakter dan mengandung angka, karakter khusus, dan huruf kapital.";
       }
 
       // Validasi Konfirmasi Password Baru
       if (!this.konfirmasiPasswordBaru) {
-        this.konfirmasiPasswordBaruError = "Konfirmasi password baru harus diisi.";
+        this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak boleh kosong.";
       } else if (this.konfirmasiPasswordBaru !== this.passwordBaru) {
         this.konfirmasiPasswordBaruError = "Konfirmasi password baru tidak cocok dengan password baru.";
       }
