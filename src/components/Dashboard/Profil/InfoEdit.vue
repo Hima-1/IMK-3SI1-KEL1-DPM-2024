@@ -71,7 +71,7 @@
               v-model="mahasiswa.noHp"
               type="text"
               placeholder="Type here"
-              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input-sm text-[1rem] px-2 py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl"
+              class="min-[425px]:col-start-3 min-[425px]:col-end-9 lg:col-span-4 input input-bordered input-sm text-[1rem] px-2 py-5 bg-[#F6F6F6] border-2 border-[#6A6C7A] rounded-lg w-full max-w-xl"
             />
           </div>
 
