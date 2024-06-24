@@ -7,7 +7,7 @@
           class="w-3/4 h-auto"
       />
       <p class="w-4/5 text-[#1A5796] text-center font-poppins text-lg my-6">
-        Apakah anda yakin ingin mengubah profil?
+        Apakah kamu yakin ingin mengubah profil?
       </p>
       <div class="w-full flex justify-evenly mt-4">
         <button @click="confirm"

@@ -7,7 +7,7 @@
           class="modal-image"
       />
       <h1 class="sukses-text">SUKSES >_<</h1>
-      <p class="password-text">Password berhasil diubah!</p>
+      <p class="password-text">Password kamu berhasil diubah!</p>
       <router-link to="/dashboard/my-profile" class="modal-buttons" :active-class="'active-link'" >
         <button @click="confirm" class="confirm-button">Oke</button>
       </router-link>
