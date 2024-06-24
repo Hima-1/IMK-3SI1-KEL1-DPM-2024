@@ -225,7 +225,7 @@ export default {
     },
     validPassword(password) {
       // Minimal 8 karakter, minimal satu huruf besar, satu huruf kecil, satu angka, dan satu karakter khusus
-      const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_\-+=\[\]{}|\\;:'",.<>?/`~])[A-Za-z\d!@#$%^&*()_\-+=\[\]{}|\\;:'",.<>?/`~]{8,}$/;
       return re.test(password);
     },
   },
