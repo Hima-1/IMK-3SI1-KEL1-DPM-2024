@@ -94,7 +94,7 @@
                 <!-- Password Lama -->
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Password Lama</label>
-                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(passwordLamaError)">
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg focus-within:border-[#6A6C7A]" :class="inputClass(passwordLamaError)">
                     <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" placeholder="Masukkan password lama" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="passwordLamaVisible === false" @click="togglePasswordLamaVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
@@ -107,7 +107,7 @@
                 <!-- Password Baru -->
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Password Baru</label>
-                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(passwordBaruError)">
+                  <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg focus-within:border-[#6A6C7A]" :class="inputClass(passwordBaruError)">
                     <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" placeholder="Masukkan password baru" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="passwordBaruVisible === false" @click="togglePasswordBaruVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
@@ -121,7 +121,7 @@
                 <!-- Konfirmasi Password Baru -->
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Konfirmasi Password Baru</label>
-                  <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(konfirmasiPasswordBaruError)">
+                  <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg focus-within:border-[#6A6C7A]" :class="inputClass(konfirmasiPasswordBaruError)">
                     <input v-model="konfirmasiPasswordBaru" :type="konfirmasiPasswordVisible ? 'text' : 'password'" placeholder="Masukkan konfirmasi password baru" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
