@@ -13,7 +13,7 @@
         <div class="grid lg:hidden justify-center">
           <div class="relative w-fit mb-6">
             <img :src="`/mahasiswa/${mahasiswa.foto}`" alt="User Photo" class="border-4 border-[#6A6C7A] rounded-full w-[200px] md:w-[250px] h-[200px] md:h-[250px] object-center object-cover" />
-            <button @click="triggerFileInput" class="absolute bottom-1 md:bottom-4 right-1 rounded-full p-5 w-fit">
+            <button @click="triggerFileInput" class="absolute bottom-1 md:bottom-4 right-1 rounded-full p-5 w-fit bg-[#1A5796]">
               <img src="@/assets/icon/camera.svg" alt="User Photo" class="scale-150" />
             </button>
             <input type="file" ref="fileInput" @change="handleFileChange" class="hidden" />
