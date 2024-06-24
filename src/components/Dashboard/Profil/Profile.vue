@@ -95,7 +95,7 @@
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Password Lama</label>
                   <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(passwordLamaError)">
-                    <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
+                    <input v-model="passwordLama" :type="passwordLamaVisible ? 'text' : 'password'" placeholder="Masukkan password lama" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="passwordLamaVisible === false" @click="togglePasswordLamaVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="passwordLamaVisible === true" @click="togglePasswordLamaVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
@@ -108,12 +108,13 @@
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Password Baru</label>
                   <div class="col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(passwordBaruError)">
-                    <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
+                    <input v-model="passwordBaru" :type="passwordBaruVisible ? 'text' : 'password'" placeholder="Masukkan password baru" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="passwordBaruVisible === false" @click="togglePasswordBaruVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="passwordBaruVisible === true" @click="togglePasswordBaruVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
+                  <span v-if="!passwordBaruError" class="label-text-alt text-[#1A5796] pl-1 xl:col-start-2 xl:col-span-2">Password baru harus terdiri dari minimal 8 karakter, 1 huruf kapital, 1 huruf kecil, dan 1 karakter khusus</span>
                   <span v-if="passwordBaruError" class="label-text-alt text-red-500">{{ passwordBaruError }}</span>
                 </div>
 
@@ -121,7 +122,7 @@
                 <div class="grid xl:grid-cols-3 items-center">
                   <label>Konfirmasi Password Baru</label>
                   <div class="lg:col-span-2 grid grid-cols-7 w-full items-center border-2 rounded-lg" :class="inputClass(konfirmasiPasswordBaruError)">
-                    <input v-model="konfirmasiPasswordBaru" :type="konfirmasiPasswordVisible ? 'text' : 'password'" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
+                    <input v-model="konfirmasiPasswordBaru" :type="konfirmasiPasswordVisible ? 'text' : 'password'" placeholder="Masukkan konfirmasi password baru" class="col-span-6 bg-transparent input focus:outline-none focus:outline-0 focus:border-none w-full" />
                     <div class="grid w-full justify-center object-center">
                       <img v-if="konfirmasiPasswordVisible === false" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/invisible.svg" class="h-10 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                       <img v-if="konfirmasiPasswordVisible === true" @click="toggleKonfirmasiPasswordVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />

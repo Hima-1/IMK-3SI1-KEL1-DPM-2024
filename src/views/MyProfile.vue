@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-fit bg-[#ebf3f5]">
     <section id="myProfile">
       <Profile @show-confirmation-popup="showConfirmationPopup"/>
     </section>
