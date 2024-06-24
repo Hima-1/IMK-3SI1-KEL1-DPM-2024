@@ -114,7 +114,7 @@
                       <img v-if="passwordBaruVisible === true" @click="togglePasswordBaruVisibility" src="@/assets/icon/visible.svg" class="h-9 pr-2 min-[425px]:p-2 cursor-pointer" alt="Toggle Password Visibility" />
                     </div>
                   </div>
-                  <span v-if="!passwordBaruError" class="label-text-alt text-[#1A5796] pl-1 xl:col-start-2 xl:col-span-2">Password baru harus terdiri dari minimal 8 karakter, 1 huruf kapital, 1 huruf kecil, dan 1 karakter khusus</span>
+                  <span v-if="!passwordBaruError" class="label-text-alt text-[#1A5796] pl-1 xl:col-start-2 xl:col-span-2">Password baru harus terdiri dari minimal 8 karakter, 1 angka, 1 huruf kapital, 1 huruf kecil, dan 1 karakter khusus</span>
                   <span v-if="passwordBaruError" class="label-text-alt text-red-500">{{ passwordBaruError }}</span>
                 </div>
 
