@@ -2,20 +2,19 @@
     <div class="grid mt-8 rounded-[44px] gap-[50px] px-2">
         <div class="foto-dummy rounded-[44px]">
             <div class="image-container rounded-[44px]" @click="toggleFullscreen">
-                <img src="../../assets/images/galeri.webp" alt="Foto" class="w-full h-auto rounded-[13px]">
+                <img :src="`/galeri/${foto.gambar}`" alt="Foto" class="w-full h-auto rounded-[13px]">
                 <div class="textlay">
                     <div class="flex-grow text-center">
                         <h1 class="text-[#FFFFFF] font-poppins text-[25px] font-semibold leading-normal">
-                            Sambutan Ketua
+                            {{ foto.desk }}
                         </h1>
                         <p class="text-[#FFFFFF] text-[18px] font-normal font-poppins leading-snug">
-                            25 Februari 2024
+                            {{ foto.tgl }}
                         </p>
                     </div>
                 </div>
                 <div class="overlay" v-if="showFullscreen">
                     <img src="../../assets/images/galeri.webp" alt="Full Foto" class="full-image">
-
                 </div>
             </div>
         </div>
@@ -25,6 +24,11 @@
 <script>
 export default {
     name: 'GaleriItem',
+    props: {
+        foto: {
+            type: Object,
+        }
+    },
     data() {
         return {
             showFullscreen: false
