@@ -129,7 +129,7 @@ export default {
 
 @media (max-width: 1280px) and (min-width: 768px) {
   .scale-down {
-    transform: scale(0.85);
+    transform: scaleY(0.85);
     transform-origin: top right;
   }
 }
