@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 pb-16 pt-0 min-h-screen flex justify-center">
+  <div class="bg-[#ebf3f5] p-6 pb-16 pt-0 min-h-screen flex justify-center arsip">
     <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
       <ArsipHeader
           :showDetail="showDetail"
@@ -15,6 +15,7 @@
             @viewDetails="viewDetails"
             @update:currentPage="updateCurrentPageHandler"
             @search="searchRowsHandler"
+            @showChange="updateItemsPerPageHandler"
         />
       </div>
     </div>
@@ -55,7 +56,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions('arsip', ['updateCurrentPage', 'searchRows']),
+    ...mapActions('arsip', ['updateCurrentPage', 'searchRows', 'updateItemsPerPage']),
     viewDetails(row) {
       this.currentFolder = row;
       this.showDetail = true;
@@ -70,6 +71,18 @@ export default {
     searchRowsHandler(query) {
       this.searchRows(query);
     },
+    updateItemsPerPageHandler(newNumber) {
+      this.updateItemsPerPage(newNumber);
+    },
   },
 };
 </script>
+
+<style scoped>
+@media (min-width: 1280px) {
+  .arsip {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+</style>

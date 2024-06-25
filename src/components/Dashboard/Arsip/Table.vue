@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col overflow-x-auto">
-    <TableSearch @search="searchRows" />
+    <TableSearch @search="searchRows" @showChange="handleShowChange" />
 
     <div class="w-full mt-6 overflow-x-auto">
       <div class="min-w-[800px]">
@@ -67,8 +67,11 @@ export default {
     searchRows(query) {
       this.$emit("search", query);
     },
+    handleShowChange(newNumber) {
+      this.$emit("update:itemsPerPage", newNumber);
+    },
   },
-};
+}
 </script>
 
 <style scoped>

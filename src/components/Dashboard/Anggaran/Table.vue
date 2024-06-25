@@ -1,6 +1,6 @@
 <template>
   <div class="px-12 w-full flex flex-col overflow-x-auto">
-    <TableSearch @search="handleSearchRows" />
+    <TableSearch @search="handleSearchRows" @showChange="handleShowChange" />
 
     <div class="w-full mt-6 overflow-x-auto">
       <div class="min-w-[800px]">
@@ -49,7 +49,7 @@ export default {
     ...mapGetters('anggaran', ['paginatedRows', 'totalPages']),
   },
   methods: {
-    ...mapActions('anggaran', ['updateCurrentPage', 'searchRows']),
+    ...mapActions('anggaran', ['updateCurrentPage', 'searchRows', 'updateItemsPerPage']),
     handleNavigateToDetail(id) {
       this.$emit('navigateToDetail', id);
     },
@@ -58,6 +58,9 @@ export default {
     },
     handleSearchRows(query) {
       this.searchRows(query);
+    },
+    handleShowChange(newNumber) {
+      this.updateItemsPerPage(newNumber);
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 pb-16 pt-0 min-h-screen flex justify-center">
+  <div class="bg-[#ebf3f5] p-6 pb-16 pt-0 min-h-screen flex justify-center anggaran">
     <div class="w-full max-w-full md:max-w-[1660px] flex flex-col">
       <AnggaranHeader />
 
@@ -21,7 +21,9 @@
           @navigateToDetail="navigateToDetail"
           @update:currentPage="updateCurrentPageHandler"
           @search="searchRowsHandler"
+          @showChange="updateItemsPerPageHandler"
       />
+
     </div>
   </div>
 </template>
@@ -56,7 +58,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions('anggaran', ['updateCurrentPage', 'searchRows']),
+    ...mapActions('anggaran', ['updateCurrentPage', 'searchRows', 'updateItemsPerPage']),
     navigateToDetail(id) {
       this.currentFolder = this.paginatedRows.find(row => row.id === id);
       this.showDetail = true;
@@ -75,6 +77,9 @@ export default {
     searchRowsHandler(query) {
       this.searchRows(query);
     },
+    updateItemsPerPageHandler(newNumber) {
+      this.updateItemsPerPage(newNumber);
+    },
   },
 };
 </script>
@@ -83,8 +88,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
+@media (min-width: 1280px) {
+  .anggaran {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 @media (max-width: 800px) {

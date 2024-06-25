@@ -52,6 +52,20 @@ const state = {
                 { namaFile: 'Realisasi.xlsx', size: '250 KB', tipe: 'Excel Spreadsheet' },
             ]
         },
+        {
+            id: 5,
+            no: 5,
+            namaFolder: 'Laporan Keuangan 2019',
+            waktu: '2019-01-15 10:30 WIB',
+            tipe: 'PDF Document',
+            size: '1.0 MB',
+            isiFolder: [
+                { namaFile: 'Q1.pdf', size: '250 KB', tipe: 'PDF Document' },
+                { namaFile: 'Q2.pdf', size: '250 KB', tipe: 'PDF Document' },
+                { namaFile: 'Q3.pdf', size: '250 KB', tipe: 'PDF Document' },
+                { namaFile: 'Q4.pdf', size: '250 KB', tipe: 'PDF Document' },
+            ]
+        },
     ],
     currentPage: 1,
     itemsPerPage: 5,
@@ -89,7 +103,12 @@ const mutations = {
         state.searchQuery = query;
         state.currentPage = 1;
     },
+    updateItemsPerPage(state, newNumber) {
+        state.itemsPerPage = newNumber;
+        state.currentPage = 1;
+    },
 };
+
 
 const actions = {
     updateCurrentPage({ commit }, newPage) {
@@ -100,6 +119,9 @@ const actions = {
     },
     getFolderContents({ getters }, folderId) {
         return getters.folderContents(folderId);
+    },
+    updateItemsPerPage({ commit }, newNumber) {
+        commit('updateItemsPerPage', newNumber);
     },
 };
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#ebf3f5] p-6 pb-16 min-h-screen flex justify-center">
+  <div class="bg-[#ebf3f5] p-6 pb-16 min-h-screen flex justify-center detail-anggaran">
     <div class="w-full max-w-[1660px] flex flex-col overflow-x-auto">
       <Header />
       <div class="content-wrapper flex w-full justify-between mb-6 padding px-12">
@@ -72,6 +72,13 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+@media (min-width: 1280px) {
+  .detail-anggaran {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 
 @media (max-width: 1280px) {
   .font-poppins {

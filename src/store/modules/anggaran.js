@@ -66,7 +66,12 @@ const mutations = {
         state.searchQuery = query;
         state.currentPage = 1;
     },
+    updateItemsPerPage(state, newNumber) {
+        state.itemsPerPage = newNumber;
+        state.currentPage = 1;
+    },
 };
+
 
 const actions = {
     updateCurrentPage({ commit }, newPage) {
@@ -75,7 +80,11 @@ const actions = {
     searchRows({ commit }, query) {
         commit('searchRows', query);
     },
+    updateItemsPerPage({ commit }, newNumber) {
+        commit('updateItemsPerPage', newNumber);
+    },
 };
+
 
 export default {
     namespaced: true,

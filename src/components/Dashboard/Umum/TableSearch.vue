@@ -16,10 +16,28 @@
       <p class="show-text text-[#6A6C7A] font-poppins text-2xl leading-[2.25rem] text-left">
         Show
       </p>
-      <div class="number-box lg:w-[5.8125rem] lg:h-[2.8125rem] rounded-[1.40625rem] border-2 border-[#6A6C7A] bg-[#F6F6F6] flex items-center justify-center space-x-2">
-        <p class="number-text text-[#6A6C7A] font-poppins text-lg">5</p>
-        <img src="@/assets/icon/arrow-down-search.svg" alt="Sort Icon" class="w-[0.8125rem] h-[0.40625rem] flex-shrink-0"/>
+      <div class="relative">
+        <div
+            @click="toggleDropdown"
+            class="number-box lg:w-[5.8125rem] lg:h-[2.8125rem] rounded-[1.40625rem] border-2 border-[#6A6C7A] bg-[#F6F6F6] flex items-center justify-center space-x-2 cursor-pointer"
+        >
+          <p class="number-text text-[#6A6C7A] font-poppins text-lg">{{ selectedNumber }}</p>
+          <img src="@/assets/icon/arrow-down-search.svg" alt="Sort Icon" class="w-[0.8125rem] h-[0.40625rem] flex-shrink-0"/>
+        </div>
+        <div v-if="showDropdown" class="absolute z-10 mt-2 w-full rounded-md bg-white shadow-lg">
+          <ul class="py-1">
+            <li
+                v-for="number in numbers"
+                :key="number"
+                @click="selectNumber(number)"
+                class="cursor-pointer px-4 py-2 text-[#6A6C7A] hover:bg-gray-200"
+            >
+              {{ number }}
+            </li>
+          </ul>
+        </div>
       </div>
+
       <p class="documents-text text-[#6A6C7A] font-poppins text-2xl leading-[2.25rem]">
         documents per page
       </p>
@@ -30,9 +48,24 @@
 <script>
 export default {
   name: 'TableSearch',
+  data() {
+    return {
+      showDropdown: false,
+      selectedNumber: 5,
+      numbers: [5, 10, 15, 20, 25]
+    };
+  },
   methods: {
     onSearch(event) {
       this.$emit('search', event.target.value);
+    },
+    toggleDropdown() {
+      this.showDropdown = !this.showDropdown;
+    },
+    selectNumber(number) {
+      this.selectedNumber = number;
+      this.showDropdown = false;
+      this.$emit('showChange', number);
     }
   }
 }
