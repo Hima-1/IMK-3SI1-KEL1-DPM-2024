@@ -4,7 +4,7 @@
             <div class="bg-[#EBF3F5] rounded-[12px] flex-shrink-0 w-full h-full">
                 <div class="relative w-full h-[350px] rounded-t-[13px] object-cover"
                     style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0.00) 96.17%);">
-                    <img src="@/assets/images/berita.webp" class="w-full h-full rounded-t-[13px] object-cover" />
+                    <img src="../../assets/images/berita.webp" class="w-full h-full rounded-t-[13px] object-cover" />
                     <!-- Judul Foto -->
                     <div
                         class="absolute content-end bottom-0 left-0 w-full px-8 py-6 h-full bg-gradient-to-t from-black to-90% rounded-b-[13px]">

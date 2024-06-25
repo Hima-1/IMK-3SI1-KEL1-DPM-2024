@@ -2,7 +2,7 @@
   <div class="bg-[#EBF3F5] rounded-[12px] flex-shrink-0 w-[320px] md:w-[350px] h-auto flex flex-col">
     <div class="relative w-full h-[250px] rounded-t-[13px]"
       style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0.00) 96.17%);">
-      <img src="@/assets/images/berita.webp" class="w-full h-full rounded-t-[13px]" />
+      <img src="../../assets/images/berita.webp" class="w-full h-full rounded-t-[13px]" />
       <div
         class="absolute bottom-0 left-0 w-full h-full px-5 py-4 bg-gradient-to-t from-black to-90% flex items-end justify-center">
         <h2 class="text-[#EBF3F5] font-poppins text-[15px] font-bold leading-normal">

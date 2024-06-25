@@ -3,7 +3,7 @@
     <img src="@/assets/icon/jumlah-dana.svg" alt="Icon" class="icon">
     <div class="text-center content">
       <h2 class="title">Jumlah Dana</h2>
-      <h3 class="title subtitle">Imapolstat saat ini:</h3>
+      <h3 class="title subtitle">Imapolstat <br class="pc"> saat ini:</h3>
       <p class="amount">Rp83.752.825</p>
     </div>
   </div>
@@ -131,6 +131,15 @@ export default {
   .scale-down {
     transform: scaleY(0.85);
     transform-origin: top right;
+  }
+  .title{
+    line-height: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pc{
+    display: none;
   }
 }
 

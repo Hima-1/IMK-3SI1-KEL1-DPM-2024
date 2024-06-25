@@ -3,7 +3,7 @@
         <div class="flex flex-wrap justify-center gap-8">
             <div class="rounded-[12px] w-full h-auto bg-[#EBF3F5] flex flex-col">
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
-                    <img src="@/assets/images/berita.webp"
+                    <img src="../../assets/images/berita.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <div class="flex-grow p-4 md:px-7">
