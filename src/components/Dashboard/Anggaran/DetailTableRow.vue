@@ -7,19 +7,19 @@
       <span>{{ rowData.rincianPenggunaan }}</span>
     </div>
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 13.94%;">
-      <span>{{ rowData.hargaSatuan }}</span>
+      <span>{{ formatCurrency(rowData.hargaSatuan) }}</span>
     </div>
     <div class="flex items-center justify-center text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 9.81%;">
       <span>{{ rowData.pengali }}</span>
     </div>
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 17.44%;">
-      <span>{{ rowData.rincianAnggaran }}</span>
+      <span>{{ formatCurrency(rowData.rincianAnggaran) }}</span>
     </div>
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 16.875%;">
-      <span>{{ rowData.imapolstat }}</span>
+      <span>{{ formatCurrency(rowData.imapolstat) }}</span>
     </div>
     <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] px-4 row-text" style="width: 16.875%;">
-      <span>{{ rowData.lainnya }}</span>
+      <span>{{ formatCurrency(rowData.lainnya) }}</span>
     </div>
   </div>
 </template>
@@ -38,6 +38,13 @@ export default {
     }
   },
   methods: {
+    formatCurrency(value) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(value);
+    },
     viewDetails() {
       this.$emit('viewDetails', this.rowData);
     }

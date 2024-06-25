@@ -20,13 +20,13 @@
           <div class="flex items-center justify-between px-4" style="width: 13.94%;"></div>
           <div class="flex items-center justify-between px-4" style="width: 9.81%;"></div>
           <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4 subtotal-text" style="width: 17.44%;">
-            <span>{{ subtotal.rincianAnggaran }}</span>
+            <span>{{ formatCurrency(subtotal.rincianAnggaran) }}</span>
           </div>
           <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4 subtotal-text" style="width: 16.875%;">
-            <span>{{ subtotal.imapolstat }}</span>
+            <span>{{ formatCurrency(subtotal.imapolstat) }}</span>
           </div>
           <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4 subtotal-text" style="width: 16.875%;">
-            <span>{{ subtotal.lainnya }}</span>
+            <span>{{ formatCurrency(subtotal.lainnya) }}</span>
           </div>
         </div>
       </div>
@@ -52,24 +52,24 @@ export default {
   },
   computed: {
     subtotal() {
-      return {
-        rincianPenggunaan: 'Subtotal',
-        hargaSatuan: '',
-        pengali: '',
-        rincianAnggaran: this.calculateSubtotal('rincianAnggaran'),
-        imapolstat: this.calculateSubtotal('imapolstat'),
-        lainnya: this.calculateSubtotal('lainnya')
-      };
+      return this.rows.reduce((acc, row) => {
+        acc.rincianAnggaran += row.rincianAnggaran;
+        acc.imapolstat += row.imapolstat;
+        acc.lainnya += row.lainnya;
+        return acc;
+      }, { rincianAnggaran: 0, imapolstat: 0, lainnya: 0 });
     }
   },
   methods: {
-    calculateSubtotal(key) {
-      return this.rows.reduce((sum, row) => {
-        return sum + (parseFloat(row[key].replace(/[^0-9.-]+/g, "")) || 0);
-      }, 0).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
-    },
     viewDetails(row) {
       this.$emit("viewDetails", row);
+    },
+    formatCurrency(value) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(value);
     }
   }
 }

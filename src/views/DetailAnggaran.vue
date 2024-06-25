@@ -43,21 +43,21 @@ export default {
           id: 1,
           no: 1,
           rincianPenggunaan: 'Banner Backdrop',
-          hargaSatuan: 'Rp460.000',
+          hargaSatuan: 460000,
           pengali: 1,
-          rincianAnggaran: 'Rp460.000',
-          imapolstat: 'Rp150.000',
-          lainnya: ''
+          rincianAnggaran: 460000,
+          imapolstat: 150000,
+          lainnya: 0
         },
         {
           id: 2,
           no: 2,
           rincianPenggunaan: 'Makanan Ringan',
-          hargaSatuan: 'Rp200.000',
+          hargaSatuan: 200000,
           pengali: 3,
-          rincianAnggaran: 'Rp600.000',
-          imapolstat: 'Rp200.000',
-          lainnya: ''
+          rincianAnggaran: 600000,
+          imapolstat: 200000,
+          lainnya: 0
         }
       ]
     }
