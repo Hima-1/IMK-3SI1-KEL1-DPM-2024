@@ -6,12 +6,12 @@ const state = {
     { id: "4", nama: "Aurelia Dini Syafnadiva", nim: "212313007", foto: "bend2.webp", jabatan: "BENDAHARA II", divisi: "BPH"},
     { id: "5", nama: "Masna Novita Rahmaniar", nim: "222011296", foto: "sekre1.webp", jabatan: "SEKRETARIS I", divisi: "BPH"},
     { id: "6", nama: "Yohana Herdianly Br Nainggolan", nim: "112313432", foto: "sekre2.webp", jabatan: "SEKRETARIS II", divisi: "BPH"},
-    { id: "7", nama: "Bagas Ashari", nim: "112313432", foto: "dummy.webp", jabatan: "KETUA KOMISI I", divisi: "Komisi I"},
-    { id: "8", nama: "R. Faras Roihan", nim: "112313432", foto: "dummy.webp", jabatan: "KETUA KOMISI II", divisi: "Komisi II"},
-    { id: "9", nama: "Muhammad 'Anil 'Aziz", nim: "112313432", foto: "dummy.webp", jabatan: "KETUA KOMISI III", divisi: "Komisi III"},
-    { id: "10", nama: "Surya Maruli", nim: "112313432", foto: "dummy.webp", jabatan: "KETUA KOMISI IV", divisi: "Komisi IV"},
-    { id: "11", nama: "Erika Azizah Khoirunnisa", nim: "112313432", foto: "dummy.webp", jabatan: "KOORDINATOR PUBMEDKRAF", divisi: "Pubmedkraf"},
-    { id: "12", nama: "Septian Tegar Y", nim: "112313432", foto: "dummy.webp", jabatan: "KOORDINATOR IT", divisi: "IT"},
+    { id: "7", nama: "Bagas Ashari", nim: "112313432", foto: "foto1.webp", jabatan: "KETUA KOMISI I", divisi: "Komisi I"},
+    { id: "8", nama: "R. Faras Roihan", nim: "112313432", foto: "foto2.webp", jabatan: "KETUA KOMISI II", divisi: "Komisi II"},
+    { id: "9", nama: "Muhammad 'Anil 'Aziz", nim: "112313432", foto: "foto3.webp", jabatan: "KETUA KOMISI III", divisi: "Komisi III"},
+    { id: "10", nama: "Surya Maruli", nim: "112313432", foto: "foto4.webp", jabatan: "KETUA KOMISI IV", divisi: "Komisi IV"},
+    { id: "11", nama: "Erika Azizah Khoirunnisa", nim: "112313432", foto: "foto5.webp", jabatan: "KOORDINATOR PUBMEDKRAF", divisi: "Pubmedkraf"},
+    { id: "12", nama: "Septian Tegar Y", nim: "112313432", foto: "foto6.webp", jabatan: "KOORDINATOR IT", divisi: "IT"},
   ]
 };
 
