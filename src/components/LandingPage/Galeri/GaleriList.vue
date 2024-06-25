@@ -7,7 +7,7 @@
       </h1>
     </div>
 
-    <div class="flex w-full mt-8 justify-center md:hidden">
+    <div class="flex w-full mt-8 justify-center lg:hidden">
       <div
         class="grid grid-cols-5 items-center bg-[#15649D] text-[#FFFFFF] text-[18px] mb-6 p-3 shadow-lg rounded-[44px] border-none font-bold text-center min-[425px]:text-left min-[425px]:pl-6 max-w-xl min-[425px]:w-1/2 md:w-1/3"
         @click="toggleDropdown">
@@ -28,7 +28,7 @@
     </div>
 
     <div
-      class="hidden md:flex bg-[#15649D] text-[#FFFFFF] text-[15px] xl:text-[18px] mt-8 mb-6 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
+      class="hidden lg:flex bg-[#15649D] text-[#FFFFFF] text-[15px] xl:text-[18px] mt-8 mb-6 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
       <li v-for="button in buttons" :key="button" class="list-none">
         <button :class="{ 'font-bold': activeButton === button, 'text-[#C7D6DD]': activeButton === button }"
           @click="setActiveButton(button)"
