@@ -5,7 +5,7 @@
     </h2>
     <hr class="w-full border-t border-[rgba(206,219,229,0.90)] my-4" />
     <h3 class="text-[#EBF3F5] font-poppins text-[1rem] md:text-[20px] font-bold mb-2 md:mb-4 px-8">
-      Contact
+      Kontak
     </h3>
     <!-- Kontak Info -->
     <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8 px-8 md:pb-10">
