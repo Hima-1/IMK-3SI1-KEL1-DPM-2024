@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import BeritaUtama from "@/components/LandingPage/BeritaUtama.vue";
-import BeritaLain from "@/components/LandingPage/BeritaLain.vue";
-import PopulerList from "@/components/LandingPage/PopulerList.vue";
+import BeritaUtama from "@/components/LandingPage/Berita/BeritaUtama.vue";
+import BeritaLain from "@/components/LandingPage/Berita/BeritaLain.vue";
+import PopulerList from "@/components/LandingPage/Berita/PopulerList.vue";
 
 export default {
   name: 'Berita',

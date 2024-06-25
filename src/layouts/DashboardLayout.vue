@@ -10,7 +10,7 @@
 
 <script>
 import Navbar from "@/components/Dashboard/Navigasi/Navbar.vue";
-import ScrollToTop from "@/components/LandingPage/ScrollToTop.vue";
+import ScrollToTop from "@/components/LandingPage/Navigasi/ScrollToTop.vue";
 import Footer from "@/components/Dashboard/Navigasi/Footer.vue";
 import LoadingSpinner from "@/components/Dashboard/Umum/Loading.vue";
 import {inject, onMounted, onBeforeUnmount} from 'vue';

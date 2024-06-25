@@ -25,13 +25,13 @@
 </template>
 
 <script>
-import Navbar from '@/components/LandingPage/Navbar.vue';
-import Hero from '@/components/LandingPage/Hero.vue';
-import VisiMisi from '@/components/LandingPage/VisiMisi.vue';
-import DaftarGaleri from "@/components/LandingPage/GaleriList.vue";
+import Navbar from '@/components/LandingPage/Navigasi/Navbar.vue';
+import Hero from '@/components/LandingPage/Home/Hero.vue';
+import VisiMisi from '@/components/LandingPage/Home/VisiMisi.vue';
+import DaftarGaleri from "@/components/LandingPage/Galeri/GaleriList.vue";
 import DaftarBerita from "@/components/LandingPage/BeritaList.vue";
-import Footer from "@/components/LandingPage/Footer.vue";
-import ScrollToTop from "@/components/LandingPage/ScrollToTop.vue";
+import Footer from "@/components/LandingPage/Navigasi/Footer.vue";
+import ScrollToTop from "@/components/LandingPage/Navigasi/ScrollToTop.vue";
 
 export default {
   name: 'LandingPage',

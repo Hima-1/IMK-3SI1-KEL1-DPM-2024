@@ -76,10 +76,10 @@ export default {
 
 <style scoped>
 .visi-misi {
-  background-image: url('@/assets/icon/visi_misi.svg');
+  background-image: url('@assets/icon/visi_misi.svg');
 }
 
 .circle-number {
-  background-image: url('@/assets/icon/numberbg.svg');
+  background-image: url('@assets/icon/numberbg.svg');
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div v-if="isVisible" class="scroll-to-top" @click="scrollToTop">
-    <img src="@/assets/icon/scroll_up.svg" alt="Scroll to top">
+    <img src="../../../assets/icon/scroll_up.svg" alt="Scroll to top">
   </div>
 </template>
 

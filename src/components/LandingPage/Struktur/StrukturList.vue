@@ -13,7 +13,7 @@
         @click="toggleDropdown">
         <span class="col-span-4">{{ activeButton }}</span>
         <div class="grid col-start-5 justify-center">
-          <img src="@/assets/icon/dropdown-blue.svg" alt="Dropdown Icon" class="icon" />
+          <img src="../../../assets/icon/dropdown-blue.svg" alt="Dropdown Icon" class="icon" />
         </div>
       </div>
       <ul v-show="dropdownOpen" class="absolute w-1/2 bg-[#EBF3F5] text-[#1A5796] text-[18px] shadow-lg border-none font-bold text-center mt-16 z-10">

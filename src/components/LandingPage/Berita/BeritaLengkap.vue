@@ -3,12 +3,12 @@
         <div class="flex flex-wrap justify-center gap-8">
             <div class="rounded-[12px] w-full h-auto bg-[#EBF3F5] flex flex-col">
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
-                    <img src="../../assets/images/berita.webp"
+                    <img src="../../../assets/images/berita.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <div class="flex-grow p-4 md:px-7">
                     <div class="flex items-center mb-2">
-                        <img src="@/assets/icon/bluecalendar.svg"
+                        <img src="../../../assets/icon/bluecalendar.svg"
                             class="w-auto h-[20px] flex-shrink-0 text-[#15649D]" />
                         <p class="text-[#15649D] font-poppins text-[15px] md:text-[16px] font-semibold ml-2">KAMIS, 12
                             Juni 2024 08:48 WIB</p>
@@ -40,12 +40,12 @@
                     <hr class="border-[#15649D]">
                     <div class="flex items-center justify-between p-4 md:px-7">
                         <div class="flex items-center">
-                            <img src="@/assets/icon/person.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
+                            <img src="../../../assets/icon/person.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
                             <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">Pororo
                                 ajaaah</p>
                         </div>
                         <div class="flex items-center">
-                            <img src="@/assets/icon/blueeye.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
+                            <img src="../../../assets/icon/blueeye.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
                             <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">692</p>
                         </div>
                     </div>

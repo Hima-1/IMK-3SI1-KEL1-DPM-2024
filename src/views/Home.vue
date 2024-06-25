@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Hero from '@/components/LandingPage/Hero.vue';
-import VisiMisi from '@/components/LandingPage/VisiMisi.vue';
+import Hero from '@/components/LandingPage/Home/Hero.vue';
+import VisiMisi from '@/components/LandingPage/Home/VisiMisi.vue';
 
 export default {
   name: 'Home',

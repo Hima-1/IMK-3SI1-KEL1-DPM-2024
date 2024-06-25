@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import StrukturBagan from '@/components/LandingPage/StrukturBagan.vue';
-import StrukturList from '@/components/LandingPage/StrukturList.vue';
+import StrukturBagan from '@/components/LandingPage/Struktur/StrukturBagan.vue';
+import StrukturList from '@/components/LandingPage/Struktur/StrukturList.vue';
 
 export default {
   name: 'Struktur',

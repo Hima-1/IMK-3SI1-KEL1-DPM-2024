@@ -6,7 +6,7 @@
                 <!-- Image container -->
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
                     <!-- Image -->
-                    <img src="@/assets/images/lain2.webp"
+                    <img src="../../../assets/images/lain2.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <!-- Content -->
@@ -14,7 +14,7 @@
                     <!-- Tanggal Berita -->
                     <div class="flex items-center mb-2">
                         <!-- Ikon Tanggal -->
-                        <img src="@/assets/icon/bluecalendar.svg"
+                        <img src="../../../assets/icon/bluecalendar.svg"
                             class="w-auto h-[20px] flex-shrink-0 text-[#15649D]" />
                         <!-- Tanggal -->
                         <p class="text-[#15649D] font-poppins text-[15px] md:text-[16px] font-semibold ml-2">JUMAT, 13
@@ -50,14 +50,14 @@
                     <div class="flex items-center justify-between p-4 md:px-7">
                         <div class="flex items-center">
                             <!-- Ikon Penulis -->
-                            <img src="@/assets/icon/person.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
+                            <img src="../../../assets/icon/person.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
                             <!-- Penulis -->
                             <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">Loopy
                                 ajaaah</p>
                         </div>
                         <div class="flex items-center">
                             <!-- Ikon Viewers -->
-                            <img src="@/assets/icon/blueeye.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
+                            <img src="../../../assets/icon/blueeye.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
                             <!-- Viewers -->
                             <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">100</p>
                         </div>

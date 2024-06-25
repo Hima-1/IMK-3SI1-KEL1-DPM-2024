@@ -13,7 +13,7 @@
         @click="toggleDropdown">
         <span class="col-span-4">{{ activeButton }}</span>
         <div class="grid col-start-5 justify-center">
-          <img src="@/assets/icon/dropdown.svg" alt="Dropdown Icon" class="icon mx-1" />
+          <img src="../../../assets/icon/dropdown.svg" alt="Dropdown Icon" class="icon mx-1" />
         </div>
       </div>
       <ul v-show="dropdownOpen"
@@ -91,6 +91,6 @@ export default {
 
 <style scoped>
 .judulpage {
-  background-image: url('@/assets/icon/visi_misi.svg');
+  background-image: url('@assets/icon/visi_misi.svg');
 }
 </style>

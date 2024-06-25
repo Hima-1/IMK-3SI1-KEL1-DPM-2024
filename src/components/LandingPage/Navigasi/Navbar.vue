@@ -3,7 +3,7 @@
     :class="['bg-[#1a5796] shadow-lg w-full z-50', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
     <div class="mx-auto flex justify-between items-center py-2 px-7">
       <div class="flex items-center">
-        <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo mr-4" />
+        <img src="../../../assets/images/logo_dpm.webp" alt="Logo" class="logo mr-4" />
         <span class="text-white text-[16px] font-bold hidden md:block dpm-text">DEWAN PERWAKILAN MAHASISWA</span>
       </div>
 
@@ -23,7 +23,7 @@
 
       <div class="py-2 md:hidden flex items-center">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
-          <img src="@/assets/icon/hamburger.svg" alt="Menu Icon" class="burger-icon" />
+          <img src="../../../assets/icon/hamburger.svg" alt="Menu Icon" class="burger-icon" />
         </button>
       </div>
     </div>

@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import BeritaLengkaps from "../components/LandingPage/BeritaLengkaps.vue";
-import PopulerLengkap from "../components/LandingPage/PopulerLengkap.vue";
+import BeritaLengkaps from "../components/LandingPage/Berita/BeritaLengkaps.vue";
+import PopulerLengkap from "../components/LandingPage/Berita/PopulerLengkap.vue";
 
 export default {
     name: 'Selengkapnyas',
