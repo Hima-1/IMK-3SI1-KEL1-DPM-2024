@@ -90,8 +90,14 @@ export default {
 
 @media (min-width: 1280px) {
   .anggaran {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 768px) {
+  .mb-16{
+    margin-bottom: 0rem;
   }
 }
 

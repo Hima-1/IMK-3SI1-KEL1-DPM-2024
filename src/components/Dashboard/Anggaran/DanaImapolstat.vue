@@ -1,7 +1,7 @@
 <template>
-  <div class="flex-shrink-0 w-full max-w-[63.125rem] max-h-[48.0625rem] min-h-[20rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8 m:h-[30rem]">
-    <h1 class="text-[#1A5796] text-center font-poppins text-[2rem] sm:text-[3.125rem] font-bold mb-5">Dana Imapolstat</h1>
-    <div class="w-full h-[16rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
+  <div class="scale-down flex-shrink-0 w-full max-w-[53.65625rem] max-h-[40.853125rem] min-h-[25rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8 m:h-[30rem]">
+    <h1 class="text-[#1A5796] text-center font-poppins text-[2rem] sm:text-[3rem] font-bold mb-5">Dana Imapolstat</h1>
+    <div class="w-full min-h-[20rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
       <Bar ref="chart" :data="chartData" :options="chartOptions" />
     </div>
   </div>
@@ -173,15 +173,16 @@ div[style*="border-radius"] {
   min-height: 27.61069rem;
 }
 
-@media (max-width: 640px) {
-  .sm\:h-[30rem] {
-  height: 30rem;
-}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .scale-down {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
 }
 
 @media (max-width: 768px) {
   .chart-container {
-    min-height: 10.06713rem;
+    min-height: 18rem;
   }
   .chart-container .chartjs-size-monitor,
   .chart-container .chartjs-render-monitor {

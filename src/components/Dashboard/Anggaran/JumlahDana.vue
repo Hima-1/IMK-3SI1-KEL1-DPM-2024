@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper flex flex-col items-center justify-center rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+  <div class="scale-down wrapper flex flex-col items-center justify-center rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
     <img src="@/assets/icon/jumlah-dana.svg" alt="Icon" class="icon">
     <div class="text-center content">
       <h2 class="title">Jumlah Dana</h2>
@@ -124,6 +124,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 768px) {
+  .scale-down {
+    transform: scale(0.85);
+    transform-origin: top right;
   }
 }
 
