@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#ebf3f5] justify-center">
-    <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]" class="grid lg:grid-rows-1 mx-8 pb-12 lg:mx-20 sm:text-[1.15rem] leading-[1.875rem] text-[#1A5796]">
+    <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]" class="grid lg:grid-rows-1 pb-12 lg:mx-20 sm:text-[1.15rem] leading-[1.875rem] text-[#1A5796]">
       <!-- Edit Icon and My Profile Text -->
       <div class="flex items-center space-x-6 my-4">
         <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-10 h-8 md:h-10" />
