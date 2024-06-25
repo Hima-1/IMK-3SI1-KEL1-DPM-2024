@@ -13,8 +13,19 @@
                         </p>
                     </div>
                 </div>
-                <div class="overlay" v-if="showFullscreen">
-                    <img src="../../assets/images/galeri.webp" alt="Full Foto" class="full-image">
+                <div v-if="showFullscreen"
+                    class="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center overflow-hidden">
+                    <div class="flex flex-col items-center text-center text-white">
+                        <img :src="`/galeri/${foto.gambar}`" alt="Full Foto" class="w-auto lg:h-[80vh] object-contain">
+                        <div class="mt-4">
+                            <h1 class="text-[#FFFFFF] font-poppins text-[25px] font-semibold leading-normal">
+                                {{ foto.desk }}
+                            </h1>
+                            <p class="text-[#FFFFFF] text-[18px] font-normal font-poppins leading-snug">
+                                {{ foto.tgl }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,10 +82,26 @@ export default {
     overflow: hidden;
 }
 
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
 .full-image {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 80vh;
+    /* Adjusted to leave space for the caption */
     object-fit: contain;
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 1.2em;
+    padding: 0 10px;
+    /* Optional: add padding for better readability */
 }
 
 .textlay {

@@ -8,12 +8,19 @@
     </div>
 
     <div class="flex flex-wrap justify-center gap-6">
-      <BeritaItem />
-      <BeritaItem />
-      <BeritaItem />
-      <BeritaItem />
-      <BeritaItem />
-      <BeritaItem />
+      <BeritaItem v-if="currentPage === 1" />
+      <BeritaItem v-if="currentPage === 1" />
+      <BeritaItem v-if="currentPage === 1" />
+      <BeritaItem v-if="currentPage === 1" />
+      <BeritaItem v-if="currentPage === 1" />
+      <BeritaItem v-if="currentPage === 1" />
+
+      <BeritaItems v-if="currentPage === 2" />
+      <BeritaItems v-if="currentPage === 2" />
+      <BeritaItems v-if="currentPage === 2" />
+      <BeritaItems v-if="currentPage === 2" />
+      <BeritaItems v-if="currentPage === 2" />
+      <BeritaItems v-if="currentPage === 2" />
     </div>
 
     <div class="flex justify-center my-8">
@@ -37,27 +44,19 @@
 
 <script>
 import BeritaItem from './BeritaItem.vue';
+import BeritaItems from './BeritaItems.vue';
 
 export default {
   name: 'BeritaList',
   components: {
     BeritaItem,
+    BeritaItems,
   },
   data() {
     return {
       currentPage: 1,
-      itemsPerPage: 5,
-      items: Array(12).fill({}),
+      totalPages: 2,
     };
-  },
-  computed: {
-    totalPages() {
-      return Math.ceil(this.items.length / this.itemsPerPage);
-    },
-    paginatedItems() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      return this.items.slice(start, start + this.itemsPerPage);
-    },
   },
   methods: {
     setPage(page) {
