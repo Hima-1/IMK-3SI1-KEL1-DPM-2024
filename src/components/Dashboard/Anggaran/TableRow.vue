@@ -53,7 +53,7 @@ export default {
 @media (max-width: 768px) {
   .view-icon, .download-icon {
     width: 1.5rem;
-    height: auto; /* Keep aspect ratio */
+    height: auto;
   }
 }
 

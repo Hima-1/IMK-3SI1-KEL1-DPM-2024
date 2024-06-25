@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .loader {
-  border-top-color: #3490dc; /* Warna biru */
+  border-top-color: #3490dc;
   animation: spin 1s linear infinite;
 }
 

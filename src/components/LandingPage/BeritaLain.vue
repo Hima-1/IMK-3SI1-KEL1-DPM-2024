@@ -1,6 +1,5 @@
 <template>
   <div class="bg-[#cddbe5] flex flex-col items-center justify-start w-full min-h-screen">
-    <!-- Judul Berita -->
     <div class="w-full text-center my-10 hidden md:flex flex-col">
       <h1 class="text-[#1A5796] text-left font-poppins text-[25px] font-semibold leading-normal">
         Berita Utama Lainnya
@@ -8,7 +7,6 @@
       <div style="height: 5px; background-color: #F7941D; width: 275px; margin-top: 4px;"></div>
     </div>
 
-    <!-- Wrapper Berita -->
     <div class="flex flex-wrap justify-center gap-6">
       <BeritaItem />
       <BeritaItem />
@@ -18,7 +16,6 @@
       <BeritaItem />
     </div>
 
-    <!-- Page -->
     <div class="flex justify-center my-8">
       <div class="flex space-x-2">
         <button @click="prevPage" :disabled="currentPage === 1"

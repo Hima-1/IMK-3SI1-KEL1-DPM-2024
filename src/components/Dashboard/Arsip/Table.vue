@@ -2,15 +2,12 @@
   <div class="w-full flex flex-col overflow-x-auto">
     <TableSearch @search="searchRows" />
 
-    <!-- Responsive Table Container -->
     <div class="w-full mt-6 overflow-x-auto">
       <div class="min-w-[800px]">
         <TableHeader />
 
-        <!-- No Margin Between Header and Rows -->
         <div class="border-t border-[#EBF3F5] w-full"></div>
 
-        <!-- Table Rows -->
         <div class="w-full flex flex-col">
           <TableRow
               v-for="row in rows"
@@ -22,7 +19,6 @@
       </div>
     </div>
 
-    <!-- Pagination -->
     <div class="mt-10 w-full flex justify-center">
       <TablePagination
           :currentPage="currentPage"

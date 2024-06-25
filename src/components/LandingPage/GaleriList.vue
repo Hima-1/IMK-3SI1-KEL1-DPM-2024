@@ -1,6 +1,5 @@
 <template>
   <div class="bg-[#EBF3F5] flex flex-col items-center justify-start min-h-screen">
-    <!-- Judul Galeri -->
     <div>
       <h1
         class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
@@ -8,7 +7,6 @@
       </h1>
     </div>
 
-    <!-- Dropdown -->
     <div class="flex w-full mt-8 justify-center md:hidden">
       <div
         class="grid grid-cols-5 items-center bg-[#15649D] text-[#FFFFFF] text-[18px] mb-6 p-3 shadow-lg rounded-[44px] border-none font-bold text-center min-[425px]:text-left min-[425px]:pl-6 max-w-xl min-[425px]:w-1/2 md:w-1/3"
@@ -29,7 +27,6 @@
       </ul>
     </div>
 
-    <!-- Struktur Button Group -->
     <div
       class="hidden md:flex bg-[#15649D] text-[#FFFFFF] text-[15px] xl:text-[18px] mt-8 mb-6 p-4 font-medium rounded-[44px] first:rounded-tl-[44px] first:rounded-bl-[44px] last:rounded-tr-[44px] last:rounded-br-[44px] shadow-lg">
       <li v-for="button in buttons" :key="button" class="list-none">
@@ -41,7 +38,6 @@
       </li>
     </div>
 
-    <!-- Foto Dummy -->
     <div class="flex flex-wrap justify-center mb-20">
       <GaleriItem v-for="foto in filteredButton" :key="foto.id" :foto="foto" />
     </div>

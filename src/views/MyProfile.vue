@@ -55,7 +55,6 @@ export default {
     },
     updateCurrentPage(newPage) {
       this.currentPage = newPage;
-      // Fetch new data based on newPage if needed
     },
   },
 };

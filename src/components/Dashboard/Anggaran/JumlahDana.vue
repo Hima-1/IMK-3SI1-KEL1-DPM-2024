@@ -42,7 +42,7 @@ export default {
 }
 
 .subtitle {
-  margin-top: 0.25rem; /* Adjusted for smaller spacing */
+  margin-top: 0.25rem;
 }
 
 .amount {
@@ -107,13 +107,13 @@ export default {
   .subtitle {
     font-size: 0.9375rem;
     margin: 0;
-    margin-top: 0.25rem; /* Adjusted for smaller spacing */
+    margin-top: 0.25rem;
   }
 
   .amount {
     font-size: 1.625rem;
     margin: 0;
-    margin-top: 0.25rem; /* Adjusted for smaller spacing */
+    margin-top: 0.25rem;
   }
 
   .text-center {
@@ -124,6 +124,12 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .amount{
+    font-size: 1.15rem;
   }
 }
 </style>

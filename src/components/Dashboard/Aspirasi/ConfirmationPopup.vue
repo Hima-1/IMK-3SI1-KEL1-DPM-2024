@@ -7,7 +7,7 @@
           class="w-3/4 h-auto"
       />
       <p class="w-4/5 text-[#1A5796] text-center font-poppins text-lg my-6">
-        Apakah anda yakin ingin sambat tentang hal tersebut?
+        Apakah kamu yakin ingin sambat tentang hal tersebut?
       </p>
       <div class="w-full flex justify-evenly mt-4">
         <button @click="confirm"
@@ -63,8 +63,8 @@ export default {
 
 @media (max-width: 425px) {
   .confirm-button, .cancel-button {
-    width: 8rem; /* 33% of 12rem increased by 10% */
-    height: 4rem; /* 3.5rem increased by 10% */
+    width: 8rem;
+    height: 4rem;
   }
 }
 </style>

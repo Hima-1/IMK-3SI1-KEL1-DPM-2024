@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Folder Icon and Arsip Dokumen Text -->
     <div class="flex items-center mt-12 space-x-6 folder-icon">
       <img
           src="@/assets/icon/anggaran.svg"

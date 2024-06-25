@@ -1,15 +1,12 @@
 <template>
   <div class="min-h-fit text-[#6A6C7A]">
     <div class="grid lg:grid-rows-1 pb-12 text-[1.15rem] leading-[1.875rem]">
-      <!-- Judul halaman -->
       <div class="flex items-center space-x-6 my-4">
         <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 lg:w-10 h-8 lg:h-10" />
         <h1 class="text-[#1A5796] font-poppins text-[1.85rem]" style="line-height: 60px">My Profile/Edit</h1>
       </div>
 
-      <!-- Informasi Teks User -->
       <div class="grid lg:grid-cols-3 lg:max-xl:gap-x-12 xl:gap-x-2">
-        <!-- Foto Device Small -->
         <div class="grid lg:hidden justify-center">
           <div class="relative w-fit mb-6">
             <img :src="`/mahasiswa/${mahasiswa.foto}`" alt="User Photo" class="border-4 border-[#6A6C7A] rounded-full w-[200px] md:w-[250px] h-[200px] md:h-[250px] object-center object-cover" />
@@ -84,7 +81,6 @@
           </div>
         </div>
 
-        <!-- Foto User -->
         <div class="hidden lg:grid grid-cols-4 xl:gap-y-3 items-center">
           <div class="col-span-3 lg:max-xl:col-span-4 col-start-2 grid justify-center rounded-none border-2 border-[#6A6C7A] p-2 lg:relative lg:max-xl:mb-4">
             <img :src="`/mahasiswa/${mahasiswa.foto}`" alt="User Photo" class="rounded-full w-[300px] object-center object-cover" />

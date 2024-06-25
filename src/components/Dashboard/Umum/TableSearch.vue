@@ -1,6 +1,5 @@
 <template>
   <div class="container flex items-center justify-between p-0 bg-[#ebf3f5] flex-wrap lg:flex-nowrap">
-    <!-- Search Text and Search Box -->
     <div class="search-container flex items-center space-x-4 mb-4 lg:mb-0">
       <p class="search-text text-[#6A6C7A] font-poppins text-2xl leading-[2.25rem]">
         Search
@@ -13,13 +12,12 @@
       />
     </div>
 
-    <!-- Show Text, Border Angka Box, and Documents per Page Text -->
     <div class="show-container flex items-center space-x-4">
       <p class="show-text text-[#6A6C7A] font-poppins text-2xl leading-[2.25rem] text-left">
         Show
       </p>
       <div class="number-box lg:w-[5.8125rem] lg:h-[2.8125rem] rounded-[1.40625rem] border-2 border-[#6A6C7A] bg-[#F6F6F6] flex items-center justify-center space-x-2">
-        <p class="number-text text-[#6A6C7A] font-poppins text-lg">10</p>
+        <p class="number-text text-[#6A6C7A] font-poppins text-lg">5</p>
         <img src="@/assets/icon/arrow-down-search.svg" alt="Sort Icon" class="w-[0.8125rem] h-[0.40625rem] flex-shrink-0"/>
       </div>
       <p class="documents-text text-[#6A6C7A] font-poppins text-2xl leading-[2.25rem]">
@@ -128,13 +126,13 @@ img {
   }
 
   .container {
-    padding: 0 1rem; /* Ensure padding inside the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 0 1rem;
+    box-sizing: border-box;
     width: 100%;
   }
 
   .search-box {
-    width: 15rem; /* Shortened width for smaller screens */
+    width: 15rem;
     height: 2.1875rem;
     flex-shrink: 0;
     font-size: 0.9375rem;

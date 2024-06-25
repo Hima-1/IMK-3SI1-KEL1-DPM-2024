@@ -59,7 +59,6 @@ export default {
   }
 }
 
-/* Media query for mobile view */
 @media (max-width: 640px) {
   .wrapper {
     @apply w-full p-6 box-border;

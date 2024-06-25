@@ -63,8 +63,8 @@ export default {
 
 @media (max-width: 425px) {
   .confirm-button, .cancel-button {
-    width: 8rem; /* 33% of 12rem increased by 10% */
-    height: 4rem; /* 3.5rem increased by 10% */
+    width: 8rem;
+    height: 4rem;
   }
 }
 </style>

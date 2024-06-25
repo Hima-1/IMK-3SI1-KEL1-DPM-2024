@@ -125,10 +125,4 @@ export default {
     top: 3.55rem;
   }
 }
-
-/* Ensure user icon dimensions are consistent across devices */
-.user-icon {
-  width: 3.1875rem;
-  height: 3.1875rem;
-}
 </style>

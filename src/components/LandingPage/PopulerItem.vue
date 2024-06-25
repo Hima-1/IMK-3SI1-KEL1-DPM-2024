@@ -1,22 +1,16 @@
 <template>
     <div class="px-4 md:px-6 flex">
-        <!-- Foto -->
         <div class="flex-shrink-0 w-[110px] h-[68px] overflow-hidden mr-4 mt-2 bg-white">
             <img src="@/assets/images/berita.webp" alt="Foto Berita Populer" class="w-full h-full object-cover">
         </div>
-        <!-- Konten -->
         <div class="flex-1 flex flex-col justify-between">
-            <!-- Judul -->
             <div class="mb-2">
                 <p class="text-[#15649D] font-poppins text-[14px] font-medium">
                     Perpanjangan Open Recruitment Staff Ahli DPM Periode 2023/2024
                 </p>
             </div>
-            <!-- Keterangan -->
             <div class="flex justify-between items-center">
-                <!-- Tanggal -->
                 <div class="flex items-center">
-                    <!-- Ikon Tanggal -->
                     <img src="@/assets/icon/blackcalendar.svg"
                         class="w-auto h-[12px] flex-shrink-0 text-[#15649D]" />
                     <!-- Tanggal -->

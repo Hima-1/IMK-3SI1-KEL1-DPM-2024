@@ -1,6 +1,5 @@
 <template>
   <div class="bg-[#cddbe5] flex flex-col items-center justify-start min-h-screen pb-10 md:pb-0 px-16">
-    <!-- Judul -->
     <div class="w-full text-center mb-10">
       <h1
         class="judulpage bg-center bg-no-repeat bg-contain text-[#1A5796] text-center font-poppins text-5xl font-bold mt-8 p-5 text-[30px] lg:text-[33px]">
@@ -8,7 +7,6 @@
       </h1>
     </div>
 
-    <!-- Konten -->
     <div>
       <div class="w-full flex flex-wrap lg:flex-nowrap justify-center gap-8 hidden md:flex">
         <section id="berita-utama" class="w-full lg:w-2/3">

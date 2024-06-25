@@ -1,13 +1,10 @@
 <template>
   <div class="w-full mt-6 overflow-x-auto padding px-12">
     <div class="">
-      <!-- Table Header -->
       <TableHeader />
 
-      <!-- No Margin Between Header and Rows -->
       <div class="border-t border-[#EBF3F5] w-full"></div>
 
-      <!-- Table Rows -->
       <div class="w-full flex flex-col">
         <TableRow
             v-for="row in rows"
@@ -15,7 +12,6 @@
             :rowData="row"
             @viewDetails="viewDetails"
         />
-        <!-- Subtotal Row -->
         <div class="w-full overflow-x-auto flex items-center h-[5.3125rem] bg-[#C8D6DF] subtotal-row min-w-[60rem]">
           <div class="flex items-center justify-between text-[#6A6C7A] font-poppins text-[1.4375rem] font-bold px-4" style="width: 4.25%;">
             <span>Subtotal</span>

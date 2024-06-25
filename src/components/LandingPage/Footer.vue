@@ -1,12 +1,9 @@
 <template>
   <div class="bg-[#1A5796] w-full flex-shrink-0 flex flex-col py-5">
-    <!-- Dewan Perwakilan Mahasiswa -->
     <h2 class="text-[#F2BC43] font-poppins text-[1.125rem] md:text-[30px] font-bold px-8">
       Dewan Perwakilan Mahasiswa
     </h2>
-    <!-- Garis -->
     <hr class="w-full border-t border-[rgba(206,219,229,0.90)] my-4" />
-    <!-- Contact -->
     <h3 class="text-[#EBF3F5] font-poppins text-[1rem] md:text-[20px] font-bold mb-2 md:mb-4 px-8">
       Contact
     </h3>

@@ -1,26 +1,18 @@
 <template>
     <div class="bg-[#cddbe5] flex flex-col items-start justify-start min-h-screen">
         <div class="flex flex-wrap justify-center gap-8">
-            <!-- Box -->
             <div class="rounded-[12px] w-full h-auto bg-[#EBF3F5] flex flex-col">
-                <!-- Image container -->
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
-                    <!-- Image -->
                     <img src="@/assets/images/berita.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
-                <!-- Content -->
                 <div class="flex-grow p-4 md:px-7">
-                    <!-- Tanggal Berita -->
                     <div class="flex items-center mb-2">
-                        <!-- Ikon Tanggal -->
                         <img src="@/assets/icon/bluecalendar.svg"
                             class="w-auto h-[20px] flex-shrink-0 text-[#15649D]" />
-                        <!-- Tanggal -->
                         <p class="text-[#15649D] font-poppins text-[15px] md:text-[16px] font-semibold ml-2">KAMIS, 12
                             Juni 2024 08:48 WIB</p>
                     </div>
-                    <!-- Isi -->
                     <p class="text-[#000] font-poppins text-[15px] break-words my-4">
                         Dewan Perwakilan Mahasiswa (DPM) mengumumkan perpanjangan masa Open Recruitment untuk posisi
                         Staff Ahli periode 2023/2024. Langkah ini diambil untuk memberikan kesempatan lebih luas bagi
@@ -44,23 +36,16 @@
                         civitas akademika.
                     </p>
                 </div>
-                <!-- Foot -->
                 <div class="flex-shrink-0 flex flex-col">
-                    <!-- Garis Horizontal -->
                     <hr class="border-[#15649D]">
-                    <!-- Desc -->
                     <div class="flex items-center justify-between p-4 md:px-7">
                         <div class="flex items-center">
-                            <!-- Ikon Penulis -->
                             <img src="@/assets/icon/person.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
-                            <!-- Penulis -->
                             <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">Pororo
                                 ajaaah</p>
                         </div>
                         <div class="flex items-center">
-                            <!-- Ikon Viewers -->
                             <img src="@/assets/icon/blueeye.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
-                            <!-- Viewers -->
                             <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">692</p>
                         </div>
                     </div>
@@ -81,7 +66,6 @@ export default {
     position: relative;
     width: 100%;
     padding-top: 54%;
-    /* This sets the height to 54% of the width */
 }
 
 .aspect-ratio-54-100 img {

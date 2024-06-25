@@ -2,13 +2,11 @@
   <nav
     :class="['bg-[#1a5796] shadow-lg w-full z-50', { 'fixed': isScrolled, 'top-0': isScrolled, 'w-full': isScrolled }]">
     <div class="mx-auto flex justify-between items-center py-2 px-7">
-      <!-- Logo and Title on the Left -->
       <div class="flex items-center">
         <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo mr-4" />
         <span class="text-white text-[16px] font-bold hidden md:block dpm-text">DPM</span>
       </div>
 
-      <!-- Navigation Links and Login Button on the Right -->
       <div class="hidden md:flex items-center text-[16px] space-x-4">
         <router-link to="/" exact class="btn btn-ghost no-underline text-white font-medium"
           :exact-active-class="'active-link'">Home</router-link>
@@ -23,7 +21,6 @@
           :active-class="'active-link'">Log In</router-link>
       </div>
 
-      <!-- Mobile Menu Button -->
       <div class="py-2 md:hidden flex items-center">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
           <img src="@/assets/icon/hamburger.svg" alt="Menu Icon" class="burger-icon" />
@@ -31,7 +28,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div v-if="isMobileMenuOpen" class="flex flex-col text-[16px] md:hidden">
       <router-link to="/" exact class="flex items-center justify-center h-12 btn btn-ghost no-underline text-white font-medium px-4" :exact-active-class="'active-link'" @click.native="closeMobileMenu">
         Home
