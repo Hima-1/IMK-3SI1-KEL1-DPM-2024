@@ -4,6 +4,7 @@ import DashboardLayout from '@/layouts/DashboardLayout.vue';
 import Home from '@/views/Home.vue';
 import Berita from '@/views/Berita.vue';
 import Selengkapnya from '@/views/Selengkapnya.vue';
+import Selengkapnyas from '@/views/Selengkapnyas.vue';
 import Galeri from '@/views/Galeri.vue';
 import Struktur from '@/views/Struktur.vue';
 import LoginPage from '@/views/Login.vue';
@@ -24,7 +25,8 @@ const routes = [
         path: 'berita',
         children: [
           { path: '', name: 'Berita', component: Berita },
-          { path: 'selengkapnya', name: 'Selengkapnya', component: Selengkapnya },
+          { path: '1', name: 'Selengkapnya', component: Selengkapnya },
+          { path: '2', name: 'Selengkapnyas', component: Selengkapnyas },
         ],
       },
       { path: 'galeri', name: 'Galeri', component: Galeri },

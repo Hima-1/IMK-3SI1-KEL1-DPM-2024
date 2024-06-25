@@ -5,7 +5,7 @@
       <!-- Logo and Title on the Left -->
       <div class="flex items-center">
         <img src="@/assets/images/logo_dpm.webp" alt="Logo" class="logo mr-4" />
-        <span class="text-white text-[16px] font-bold hidden md:block dpm-text">DPM</span>
+        <span class="text-white text-[16px] font-bold hidden md:block dpm-text">DEWAN PERWAKILAN MAHASISWA</span>
       </div>
 
       <!-- Navigation Links and Login Button on the Right -->

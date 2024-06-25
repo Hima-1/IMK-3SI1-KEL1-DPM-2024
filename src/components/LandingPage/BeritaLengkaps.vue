@@ -6,7 +6,7 @@
                 <!-- Image container -->
                 <div class="flex-shrink-0 relative w-full pb-[54%]">
                     <!-- Image -->
-                    <img src="@/assets/images/berita.webp"
+                    <img src="@/assets/images/lain2.webp"
                         class="absolute top-0 left-0 w-full h-full rounded-t-[13px] object-cover" />
                 </div>
                 <!-- Content -->
@@ -17,31 +17,29 @@
                         <img src="@/assets/icon/bluecalendar.svg"
                             class="w-auto h-[20px] flex-shrink-0 text-[#15649D]" />
                         <!-- Tanggal -->
-                        <p class="text-[#15649D] font-poppins text-[15px] md:text-[16px] font-semibold ml-2">KAMIS, 12
-                            Juni 2024 08:48 WIB</p>
+                        <p class="text-[#15649D] font-poppins text-[15px] md:text-[16px] font-semibold ml-2">JUMAT, 13
+                            Juni 2024 10:58 WIB</p>
                     </div>
                     <!-- Isi -->
                     <p class="text-[#000] font-poppins text-[15px] break-words my-4">
-                        Dewan Perwakilan Mahasiswa (DPM) mengumumkan perpanjangan masa Open Recruitment untuk posisi
-                        Staff Ahli periode 2023/2024. Langkah ini diambil untuk memberikan kesempatan lebih luas bagi
-                        mahasiswa yang ingin bergabung dan berkontribusi dalam organisasi kampus. Posisi Staff Ahli
-                        memiliki peran penting dalam mendukung perumusan kebijakan, analisis data, dan pengembangan
-                        program kerja sesuai visi dan misi DPM.
+                        Kuliah Umum tentang Komputasi Statistik merupakan sebuah forum yang krusial dalam dunia ilmu
+                        data modern. Acara ini menyoroti peran penting komputasi dalam menganalisis dan mengolah data
+                        statistik untuk mendukung inovasi di berbagai bidang. Komputasi statistik tidak sekadar tentang
+                        pengolahan data, tetapi juga tentang bagaimana teknologi informasi dapat digunakan untuk
+                        mengekstraksi wawasan mendalam dari data yang kompleks dan besar.
                         <br><br>
-                        Dengan perpanjangan waktu ini, diharapkan calon pendaftar dapat mempersiapkan berkas-berkas
-                        seperti CV, surat motivasi, dan proposal kontribusi dengan lebih matang. DPM juga akan
-                        mengadakan sesi informasi dan workshop untuk memberikan pemahaman mendalam tentang tugas dan
-                        tanggung jawab seorang Staff Ahli serta membekali calon dengan pengetahuan dan keterampilan
-                        dasar yang diperlukan.
+                        Para pembicara yang ahli dalam bidangnya membahas berbagai teknik komputasi terbaru, termasuk
+                        penggunaan algoritma machine learning, analisis big data, dan visualisasi data yang memukau.
+                        Mereka juga menyoroti tantangan etika dan keamanan yang terkait dengan penggunaan data dalam era
+                        digital.
                         <br><br>
-                        Seleksi akan melibatkan panel penilai dari dosen dan alumni berpengalaman, melalui beberapa
-                        tahap mulai dari seleksi administrasi, tes tertulis, hingga wawancara mendalam. Setiap tahap
-                        akan dinilai cermat untuk memastikan kandidat terpilih memenuhi kriteria yang ditetapkan.
-                        <br><br>
-                        Respons positif terlihat dari meningkatnya minat dan pertanyaan yang masuk ke panitia.
-                        DPM berharap perpanjangan ini memotivasi lebih banyak mahasiswa untuk ikut serta, memberikan
-                        pengalaman berharga, dan terlibat dalam proses pengambilan keputusan yang berdampak luas bagi
-                        civitas akademika.
+                        Peserta kuliah umum, terdiri dari akademisi, praktisi industri, dan mahasiswa, diundang untuk
+                        mendapatkan pemahaman yang lebih dalam tentang bagaimana komputasi statistik mendorong
+                        terciptanya solusi inovatif dalam berbagai disiplin ilmu. Melalui pendekatan ini, diharapkan
+                        mampu mengoptimalkan pemanfaatan data untuk meningkatkan kehidupan dan pelayanan masyarakat
+                        secara global. Kuliah umum ini tidak hanya memberikan pengetahuan baru, tetapi juga inspirasi
+                        bagi mereka yang tertarik dengan potensi besar komputasi statistik dalam meramalkan masa depan
+                        yang lebih baik.
                     </p>
                 </div>
                 <!-- Foot -->
@@ -54,14 +52,14 @@
                             <!-- Ikon Penulis -->
                             <img src="@/assets/icon/person.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
                             <!-- Penulis -->
-                            <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">Pororo
+                            <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">Loopy
                                 ajaaah</p>
                         </div>
                         <div class="flex items-center">
                             <!-- Ikon Viewers -->
                             <img src="@/assets/icon/blueeye.svg" class="w-auto h-[15px] flex-shrink-0 text-[#15649D]" />
                             <!-- Viewers -->
-                            <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">692</p>
+                            <p class="text-[#15649D] font-poppins text-[13px] md:text-[14px] font-medium ml-2">100</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +70,7 @@
 
 <script>
 export default {
-    name: 'BeritaLengkap',
+    name: 'BeritaLengkaps',
 };
 </script>
 
