@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#ebf3f5] justify-center">
-    <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]" class="grid lg:grid-rows-1 pb-12 lg:mx-20 sm:text-[1.15rem] leading-[1.875rem] text-[#1A5796]">
+    <div :class="['h-auto', 'bg-[#EBF3F5]', 'rounded-lg', 'p-8', 'pt-0', 'md:px-0', widthClass]" class="grid lg:grid-rows-1 pb-12 md:mx-8 lg:mx-20 sm:text-[1.15rem] leading-[1.875rem] text-[#1A5796]">
       <!-- Edit Icon and My Profile Text -->
       <div class="flex items-center space-x-6 my-4">
         <img src="@/assets/icon/edit.svg" alt="Edit Icon" class="w-8 md:w-10 h-8 md:h-10" />
@@ -28,8 +28,8 @@
           <div class="grid grid-cols-2 lg:grid-cols-3 font-semibold text-[#ebf3f5]">
             <button
               @click="activeTabOne"
-              class="text-wrap sm:text-nowrap p-2 py-4 border-b-2"
-              :class="{ 'border-b-[#1A5796] text-[#1A5796]': activeTab === 'detailProfile', 'border-b-2': activeTab !== 'detailProfile' }"
+              class="text-wrap p-2 py-4 border-b-2"
+              :class="{ 'border-b-[#1A5796] text-[#1A5796] text-wrap': activeTab === 'detailProfile', 'border-b-2': activeTab !== 'detailProfile' }"
               aria-selected="activeTab === 'detailProfile'"
             >
               Detail Profile
