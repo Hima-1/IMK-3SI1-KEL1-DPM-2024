@@ -1,7 +1,7 @@
 <template>
-  <div class="flex-shrink-0 w-full max-w-[63.125rem] h-full max-h-[48.0625rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8 m:h-[30rem]">
+  <div class="flex-shrink-0 w-full max-w-[63.125rem] max-h-[48.0625rem] min-h-[20rem] rounded-[1.25rem] bg-[#F6F6F6] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center p-4 sm:p-8 m:h-[30rem]">
     <h1 class="text-[#1A5796] text-center font-poppins text-[2rem] sm:text-[3.125rem] font-bold mb-5">Dana Imapolstat</h1>
-    <div class="w-full h-[12rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
+    <div class="w-full h-[16rem] transform flex-shrink-0 chart-container" style="border-radius: 0.5625rem 0.5625rem 0rem 0rem;">
       <Bar ref="chart" :data="chartData" :options="chartOptions" />
     </div>
   </div>
@@ -34,7 +34,7 @@ export default defineComponent({
       labels: actualData.labels,
       datasets: [
         {
-          label: 'Pemasukan',
+          label: 'Dana Awal Tahun',
           backgroundColor: '#1a5796',
           barThickness: 'flex',
           minBarLength: 46,
