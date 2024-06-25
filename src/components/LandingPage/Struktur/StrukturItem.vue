@@ -3,9 +3,9 @@
     <!-- Bagian Atas Struktur -->
     <div class="relative rounded-t-[13px]" style="background: linear-gradient(0deg, #041322 7.17%, rgba(102, 102, 102, 0) 96.17%)">
       <!-- Foto -->
-      <img :src="`/mahasiswa/${anggota.foto}`" class=" object-cover w-full rounded-t-[13px]" />
+      <img :src="`/mahasiswa/${anggota.foto}`" class=" object-cover w-[256px] h-[252px] rounded-t-[13px]" />
       <!-- Jabatan -->
-      <div class="absolute content-end bottom-0 left-0 w-full h-1/2 py-3 bg-gradient-to-t from-black to-90%">
+      <div class="absolute flex items-end justify-center bottom-0 left-0 w-full h-1/2 py-3 bg-gradient-to-t from-black to-90%">
         <h2 class="text-[#EBF3F5] font-poppins text-[16px] min-[375px]:text-[23px] min-[425px]:text-[27px] sm:text-[20px] font-bold text-center">{{ anggota.jabatan }}</h2>
       </div>
     </div>
