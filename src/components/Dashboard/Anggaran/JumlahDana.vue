@@ -19,7 +19,7 @@ export default {
 .wrapper {
   width: 100%;
   max-width: 27.75rem;
-  height: 31.6875rem;
+  height: 100%;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ export default {
   .wrapper {
     width: 100%;
     max-width: 27.75rem;
-    height: 25rem;
+    height: 100%;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;

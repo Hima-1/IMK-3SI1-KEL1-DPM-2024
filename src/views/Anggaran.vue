@@ -5,8 +5,8 @@
 
       <hr class="border-0 border-t-[2px] border-[#C8D6DF] flex-shrink-0 mt-8 mb-8 w-full">
 
-      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-16 px-12 margin">
-        <div class="col-span-8 md:col-span-4 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
+      <div class="grid grid-cols-8 md:grid-cols-12 gap-10 mb-16 px-12 margin justify-center items-center">
+        <div class="h-full col-span-8 md:col-span-4 flex flex-col mb-4 md:mb-0 jumlah-dana-container">
           <JumlahDana />
         </div>
         <div class="col-span-8 md:col-span-8 flex flex-col dana-imapolstat-container">
